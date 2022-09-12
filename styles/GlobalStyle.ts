@@ -35,4 +35,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Playfair Display', serif;
         color: ${colors.blue};
     }
+
+    a {
+        text-decoration: none;
+        color: ${colors.offBlack};
+    }
 `;
