@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { colors } from '../constants';
 
+const LinkItem = styled.a``;
 const LinkContainer = styled.div``;
 const LogoContainer = styled.div``;
 const BookingButton = styled.a``;
@@ -13,8 +14,12 @@ interface IProps {
 const BaseNavbar = ({ className }: IProps) => (
     <nav className={className}>
         <LinkContainer>
-            <Link href="/rooms">Kamers</Link>
-            <Link href="/ship">Het schip</Link>
+            <Link href="/rooms">
+                <LinkItem>Kamers </LinkItem>
+            </Link>
+            <Link href="/ship">
+                <LinkItem>Het Schip </LinkItem>
+            </Link>
         </LinkContainer>
         <LogoContainer>
             <Link href="/">Logo</Link>
@@ -37,8 +42,14 @@ const Navbar = styled(BaseNavbar)`
     background-color: ${colors.white};
     height: 3.5rem;
 
-    ${LinkContainer} {
-        margin-left: 24px;
+    ${LinkItem} {
+        padding: 0 12px;
+        margin-right: 6px;
+        cursor: pointer;
+
+        &:first-of-type {
+            margin-left: 12px;
+        }
     }
 
     ${LogoContainer} {
@@ -59,6 +70,7 @@ const Navbar = styled(BaseNavbar)`
         color: ${colors.white};
         padding: 8px 24px;
         margin-right: 24px;
+        font-size: 1.1rem;
     }
 `;
 
