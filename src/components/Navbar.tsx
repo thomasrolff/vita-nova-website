@@ -63,6 +63,7 @@ const Navbar = styled(BaseNavbar)`
         border-bottom-right-radius: 15px;
         background-color: ${colors.white};
         margin: 0 auto;
+        z-index: 1;
     }
 
     ${BookingButton} {
