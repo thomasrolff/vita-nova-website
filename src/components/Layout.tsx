@@ -1,3 +1,5 @@
+import Navbar from './Navbar';
+
 interface IProps {
     children: React.ReactNode;
 }
@@ -5,7 +7,7 @@ interface IProps {
 const Layout = ({ children }: IProps) => {
     return (
         <>
-            <div>Navbar</div>
+            <Navbar />
             {children}
             <div>Footer</div>
         </>

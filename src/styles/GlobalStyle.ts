@@ -35,4 +35,18 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Playfair Display', serif;
         color: ${colors.blue};
     }
+
+    h2 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    p {
+        line-height: 2;
+    }
+
+    a {
+        text-decoration: none;
+        color: ${colors.offBlack};
+    }
 `;
