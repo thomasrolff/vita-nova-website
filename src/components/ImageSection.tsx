@@ -10,6 +10,7 @@ interface IProps {
     children: React.ReactNode;
     imageSrc: StaticImageData;
     imageAlt: string;
+    imageLeft?: boolean;
 }
 
 const BaseImageSection = ({
@@ -19,10 +20,10 @@ const BaseImageSection = ({
     imageSrc,
 }: IProps) => (
     <section className={className}>
+        <TextContainer>{children}</TextContainer>
         <ImageContainer>
             <Image alt={imageAlt} objectFit="cover" src={imageSrc} />
         </ImageContainer>
-        <TextContainer>{children}</TextContainer>
     </section>
 );
 
@@ -31,11 +32,14 @@ const ImageSection = styled(BaseImageSection)`
     flex-direction: column;
 
     @media (${breakpoints.mediumMin}) {
-        flex-direction: row;
+        flex-direction: ${({ imageLeft }) =>
+            imageLeft ? 'row-reverse' : 'row'};
     }
 
     ${ImageContainer}, ${TextContainer} {
-        flex: 1;
+        @media (${breakpoints.mediumMin}) {
+            width: 50%;
+        }
     }
 
     ${ImageContainer} {
@@ -44,10 +48,9 @@ const ImageSection = styled(BaseImageSection)`
         align-items: center;
         max-height: 400px;
         overflow: hidden;
-        flex: 1;
 
         @media (${breakpoints.mediumMin}) {
-            max-height: 540px;
+            max-height: initial;
         }
     }
 
