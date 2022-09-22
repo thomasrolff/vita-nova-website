@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
+import Hamburger from './Hamburger';
 
 const LinkItem = styled.a``;
 const LinkContainer = styled.div``;
@@ -9,10 +10,12 @@ const BookingButton = styled.a``;
 
 interface IProps {
     className?: string;
+    onHamburgerClick(): void;
 }
 
-const BaseNavbar = ({ className }: IProps) => (
+const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
     <nav className={className}>
+        <Hamburger onClick={onHamburgerClick} />
         <LinkContainer>
             <Link href="/rooms">
                 <LinkItem>Kamers </LinkItem>
@@ -41,6 +44,22 @@ const Navbar = styled(BaseNavbar)`
     align-items: center;
     background-color: ${colors.white};
     height: 3.5rem;
+
+    ${Hamburger} {
+        margin: 0 24px;
+
+        @media (${breakpoints.mediumMin}) {
+            display: none;
+        }
+    }
+
+    ${LinkContainer} {
+        display: none;
+
+        @media (${breakpoints.mediumMin}) {
+            display: block;
+        }
+    }
 
     ${LinkItem} {
         padding: 0 12px;
