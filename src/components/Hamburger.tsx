@@ -20,7 +20,7 @@ const Hamburger = styled(BaseHamburger)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 32px;
+    width: 30px;
     height: 100%;
 
     ${Line} {

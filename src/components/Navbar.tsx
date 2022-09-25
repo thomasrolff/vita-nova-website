@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
+import { Logo } from '../svg';
 import Hamburger from './Hamburger';
 
 const LinkItem = styled.a``;
-const LinkContainer = styled.div``;
+const LeftLinkContainer = styled.div``;
+const RightLinkContainer = styled.div``;
 const LogoContainer = styled.div``;
 const BookingButton = styled.a``;
 
@@ -16,26 +18,28 @@ interface IProps {
 const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
     <nav className={className}>
         <Hamburger onClick={onHamburgerClick} />
-        <LinkContainer>
+        <LeftLinkContainer>
             <Link href="/rooms">
                 <LinkItem>Kamers </LinkItem>
             </Link>
             <Link href="/ship">
                 <LinkItem>Het Schip </LinkItem>
             </Link>
-        </LinkContainer>
+        </LeftLinkContainer>
         <LogoContainer>
-            <Link href="/">Logo</Link>
+            <Link href="/">
+                <Logo />
+            </Link>
         </LogoContainer>
-        <LinkContainer>
+        <RightLinkContainer>
             <BookingButton
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                Boek nu
+                Boeken
             </BookingButton>
-        </LinkContainer>
+        </RightLinkContainer>
     </nav>
 );
 
@@ -53,11 +57,20 @@ const Navbar = styled(BaseNavbar)`
         }
     }
 
-    ${LinkContainer} {
+    ${LeftLinkContainer} {
         display: none;
 
         @media (${breakpoints.mediumMin}) {
             display: block;
+        }
+    }
+
+    ${RightLinkContainer} {
+        display: none;
+
+        @media (${breakpoints.mediumMin}) {
+            display: block;
+            margin-left: auto;
         }
     }
 
@@ -72,25 +85,47 @@ const Navbar = styled(BaseNavbar)`
     }
 
     ${LogoContainer} {
-        align-self: flex-start;
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 4.2rem;
-        width: 240px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        background-color: ${colors.white};
-        margin: 0 auto;
-        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (${breakpoints.mediumMin}) {
+            align-self: flex-start;
+            background-color: ${colors.white};
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            height: 4.2rem;
+            width: 240px;
+            z-index: 1;
+        }
+    }
+
+    ${Logo} {
+        height: 27px;
+
+        @media (${breakpoints.mediumMin}) {
+            height: 34px;
+        }
     }
 
     ${BookingButton} {
+        display: flex;
+        align-items: center;
         background-color: ${colors.orange};
         color: ${colors.white};
-        padding: 8px 24px;
+        height: 32px;
+        padding: 0 12px;
         margin-right: 24px;
-        font-size: 1.1rem;
+        font-size: 1rem;
+
+        @media (${breakpoints.mediumMin}) {
+            height: 36px;
+            padding: 8px 24px;
+            font-size: 1.1rem;
+        }
     }
 `;
 
