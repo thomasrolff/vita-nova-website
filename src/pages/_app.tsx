@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import { GlobalStyle } from '../styles';
@@ -9,10 +10,14 @@ const AppContainer = styled.div`
 `;
 
 function App({ Component, pageProps }: AppProps) {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    console.log(menuOpen);
+
     return (
         <>
             <GlobalStyle />
-            <Layout>
+            <Layout onHamburgerClick={() => setMenuOpen(!menuOpen)}>
                 <AppContainer>
                     <Component {...pageProps} />
                 </AppContainer>

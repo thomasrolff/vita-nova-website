@@ -2,12 +2,13 @@ import Navbar from './Navbar';
 
 interface IProps {
     children: React.ReactNode;
+    onHamburgerClick(): void;
 }
 
-const Layout = ({ children }: IProps) => {
+const Layout = ({ children, onHamburgerClick }: IProps) => {
     return (
         <>
-            <Navbar />
+            <Navbar onHamburgerClick={onHamburgerClick} />
             {children}
             <div>Footer</div>
         </>
