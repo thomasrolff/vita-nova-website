@@ -104,7 +104,7 @@ const Navbar = styled(BaseNavbar)`
     }
 
     ${Logo} {
-        height: 27px;
+        height: 24px;
 
         @media (${breakpoints.mediumMin}) {
             height: 34px;
