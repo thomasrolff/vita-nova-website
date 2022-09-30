@@ -11,6 +11,7 @@ interface IProps {
     imageSrc: StaticImageData;
     imageAlt: string;
     imageLeft?: boolean;
+    sectionRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 const BaseImageSection = ({
@@ -18,8 +19,9 @@ const BaseImageSection = ({
     children,
     imageAlt,
     imageSrc,
+    sectionRef,
 }: IProps) => (
-    <section className={className}>
+    <section className={className} ref={sectionRef}>
         <TextContainer>{children}</TextContainer>
         <ImageContainer>
             <Image alt={imageAlt} objectFit="cover" src={imageSrc} />

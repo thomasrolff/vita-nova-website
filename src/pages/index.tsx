@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
@@ -5,6 +6,18 @@ import placeholderImg from '../../public/images/placeholder.jpg';
 import { Container, ImageSection, LandingSection } from '../components';
 
 const BaseHome: NextPage = () => {
+    const sectionRef = useRef<null | HTMLDivElement>(null);
+
+    const handleScrollButtonClick = () => {
+        if (!sectionRef.current) return;
+
+        window.scrollTo({
+            top: sectionRef.current.offsetTop,
+            left: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div>
             <Head>
@@ -16,13 +29,14 @@ const BaseHome: NextPage = () => {
                 <link href="/favicon.ico" rel="icon" />
             </Head>
 
-            <LandingSection />
+            <LandingSection onScrollButtonClick={handleScrollButtonClick} />
 
             <Container>
                 <ImageSection
                     imageAlt="Placeholder Image"
                     imageLeft
                     imageSrc={placeholderImg}
+                    sectionRef={sectionRef}
                 >
                     <h2>Welkom aan boord van de Vita Nova</h2>
                     <p>

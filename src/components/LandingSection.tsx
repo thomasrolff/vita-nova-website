@@ -1,14 +1,17 @@
 import styled from 'styled-components';
-import { breakpoints } from '../constants';
+import { breakpoints, colors } from '../constants';
+import { Arrow } from '../svg';
 import { LinkButton } from './LinkButton';
 
 const ButtonContainer = styled.div``;
+const ScrollButton = styled.button``;
 
 interface IProps {
     className?: string;
+    onScrollButtonClick(): void;
 }
 
-const BaseLandingSection = ({ className }: IProps) => (
+const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
     <section className={className}>
         <ButtonContainer>
             <LinkButton
@@ -16,7 +19,9 @@ const BaseLandingSection = ({ className }: IProps) => (
                 title="Boeken"
             />
         </ButtonContainer>
-        <button className="arrow">Scroll</button>
+        <ScrollButton onClick={onScrollButtonClick}>
+            <Arrow />
+        </ScrollButton>
     </section>
 );
 
@@ -34,9 +39,14 @@ export const LandingSection = styled(BaseLandingSection)`
         flex-direction: column;
     }
 
-    .arrow {
+    ${ScrollButton} {
         position: absolute;
-        bottom: 2rem;
+        bottom: 1.5rem;
+        height: 46px;
+        width: 46px;
+        border-radius: 40px;
+        padding: 14px;
+        background-color: ${colors.offWhite};
     }
 
     @media (${breakpoints.mediumMin}) {
