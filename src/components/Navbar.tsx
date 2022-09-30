@@ -28,7 +28,9 @@ const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
         </LeftLinkContainer>
         <LogoContainer>
             <Link href="/">
-                <Logo />
+                <a>
+                    <Logo />
+                </a>
             </Link>
         </LogoContainer>
         <RightLinkContainer>
