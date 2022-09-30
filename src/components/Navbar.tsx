@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
 import { Logo } from '../svg';
-import Hamburger from './Hamburger';
+import { Hamburger } from './Hamburger';
 
 const LinkItem = styled.a``;
 const LeftLinkContainer = styled.div``;
@@ -43,7 +43,7 @@ const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
     </nav>
 );
 
-const Navbar = styled(BaseNavbar)`
+export const Navbar = styled(BaseNavbar)`
     display: flex;
     align-items: center;
     background-color: ${colors.white};
@@ -124,9 +124,6 @@ const Navbar = styled(BaseNavbar)`
         @media (${breakpoints.mediumMin}) {
             height: 36px;
             padding: 8px 24px;
-            font-size: 1.1rem;
         }
     }
 `;
-
-export default Navbar;

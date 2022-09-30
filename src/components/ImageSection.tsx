@@ -27,7 +27,7 @@ const BaseImageSection = ({
     </section>
 );
 
-const ImageSection = styled(BaseImageSection)`
+export const ImageSection = styled(BaseImageSection)`
     display: flex;
     flex-direction: column;
 
@@ -62,5 +62,3 @@ const ImageSection = styled(BaseImageSection)`
         }
     }
 `;
-
-export default ImageSection;
