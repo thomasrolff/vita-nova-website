@@ -37,7 +37,7 @@ const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                Boeken
+                Boek nu
             </BookingButton>
         </RightLinkContainer>
     </nav>

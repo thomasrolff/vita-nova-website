@@ -15,8 +15,9 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
     <section className={className}>
         <ButtonContainer>
             <LinkButton
+                arrow
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-                title="Boeken"
+                title="Boek nu"
             />
         </ButtonContainer>
         <ScrollButton onClick={onScrollButtonClick}>
@@ -41,12 +42,18 @@ export const LandingSection = styled(BaseLandingSection)`
 
     ${ScrollButton} {
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         bottom: 1.5rem;
         height: 46px;
         width: 46px;
         border-radius: 40px;
-        padding: 14px;
         background-color: ${colors.offWhite};
+    }
+
+    ${Arrow} {
+        height: 18px;
     }
 
     @media (${breakpoints.mediumMin}) {
