@@ -1,3 +1,4 @@
+import { Footer } from './Footer';
 import { Navbar } from './Navbar';
 
 interface IProps {
@@ -10,7 +11,7 @@ export const Layout = ({ children, onHamburgerClick }: IProps) => {
         <>
             <Navbar onHamburgerClick={onHamburgerClick} />
             {children}
-            <div>Footer</div>
+            <Footer />
         </>
     );
 };

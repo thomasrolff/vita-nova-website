@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     ul {
         padding: 0;
         margin: 0;
+        list-style: none;
     }
 
     li {
@@ -38,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h2 {
         font-size: 2.2rem;
-        line-height: 1.1;
+        line-height: 1.2;
     }
 
     p {
