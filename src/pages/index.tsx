@@ -3,9 +3,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
-import { Container, ImageSection, LandingSection } from '../components';
+import { Container, SplitImageSection, LandingSection } from '../components';
+import { LinkButton } from '../components/LinkButton';
 
-const BaseHome: NextPage = () => {
+interface IProps {
+    className?: string;
+}
+
+const BaseHome: NextPage = ({ className }: IProps) => {
     const sectionRef = useRef<null | HTMLDivElement>(null);
 
     const handleScrollButtonClick = () => {
@@ -19,7 +24,7 @@ const BaseHome: NextPage = () => {
     };
 
     return (
-        <div>
+        <div className={className}>
             <Head>
                 <title>Welkom aan boord van de Vita Nova</title>
                 <meta
@@ -32,7 +37,7 @@ const BaseHome: NextPage = () => {
             <LandingSection onScrollButtonClick={handleScrollButtonClick} />
 
             <Container>
-                <ImageSection
+                <SplitImageSection
                     imageAlt="Placeholder Image"
                     imageLeft
                     imageSrc={placeholderImg}
@@ -47,8 +52,13 @@ const BaseHome: NextPage = () => {
                         zachte deining van het water. Een onvergetelijke
                         ervaring!
                     </p>
-                </ImageSection>
-                <ImageSection
+                    <LinkButton
+                        href="/rooms"
+                        secondary
+                        title="Ontdek de Vita Nova"
+                    />
+                </SplitImageSection>
+                <SplitImageSection
                     imageAlt="Placeholder Image"
                     imageSrc={placeholderImg}
                 >
@@ -64,12 +74,23 @@ const BaseHome: NextPage = () => {
                         over leuke groepsactiviteiten of catering aan boord voor
                         een onvergetelijke tijd samen!
                     </p>
-                </ImageSection>
+                    <LinkButton
+                        href="/rooms"
+                        secondary
+                        title="Meer over groepen"
+                    />
+                </SplitImageSection>
             </Container>
         </div>
     );
 };
 
-const Home = styled(BaseHome)``;
+const Home = styled(BaseHome)`
+    ${SplitImageSection} {
+        ${LinkButton} {
+            margin-top: 36px;
+        }
+    }
+`;
 
 export default Home;
