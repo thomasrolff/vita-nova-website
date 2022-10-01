@@ -26,10 +26,23 @@ const BaseRooms: NextPage = ({ className }: IProps) => {
                 <SplitSwiperSection images={roomOne.images}>
                     <h2>{roomOne.title}</h2>
                     <p>{roomOne.description}</p>
+                    <LinkButton
+                        href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                        right
+                        secondary
+                        targetBlank
+                        title="Beschikbaarheid"
+                    />
                 </SplitSwiperSection>
                 <SplitSwiperSection imageLeft images={roomTwo.images}>
                     <h2>{roomTwo.title}</h2>
                     <p>{roomTwo.description}</p>
+                    <LinkButton
+                        href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                        secondary
+                        targetBlank
+                        title="Beschikbaarheid"
+                    />
                 </SplitSwiperSection>
             </Container>
         </div>

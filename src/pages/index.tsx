@@ -76,6 +76,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                     </p>
                     <LinkButton
                         href="/rooms"
+                        right
                         secondary
                         title="Meer over groepen"
                     />
