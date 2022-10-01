@@ -49,4 +49,11 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: ${colors.offBlack};
     }
+
+    button {
+        appearance: none;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+    }
 `;

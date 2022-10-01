@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
 import { Logo } from '../svg';
-import Hamburger from './Hamburger';
+import { Hamburger } from './Hamburger';
 
 const LinkItem = styled.a``;
 const LeftLinkContainer = styled.div``;
@@ -28,7 +28,9 @@ const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
         </LeftLinkContainer>
         <LogoContainer>
             <Link href="/">
-                <Logo />
+                <a>
+                    <Logo />
+                </a>
             </Link>
         </LogoContainer>
         <RightLinkContainer>
@@ -37,13 +39,13 @@ const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                Boeken
+                Boek nu
             </BookingButton>
         </RightLinkContainer>
     </nav>
 );
 
-const Navbar = styled(BaseNavbar)`
+export const Navbar = styled(BaseNavbar)`
     display: flex;
     align-items: center;
     background-color: ${colors.white};
@@ -124,9 +126,6 @@ const Navbar = styled(BaseNavbar)`
         @media (${breakpoints.mediumMin}) {
             height: 36px;
             padding: 8px 24px;
-            font-size: 1.1rem;
         }
     }
 `;
-
-export default Navbar;

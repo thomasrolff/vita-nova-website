@@ -16,7 +16,7 @@ const BaseHamburger = ({ className, onClick }: IProps) => (
     </div>
 );
 
-const Hamburger = styled(BaseHamburger)`
+export const Hamburger = styled(BaseHamburger)`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,5 +29,3 @@ const Hamburger = styled(BaseHamburger)`
         background-color: ${colors.blue};
     }
 `;
-
-export default Hamburger;

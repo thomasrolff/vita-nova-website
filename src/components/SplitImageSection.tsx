@@ -11,15 +11,17 @@ interface IProps {
     imageSrc: StaticImageData;
     imageAlt: string;
     imageLeft?: boolean;
+    sectionRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
-const BaseImageSection = ({
+const BaseSplitImageSection = ({
     className,
     children,
     imageAlt,
     imageSrc,
+    sectionRef,
 }: IProps) => (
-    <section className={className}>
+    <section className={className} ref={sectionRef}>
         <TextContainer>{children}</TextContainer>
         <ImageContainer>
             <Image alt={imageAlt} objectFit="cover" src={imageSrc} />
@@ -27,7 +29,7 @@ const BaseImageSection = ({
     </section>
 );
 
-const ImageSection = styled(BaseImageSection)`
+export const SplitImageSection = styled(BaseSplitImageSection)`
     display: flex;
     flex-direction: column;
 
@@ -55,12 +57,10 @@ const ImageSection = styled(BaseImageSection)`
     }
 
     ${TextContainer} {
-        padding: 24px;
+        padding: 48px 24px;
 
         @media (${breakpoints.mediumMin}) {
             padding: 60px;
         }
     }
 `;
-
-export default ImageSection;
