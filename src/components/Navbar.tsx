@@ -101,7 +101,7 @@ export const Navbar = styled(BaseNavbar)`
             border-bottom-right-radius: 15px;
             height: 4.2rem;
             width: 240px;
-            z-index: 1;
+            z-index: 2;
         }
     }
 
