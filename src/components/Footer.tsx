@@ -41,11 +41,11 @@ const BaseFooter = ({ className }: IProps) => (
 export const Footer = styled(BaseFooter)`
     background-color: ${colors.blue};
     color: ${colors.offWhite};
-    padding: 40px 24px 24px;
+    padding: 48px 24px 24px;
 
     // Todo: fix responsive padding
     @media (${breakpoints.mediumMin}) {
-        padding: 40px 0 24px;
+        padding: 48px 0 24px;
     }
 
     h3 {
