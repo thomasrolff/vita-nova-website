@@ -6,9 +6,12 @@ import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Lightbox } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 import { breakpoints, colors } from '../constants';
-import { IImages } from '../types';
+import { IImage } from '../types';
+import { useState } from 'react';
 
 const ImageContainer = styled.div``;
 const TextContainer = styled.div``;
@@ -17,33 +20,55 @@ interface IProps {
     className?: string;
     children: React.ReactNode;
     imageLeft?: boolean;
-    images: IImages[];
+    images: IImage[];
 }
 
-const BaseSplitSwiperSection = ({ className, children, images }: IProps) => (
-    <section className={className}>
-        <TextContainer>{children}</TextContainer>
-        <ImageContainer>
-            <Swiper
-                modules={[Navigation, Pagination]}
-                navigation
-                pagination={{ clickable: true }}
-                slidesPerView={1}
-                speed={400}
-            >
-                {images.map((image) => (
-                    <SwiperSlide key={image.id}>
-                        <Image
-                            alt={image.alt}
-                            objectFit="cover"
-                            src={image.src}
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </ImageContainer>
-    </section>
-);
+const BaseSplitSwiperSection = ({ className, children, images }: IProps) => {
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const fullSizeImages = images.map((image) => image.srcFull);
+
+    const handleImageClick = (id: number) => {
+        setImageIndex(id);
+        setLightboxOpen(true);
+    };
+
+    return (
+        <section className={className}>
+            <TextContainer>{children}</TextContainer>
+            <ImageContainer>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    slidesPerView={1}
+                    speed={400}
+                >
+                    {images.map((image) => (
+                        <SwiperSlide key={image.id}>
+                            <Image
+                                alt={image.alt}
+                                objectFit="cover"
+                                src={image.src}
+                                onClick={() => handleImageClick(image.id)}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </ImageContainer>
+            <Lightbox
+                close={() => setLightboxOpen(false)}
+                index={imageIndex}
+                open={lightboxOpen}
+                slides={fullSizeImages}
+            />
+        </section>
+    );
+};
+
+// Todo: optimize lightbox image sizes
+// https://yet-another-react-lightbox.com/examples/nextjs
 
 export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     display: flex;

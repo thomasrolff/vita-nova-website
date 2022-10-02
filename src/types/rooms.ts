@@ -1,8 +1,8 @@
-import { IImages } from './images';
+import { IImage } from './images';
 
 export interface IRooms {
     id: number;
     title: string;
     description: string;
-    images: IImages[];
+    images: IImage[];
 }

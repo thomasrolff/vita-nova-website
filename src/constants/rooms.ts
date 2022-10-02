@@ -1,7 +1,12 @@
 import { IRooms } from '../types';
-import towels from '/public/images/handdoeken.jpg';
-import placeholder from '/public/images/placeholder.jpg';
-import mirror from '/public/images/mirror.jpg';
+import {
+    hut0,
+    hut0Full,
+    placeholder,
+    placeholderFull,
+    forecastle0,
+    forecastle0Full,
+} from './images';
 
 export const rooms: IRooms[] = [
     {
@@ -12,12 +17,14 @@ export const rooms: IRooms[] = [
         images: [
             {
                 id: 0,
-                src: towels,
+                src: hut0,
+                srcFull: hut0Full,
                 alt: 'Handdoeken image',
             },
             {
                 id: 1,
                 src: placeholder,
+                srcFull: placeholderFull,
                 alt: 'Placeholder image',
             },
         ],
@@ -30,12 +37,14 @@ export const rooms: IRooms[] = [
         images: [
             {
                 id: 0,
-                src: mirror,
+                src: forecastle0,
+                srcFull: forecastle0Full,
                 alt: 'Handdoeken image',
             },
             {
                 id: 1,
                 src: placeholder,
+                srcFull: placeholderFull,
                 alt: 'Placeholder image',
             },
         ],
