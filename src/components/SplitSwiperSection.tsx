@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { Lightbox } from 'yet-another-react-lightbox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Lightbox } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
 import { breakpoints, colors } from '../constants';
@@ -58,6 +58,7 @@ const BaseSplitSwiperSection = ({ className, children, images }: IProps) => {
                 </Swiper>
             </ImageContainer>
             <Lightbox
+                animation={{ fade: 300, swipe: 400 }}
                 close={() => setLightboxOpen(false)}
                 index={imageIndex}
                 open={lightboxOpen}
