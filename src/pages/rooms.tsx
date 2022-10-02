@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Container, SplitSwiperSection } from '../components';
+import { Container, FeatureList, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
 import { rooms } from '../constants';
 
@@ -25,6 +25,7 @@ const BaseRooms: NextPage = ({ className }: IProps) => {
             <Container>
                 <SplitSwiperSection images={roomOne.images}>
                     <h2>{roomOne.title}</h2>
+                    <FeatureList features={roomOne.features} />
                     <p>{roomOne.description}</p>
                     <LinkButton
                         href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"

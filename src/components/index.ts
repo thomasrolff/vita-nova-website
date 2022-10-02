@@ -5,3 +5,4 @@ export * from './SplitSwiperSection';
 export * from './LandingSection';
 export * from './Layout';
 export * from './Navbar';
+export * from './FeatureList';

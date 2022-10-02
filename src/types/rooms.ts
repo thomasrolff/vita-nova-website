@@ -1,3 +1,4 @@
+import { IFeature } from './features';
 import { IImage } from './images';
 
 export interface IRooms {
@@ -5,4 +6,5 @@ export interface IRooms {
     title: string;
     description: string;
     images: IImage[];
+    features: IFeature[];
 }
