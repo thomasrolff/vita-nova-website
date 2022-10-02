@@ -123,6 +123,7 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     .swiper-button-next,
     .swiper-button-prev {
         color: ${colors.offWhite};
+        opacity: 0.8;
         padding: 0 24px;
     }
 
