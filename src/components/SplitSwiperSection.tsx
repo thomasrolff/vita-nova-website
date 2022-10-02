@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { Lightbox } from 'yet-another-react-lightbox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
+import 'yet-another-react-lightbox/styles.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'yet-another-react-lightbox/styles.css';
 
 import { breakpoints, colors } from '../constants';
 import { IImage } from '../types';
@@ -51,6 +51,7 @@ const BaseSplitSwiperSection = ({ className, children, images }: IProps) => {
                                 alt={image.alt}
                                 objectFit="cover"
                                 src={image.src}
+                                style={{ cursor: 'pointer' }}
                                 onClick={() => handleImageClick(image.id)}
                             />
                         </SwiperSlide>
@@ -121,6 +122,7 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     .swiper-button-next,
     .swiper-button-prev {
         color: ${colors.offWhite};
+        padding: 24px;
     }
 
     // Todo: fix responsive pagination visibility
