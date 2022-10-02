@@ -27,12 +27,12 @@ export const rooms: IRooms[] = [
                 svg: ShowerIcon,
             },
             {
-                id: 1,
+                id: 2,
                 title: 'Elektrisch dakraam',
                 svg: WindowIcon,
             },
             {
-                id: 1,
+                id: 3,
                 title: 'Gratis Wifi',
                 svg: WifiIcon,
             },
@@ -69,7 +69,7 @@ export const rooms: IRooms[] = [
                 svg: BedIcon,
             },
             {
-                id: 1,
+                id: 2,
                 title: 'Douche en toilet (met scheepspomp!)',
                 svg: ShowerIcon,
             },
