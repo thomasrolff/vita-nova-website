@@ -57,7 +57,7 @@ export const SplitImageSection = styled(BaseSplitImageSection)`
     }
 
     ${TextContainer} {
-        padding: 48px 24px;
+        padding: 48px 24px 72px;
 
         @media (${breakpoints.mediumMin}) {
             padding: 60px;

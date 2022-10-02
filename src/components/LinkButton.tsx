@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
 import { Arrow } from '../svg';
 
 interface IProps {
@@ -9,11 +9,19 @@ interface IProps {
     href: string;
     title: string;
     secondary?: boolean;
+    right?: boolean;
+    targetBlank?: boolean;
 }
 
-const BaseLinkButton = ({ arrow, className, href, title }: IProps) => (
+const BaseLinkButton = ({
+    arrow,
+    className,
+    href,
+    title,
+    targetBlank,
+}: IProps) => (
     <Link href={href}>
-        <a className={className}>
+        <a className={className} target={targetBlank ? '_blank' : '_self'}>
             {title}
             {arrow && <Arrow />}
         </a>
@@ -47,5 +55,9 @@ export const LinkButton = styled(BaseLinkButton)`
     &:hover {
         color: ${({ secondary }) => secondary && colors.offWhite};
         background-color: ${({ secondary }) => secondary && colors.blue};
+    }
+
+    @media (${breakpoints.mediumMin}) {
+        margin-left: ${({ right }) => right && 'auto'};
     }
 `;

@@ -15,7 +15,6 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
     <section className={className}>
         <ButtonContainer>
             <LinkButton
-                arrow
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                 title="Boek nu"
             />
@@ -46,14 +45,14 @@ export const LandingSection = styled(BaseLandingSection)`
         align-items: center;
         justify-content: center;
         bottom: 1.5rem;
-        height: 46px;
-        width: 46px;
+        height: 44px;
+        width: 44px;
         border-radius: 40px;
         background-color: ${colors.offWhite};
     }
 
     ${Arrow} {
-        height: 18px;
+        height: 14px;
     }
 
     @media (${breakpoints.mediumMin}) {
