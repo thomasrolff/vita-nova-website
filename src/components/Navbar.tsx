@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { breakpoints, colors } from '../constants';
+import { useRouter } from 'next/router';
+import { breakpoints, colors, routes } from '../constants';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
 
-const LinkItem = styled.a``;
+interface ILinkItem {
+    active?: boolean;
+}
+
+const LinkItem = styled.a<ILinkItem>``;
 const LeftLinkContainer = styled.div``;
 const RightLinkContainer = styled.div``;
 const LogoContainer = styled.div``;
@@ -15,35 +20,48 @@ interface IProps {
     onHamburgerClick(): void;
 }
 
-const BaseNavbar = ({ className, onHamburgerClick }: IProps) => (
-    <nav className={className}>
-        <Hamburger onClick={onHamburgerClick} />
-        <LeftLinkContainer>
-            <Link href="/rooms">
-                <LinkItem>Kamers </LinkItem>
-            </Link>
-            <Link href="/ship">
-                <LinkItem>Het Schip </LinkItem>
-            </Link>
-        </LeftLinkContainer>
-        <LogoContainer>
-            <Link href="/">
-                <a>
-                    <Logo />
-                </a>
-            </Link>
-        </LogoContainer>
-        <RightLinkContainer>
-            <BookingButton
-                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                Boek nu
-            </BookingButton>
-        </RightLinkContainer>
-    </nav>
-);
+const BaseNavbar = ({ className, onHamburgerClick }: IProps) => {
+    const router = useRouter();
+
+    return (
+        <nav className={className}>
+            <Hamburger onClick={onHamburgerClick} />
+            <LeftLinkContainer>
+                {routes
+                    .filter((route) => route.inNavbar)
+                    .map((route) => (
+                        <Link href={route.href} key={route.id}>
+                            <LinkItem
+                                className={
+                                    router.pathname === route.href
+                                        ? 'active'
+                                        : ''
+                                }
+                            >
+                                {route.title}
+                            </LinkItem>
+                        </Link>
+                    ))}
+            </LeftLinkContainer>
+            <LogoContainer>
+                <Link href="/">
+                    <a>
+                        <Logo />
+                    </a>
+                </Link>
+            </LogoContainer>
+            <RightLinkContainer>
+                <BookingButton
+                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Boek nu
+                </BookingButton>
+            </RightLinkContainer>
+        </nav>
+    );
+};
 
 export const Navbar = styled(BaseNavbar)`
     display: flex;
@@ -77,13 +95,18 @@ export const Navbar = styled(BaseNavbar)`
     }
 
     ${LinkItem} {
-        padding: 0 12px;
-        margin-right: 6px;
+        margin: 0 12px;
+        padding: 3px 0;
         cursor: pointer;
 
         &:first-of-type {
-            margin-left: 12px;
+            margin-left: 24px;
         }
+    }
+
+    .active {
+        color: ${colors.blue};
+        border-bottom: 1.5px solid ${colors.blue};
     }
 
     ${LogoContainer} {
