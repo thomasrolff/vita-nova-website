@@ -39,6 +39,7 @@ const BaseSplitSwiperSection = ({ className, children, images }: IProps) => {
             <TextContainer>{children}</TextContainer>
             <ImageContainer>
                 <Swiper
+                    loop={true}
                     modules={[Navigation, Pagination]}
                     navigation
                     pagination={{ clickable: true }}
@@ -101,7 +102,7 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     }
 
     ${TextContainer} {
-        padding: 48px 24px;
+        padding: 48px 24px 72px;
 
         @media (${breakpoints.mediumMin}) {
             padding: 60px;
@@ -122,7 +123,12 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     .swiper-button-next,
     .swiper-button-prev {
         color: ${colors.offWhite};
-        padding: 24px;
+        padding: 0 24px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        padding: 56px;
     }
 
     // Todo: fix responsive pagination visibility
