@@ -6,3 +6,4 @@ export * from './LandingSection';
 export * from './Layout';
 export * from './Navbar';
 export * from './FeatureList';
+export * from './Accordion';
