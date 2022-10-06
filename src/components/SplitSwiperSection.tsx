@@ -105,7 +105,7 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
         padding: 48px 24px 72px;
 
         @media (${breakpoints.mediumMin}) {
-            padding: 60px;
+            padding: 48px 48px 24px;
         }
     }
 

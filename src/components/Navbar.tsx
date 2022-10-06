@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { breakpoints, colors, routes } from '../constants';
+import { breakpoints, colors } from '../constants';
+import { routes } from '../data';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
 
