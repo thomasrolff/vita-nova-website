@@ -1,7 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import styled from 'styled-components';
 import { Accordion, Container } from '../components';
+import backgroundImg from '/public/images/placeholder_full.jpg';
+
+const ImageContainer = styled.div``;
 
 const accordionData = [
     {
@@ -40,6 +44,7 @@ const BaseFaq: NextPage = ({ className }: IProps) => (
             />
         </Head>
         <Container>
+            <h2>FAQs</h2>
             {accordionData.map((section) => (
                 <Accordion
                     body={section.content}
@@ -48,12 +53,33 @@ const BaseFaq: NextPage = ({ className }: IProps) => (
                 />
             ))}
         </Container>
-        <div className="test" />
+        <ImageContainer>
+            <Image
+                alt="placeholder"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+                src={backgroundImg}
+            />
+        </ImageContainer>
     </div>
 );
 
 const Faq = styled(BaseFaq)`
-    .test {
+    h2 {
+        margin-bottom: 48px;
+        margin-left: 24px;
+    }
+
+    ${Container} {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 48px 0;
+    }
+
+    ${ImageContainer} {
+        position: relative;
+        width: 100%;
         height: 400px;
     }
 `;
