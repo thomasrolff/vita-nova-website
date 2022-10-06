@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { breakpoints, colors } from '../constants';
+import { colors } from '../constants';
 
 const AccordionTitle = styled.div``;
 const AccordionBody = styled.div``;
+const Icon = styled.div``;
 
 interface IProps {
     className?: string;
@@ -25,7 +26,7 @@ const BaseAccordion = ({ className, title, body }: IProps) => {
         <div className={className}>
             <AccordionTitle onClick={() => setIsActive(!isActive)}>
                 <div>{title}</div>
-                <div>+</div>
+                <Icon>{isActive ? '-' : '+'}</Icon>
             </AccordionTitle>
             <AccordionBody
                 ref={bodyRef}
@@ -38,23 +39,28 @@ const BaseAccordion = ({ className, title, body }: IProps) => {
 };
 
 export const Accordion = styled(BaseAccordion)`
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 0 24px 16px;
 
     ${AccordionTitle} {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-right: 24px;
-        height: 56px;
+        padding-top: 16px;
+        min-height: 56px;
         cursor: pointer;
         border-top: 1px solid ${colors.grey};
+        color: ${colors.blue};
+        font-size: 1.2rem;
     }
 
     ${AccordionBody} {
         overflow: hidden;
-        background: lightgray;
-        transition: max-height 0.3s ease-in-out;
+        transition: max-height 0.25s ease-in-out;
         padding-right: 24px;
+    }
+
+    ${Icon} {
+        margin-left: 16px;
     }
 `;
