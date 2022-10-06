@@ -3,7 +3,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { Container, FeatureList, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
-import { rooms } from '../constants';
+import { rooms } from '../data';
 
 interface IProps {
     className?: string;

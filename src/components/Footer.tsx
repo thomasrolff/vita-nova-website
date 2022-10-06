@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { breakpoints, colors, routes } from '../constants';
+import { breakpoints, colors } from '../constants';
+import { routes } from '../data';
 import { Logo } from '../svg';
 import { Container } from './Container';
 

@@ -3,32 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Accordion, Container } from '../components';
+import { faqs } from '../data';
 import backgroundImg from '/public/images/placeholder_full.jpg';
 
 const ImageContainer = styled.div``;
-
-const accordionData = [
-    {
-        id: 0,
-        title: 'Section 1',
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore.`,
-    },
-    {
-        id: 1,
-        title: 'Section 2',
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore.`,
-    },
-    {
-        id: 2,
-        title: 'Section 3',
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore.`,
-    },
-];
 
 interface IProps {
     className?: string;
@@ -45,7 +23,7 @@ const BaseFaq: NextPage = ({ className }: IProps) => (
         </Head>
         <Container>
             <h2>FAQs</h2>
-            {accordionData.map((section) => (
+            {faqs.map((section) => (
                 <Accordion
                     body={section.content}
                     key={section.id}
@@ -56,7 +34,6 @@ const BaseFaq: NextPage = ({ className }: IProps) => (
         <ImageContainer>
             <Image
                 alt="placeholder"
-                height="100%"
                 layout="fill"
                 objectFit="cover"
                 src={backgroundImg}
@@ -73,14 +50,13 @@ const Faq = styled(BaseFaq)`
 
     ${Container} {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 48px 0;
+        margin: 48px auto 64px;
     }
 
     ${ImageContainer} {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 480px;
     }
 `;
 
