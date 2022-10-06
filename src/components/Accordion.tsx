@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
 
@@ -13,8 +13,13 @@ interface IProps {
 
 const BaseAccordion = ({ className, title, body }: IProps) => {
     const [isActive, setIsActive] = useState(false);
+    const bodyRef = useRef<HTMLDivElement | null>(null);
 
-    console.log(isActive);
+    const getActiveHeight = () => {
+        if (!bodyRef.current) return;
+
+        return bodyRef.current.scrollHeight;
+    };
 
     return (
         <div className={className}>
@@ -22,7 +27,10 @@ const BaseAccordion = ({ className, title, body }: IProps) => {
                 <div>{title}</div>
                 <div>+</div>
             </AccordionTitle>
-            <AccordionBody className={isActive ? 'active' : 'inactive'}>
+            <AccordionBody
+                ref={bodyRef}
+                style={{ maxHeight: isActive ? getActiveHeight() : 0 }}
+            >
                 <p>{body}</p>
             </AccordionBody>
         </div>
@@ -40,22 +48,13 @@ export const Accordion = styled(BaseAccordion)`
         padding-right: 24px;
         height: 56px;
         cursor: pointer;
-        border-top: 1px solid ${colors.greyLight};
-        border-bottom: 1px solid ${colors.greyLight};
+        border-top: 1px solid ${colors.grey};
     }
 
     ${AccordionBody} {
         overflow: hidden;
         background: lightgray;
-        transition: all 0.8s linear;
+        transition: max-height 0.3s ease-in-out;
         padding-right: 24px;
-    }
-
-    .inactive {
-        max-height: 0px;
-    }
-
-    .active {
-        max-height: 300px;
     }
 `;
