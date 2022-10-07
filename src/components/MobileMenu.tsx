@@ -5,6 +5,7 @@ import { colors } from '../constants';
 import { routes } from '../data';
 
 const LinkItem = styled.a``;
+const BookingLink = styled.a``;
 const Nav = styled.nav``;
 
 interface IProps {
@@ -22,17 +23,12 @@ const BaseMobileMenu = ({ className }: IProps) => {
                     .filter((route) => route.inNavbar)
                     .map((route) => (
                         <Link href={route.href} key={route.id}>
-                            <LinkItem
-                                className={
-                                    router.pathname === route.href
-                                        ? 'active'
-                                        : ''
-                                }
-                            >
-                                {route.title}
-                            </LinkItem>
+                            <LinkItem>{route.title}</LinkItem>
                         </Link>
                     ))}
+                <Link href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/">
+                    <BookingLink>Boek nu</BookingLink>
+                </Link>
             </Nav>
         </div>
     );
@@ -46,7 +42,7 @@ export const MobileMenu = styled(BaseMobileMenu)`
     padding-top: 56px;
     background-color: ${colors.white};
     position: fixed;
-    transition: top 0.4s ease-out;
+    transition: top 0.4s ease;
     top: ${({ open }) => (open ? 0 : '-100%')};
     color: ${colors.white};
     z-index: 10;
@@ -58,11 +54,20 @@ export const MobileMenu = styled(BaseMobileMenu)`
         width: 100%;
     }
 
-    ${LinkItem} {
-        color: ${colors.blue};
+    ${LinkItem}, ${BookingLink} {
         font-size: 1.2rem;
         padding: 16px 0;
+    }
+
+    ${LinkItem} {
         width: 100%;
+        height: 56px;
+        color: ${colors.blue};
         border-top: 1px solid ${colors.blue};
+    }
+
+    ${BookingLink} {
+        color: ${colors.white};
+        background-color: ${colors.orange};
     }
 `;
