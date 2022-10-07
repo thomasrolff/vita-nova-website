@@ -6,11 +6,7 @@ import { routes } from '../data';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
 
-interface ILinkItem {
-    active?: boolean;
-}
-
-const LinkItem = styled.a<ILinkItem>``;
+const LinkItem = styled.a``;
 const LeftLinkContainer = styled.div``;
 const RightLinkContainer = styled.div``;
 const LogoContainer = styled.div``;
@@ -69,6 +65,10 @@ export const Navbar = styled(BaseNavbar)`
     align-items: center;
     background-color: ${colors.white};
     height: 3.5rem;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     ${Hamburger} {
         margin: 0 24px;
@@ -125,7 +125,7 @@ export const Navbar = styled(BaseNavbar)`
             border-bottom-right-radius: 15px;
             height: 4.2rem;
             width: 240px;
-            z-index: 2;
+            z-index: 12;
         }
     }
 
