@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../constants';
 
 const Line = styled.div``;
+const HamburgerContainer = styled.div``;
 
 interface IProps {
     className?: string;
@@ -12,17 +13,16 @@ const BaseHamburger = ({ className, onClick }: IProps) => (
     <div className={className}>
         <input id="hamburger" type="checkbox" onChange={onClick} />
         <label htmlFor="hamburger">
-            <Line className="top-bar" />
-            <Line className="middle-bar" />
-            <Line className="bottom-bar" />
+            <HamburgerContainer>
+                <Line className="top-bar" />
+                <Line className="middle-bar" />
+                <Line className="bottom-bar" />
+            </HamburgerContainer>
         </label>
     </div>
 );
 
 export const Hamburger = styled(BaseHamburger)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100%;
     width: 25px;
 
@@ -30,9 +30,17 @@ export const Hamburger = styled(BaseHamburger)`
         display: none;
     }
 
-    // Todo: add label padding for clickability
     label {
+        width: 25px;
+        height: 56px;
+        cursor: pointer;
+    }
+
+    ${HamburgerContainer} {
         position: relative;
+        height: 56px;
+        width: 25px;
+        transform: translateY(50%);
     }
 
     input[type='checkbox'] + label {
@@ -43,7 +51,7 @@ export const Hamburger = styled(BaseHamburger)`
             height: 2px;
             background-color: ${colors.blue};
             animation-timing-function: ease-out;
-            animation-duration: 0.25s;
+            animation-duration: 0.2s;
             animation-fill-mode: forwards;
             align-self: center;
         }
