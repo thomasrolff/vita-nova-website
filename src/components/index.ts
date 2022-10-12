@@ -7,3 +7,4 @@ export * from './Layout';
 export * from './Navbar';
 export * from './FeatureList';
 export * from './Accordion';
+export * from './MobileMenu';
