@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { colors } from '../constants';
 import { routes } from '../data';
@@ -13,26 +12,26 @@ interface IProps {
     open: boolean;
 }
 
-const BaseMobileMenu = ({ className }: IProps) => {
-    const router = useRouter();
-
-    return (
-        <div className={className}>
-            <Nav>
-                {routes
-                    .filter((route) => route.inNavbar)
-                    .map((route) => (
-                        <Link href={route.href} key={route.id}>
-                            <LinkItem>{route.title}</LinkItem>
-                        </Link>
-                    ))}
-                <Link href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/">
-                    <BookingLink>Boek nu</BookingLink>
-                </Link>
-            </Nav>
-        </div>
-    );
-};
+const BaseMobileMenu = ({ className }: IProps) => (
+    <div className={className}>
+        <Nav>
+            {routes
+                .filter((route) => route.inNavbar)
+                .map((route) => (
+                    <Link href={route.href} key={route.id}>
+                        <LinkItem>{route.title}</LinkItem>
+                    </Link>
+                ))}
+            <BookingLink
+                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                Boek nu
+            </BookingLink>
+        </Nav>
+    </div>
+);
 
 export const MobileMenu = styled(BaseMobileMenu)`
     display: flex;
@@ -57,6 +56,7 @@ export const MobileMenu = styled(BaseMobileMenu)`
     ${LinkItem}, ${BookingLink} {
         font-size: 1.2rem;
         padding: 16px 0;
+        cursor: pointer;
     }
 
     ${LinkItem} {
