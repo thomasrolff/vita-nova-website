@@ -12,7 +12,6 @@ interface IProps {
 
 const BaseLayout = ({ className, children }: IProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
-
     const router = useRouter();
 
     useEffect(() => {

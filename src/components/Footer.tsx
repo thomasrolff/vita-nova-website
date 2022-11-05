@@ -4,8 +4,10 @@ import { breakpoints, colors } from '../constants';
 import { routes } from '../data';
 import { Logo } from '../svg';
 import { Container } from './Container';
+import { GoogleMap } from './GoogleMap';
 
 const LogoContainer = styled.div``;
+const GoogleMapContainer = styled.div``;
 const LinkContainer = styled.ul``;
 const LinkItem = styled.li``;
 const Copyright = styled.span``;
@@ -25,17 +27,20 @@ const BaseFooter = ({ className }: IProps) => (
                     </Link>
                 ))}
             </LinkContainer>
-            <LogoContainer>
-                <Link href="/">
-                    <a>
-                        <Logo />
-                    </a>
-                </Link>
-                <Copyright>
-                    &copy; {new Date().getFullYear()} B&B Vita Nova
-                </Copyright>
-            </LogoContainer>
+            <GoogleMapContainer>
+                <GoogleMap />
+            </GoogleMapContainer>
         </Container>
+        <LogoContainer>
+            <Link href="/">
+                <a>
+                    <Logo />
+                </a>
+            </Link>
+            <Copyright>
+                &copy; {new Date().getFullYear()} B&B Vita Nova
+            </Copyright>
+        </LogoContainer>
     </div>
 );
 
@@ -47,6 +52,19 @@ export const Footer = styled(BaseFooter)`
     // Todo: fix responsive padding
     @media (${breakpoints.mediumMin}) {
         padding: 48px 0 24px;
+    }
+
+    ${Container} {
+        @media (${breakpoints.mediumMin}) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    ${GoogleMapContainer} {
+        @media (${breakpoints.mediumMin}) {
+            width: 400px;
+        }
     }
 
     h3 {
