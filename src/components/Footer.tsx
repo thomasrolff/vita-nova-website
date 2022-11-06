@@ -101,12 +101,20 @@ export const Footer = styled(BaseFooter)`
         }
     }
 
-    h3 {
-        margin-bottom: 8px;
+    ${ListContainer}, ${GoogleMapContainer} {
+        margin-bottom: 32px;
+
+        @media (${breakpoints.mediumMin}) {
+            margin-bottom: 0;
+        }
     }
 
     ${ListContainer} {
         width: fit-content;
+    }
+
+    h3 {
+        margin-bottom: 8px;
     }
 
     ${Pin}, ${Email}, ${Phone} {
