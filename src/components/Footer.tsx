@@ -11,6 +11,7 @@ const GoogleMapContainer = styled.div``;
 const ListContainer = styled.ul``;
 const LinkItem = styled.li``;
 const Copyright = styled.span``;
+const ContactContainer = styled.div``;
 const ContactLink = styled.a``;
 
 interface IProps {
@@ -28,29 +29,31 @@ const BaseFooter = ({ className }: IProps) => (
                     </Link>
                 ))}
             </ListContainer>
-            <ListContainer>
-                <h3>CONTACT</h3>
-                <li>
-                    <Pin />
-                    Kleine koppel 11
-                </li>
-                <li>3812 PG Amersfoort</li>
-                <li>
-                    <Email />
-                    <ContactLink href="mailto:elene@hotelvitanova.nl">
-                        elene@hotelvitanova.nl
-                    </ContactLink>
-                </li>
-                <li>
-                    <Phone />
-                    <ContactLink href="tel:+31651672548">
-                        +31 651672548
-                    </ContactLink>
-                </li>
-            </ListContainer>
-            <GoogleMapContainer>
-                <Map />
-            </GoogleMapContainer>
+            <ContactContainer>
+                <ListContainer>
+                    <h3>CONTACT</h3>
+                    <li>
+                        <Pin />
+                        Kleine koppel 11
+                    </li>
+                    <li>3812 PG Amersfoort</li>
+                    <li>
+                        <Email />
+                        <ContactLink href="mailto:elene@hotelvitanova.nl">
+                            elene@hotelvitanova.nl
+                        </ContactLink>
+                    </li>
+                    <li>
+                        <Phone />
+                        <ContactLink href="tel:+31651672548">
+                            +31 651672548
+                        </ContactLink>
+                    </li>
+                </ListContainer>
+                <GoogleMapContainer>
+                    <Map />
+                </GoogleMapContainer>
+            </ContactContainer>
         </Container>
         <LogoContainer>
             <Link href="/">
@@ -82,8 +85,18 @@ export const Footer = styled(BaseFooter)`
         }
     }
 
+    ${ContactContainer} {
+        display: flex;
+        flex-direction: column;
+
+        @media (${breakpoints.mediumMin}) {
+            flex-direction: row;
+        }
+    }
+
     ${GoogleMapContainer} {
         @media (${breakpoints.mediumMin}) {
+            margin-left: 140px;
             width: 400px;
         }
     }
@@ -97,8 +110,13 @@ export const Footer = styled(BaseFooter)`
     }
 
     ${Pin}, ${Email}, ${Phone} {
-        position: absolute;
-        left: -24px;
+        display: none;
+
+        @media (${breakpoints.mediumMin}) {
+            display: block;
+            position: absolute;
+            left: -24px;
+        }
     }
 
     li {
