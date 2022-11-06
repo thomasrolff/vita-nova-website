@@ -6,3 +6,6 @@ export * from './WindowIcon';
 export * from './WifiIcon';
 export * from './StarIcon';
 export * from './FullScreen';
+export * from './Pin';
+export * from './Email';
+export * from './Phone';

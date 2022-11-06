@@ -2,15 +2,16 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
 import { routes } from '../data';
-import { Logo } from '../svg';
+import { Email, Logo, Phone, Pin } from '../svg';
 import { Container } from './Container';
 import { Map } from './Map';
 
 const LogoContainer = styled.div``;
 const GoogleMapContainer = styled.div``;
-const LinkContainer = styled.ul``;
+const ListContainer = styled.ul``;
 const LinkItem = styled.li``;
 const Copyright = styled.span``;
+const ContactLink = styled.a``;
 
 interface IProps {
     className?: string;
@@ -19,14 +20,34 @@ interface IProps {
 const BaseFooter = ({ className }: IProps) => (
     <div className={className}>
         <Container>
-            <LinkContainer>
+            <ListContainer>
                 <h3>LINKS</h3>
                 {routes.map((route) => (
                     <Link href={route.href} key={route.id}>
-                        <LinkItem>{route.title} </LinkItem>
+                        <LinkItem>{route.title}</LinkItem>
                     </Link>
                 ))}
-            </LinkContainer>
+            </ListContainer>
+            <ListContainer>
+                <h3>CONTACT</h3>
+                <li>
+                    <Pin />
+                    Kleine koppel 11
+                </li>
+                <li>3812 PG Amersfoort</li>
+                <li>
+                    <Email />
+                    <ContactLink href="mailto:elene@hotelvitanova.nl">
+                        elene@hotelvitanova.nl
+                    </ContactLink>
+                </li>
+                <li>
+                    <Phone />
+                    <ContactLink href="tel:+31651672548">
+                        +31 651672548
+                    </ContactLink>
+                </li>
+            </ListContainer>
             <GoogleMapContainer>
                 <Map />
             </GoogleMapContainer>
@@ -71,8 +92,20 @@ export const Footer = styled(BaseFooter)`
         margin-bottom: 8px;
     }
 
-    ${LinkContainer} {
+    ${ListContainer} {
         width: fit-content;
+    }
+
+    ${Pin}, ${Email}, ${Phone} {
+        position: absolute;
+        left: -24px;
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 4px 0;
     }
 
     ${LinkItem} {
@@ -100,5 +133,13 @@ export const Footer = styled(BaseFooter)`
 
     ${Copyright} {
         font-size: 0.8rem;
+    }
+
+    ${ContactLink} {
+        color: ${colors.offWhite};
+
+        :hover {
+            text-decoration: underline;
+        }
     }
 `;
