@@ -1,15 +1,7 @@
 import styled from 'styled-components';
-import { GoogleMap, LoadScriptNext } from '@react-google-maps/api';
-import { FullScreen, Pin } from '../svg';
+import { GoogleMap, LoadScriptNext, Marker } from '@react-google-maps/api';
+import { FullScreen } from '../svg';
 
-interface IMarker {
-    position: {
-        lat: number;
-        lng: number;
-    };
-}
-
-const Marker = styled(Pin)<IMarker>``;
 const FullScreenLink = styled.a``;
 
 interface IProps {
