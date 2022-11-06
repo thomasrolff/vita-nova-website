@@ -95,8 +95,11 @@ export const Footer = styled(BaseFooter)`
     }
 
     ${GoogleMapContainer} {
+        height: 240px;
+
         @media (${breakpoints.mediumMin}) {
             margin-left: 140px;
+            height: 200px;
             width: 400px;
         }
     }

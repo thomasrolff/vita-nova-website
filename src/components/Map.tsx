@@ -48,7 +48,7 @@ const BaseMap = ({ className }: IProps) => {
 export const Map = styled(BaseMap)`
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 100%;
 
     ${FullScreenLink} {
         display: block;
