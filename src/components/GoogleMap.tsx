@@ -1,40 +1,37 @@
 import styled from 'styled-components';
-import GoogleMapReact from 'google-map-react';
+import { Wrapper, Status } from '@googlemaps/react-wrapper';
+import { useEffect, useRef, useState } from 'react';
 
-interface ILocationPin {
-    lat: number;
-    lng: number;
-    text: string;
+interface IProps {
+    className?: string;
 }
 
-const LocationPin = ({ lat, lng, text }: ILocationPin) => (
-    <div className="pin">PIN</div>
-);
+const Map: React.FC<google.maps.MapOptions> = () => {
+    const ref = useRef<HTMLDivElement>(null);
+    const [map, setMap] = useState<google.maps.Map>();
 
-export const GoogleMap = () => {
-    const location = {
-        address: '1600 Amphitheatre Parkway, Mountain View, california.',
-        lat: 37.42216,
-        lng: -122.08427,
-    };
+    useEffect(() => {
+        if (ref.current && !map) {
+            setMap(
+                new window.google.maps.Map(ref.current, {
+                    center: { lat: 52.16134, lng: 5.38091 },
+                    zoom: 15,
+                })
+            );
+        }
+    }, [ref, map]);
 
+    return <div ref={ref} style={{ height: '200px', width: '400px' }} />;
+};
+
+const BaseGoogleMap = () => {
     if (!process.env.NEXT_PUBLIC_GOOGLE_API) return null;
 
     return (
-        <div style={{ height: '200px', width: '100%' }}>
-            <GoogleMapReact
-                bootstrapURLKeys={{
-                    key: process.env.NEXT_PUBLIC_GOOGLE_API,
-                }}
-                defaultCenter={location}
-                defaultZoom={18}
-            >
-                <LocationPin
-                    lat={location.lat}
-                    lng={location.lng}
-                    text={location.address}
-                />
-            </GoogleMapReact>
-        </div>
+        <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_API}>
+            <Map />
+        </Wrapper>
     );
 };
+
+export const GoogleMap = styled(BaseGoogleMap)``;
