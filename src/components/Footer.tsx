@@ -123,7 +123,7 @@ export const Footer = styled(BaseFooter)`
         @media (${breakpoints.mediumMin}) {
             display: block;
             position: absolute;
-            left: -24px;
+            left: -32px;
         }
     }
 
