@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../constants';
 import { routes } from '../data';
 import { Logo } from '../svg';
 import { Container } from './Container';
-import { GoogleMap } from './GoogleMap';
+import { Map } from './Map';
 
 const LogoContainer = styled.div``;
 const GoogleMapContainer = styled.div``;
@@ -28,7 +28,7 @@ const BaseFooter = ({ className }: IProps) => (
                 ))}
             </LinkContainer>
             <GoogleMapContainer>
-                <GoogleMap />
+                <Map />
             </GoogleMapContainer>
         </Container>
         <LogoContainer>
