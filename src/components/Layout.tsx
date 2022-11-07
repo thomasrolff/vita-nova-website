@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Footer } from './Footer';
 import { MobileMenu } from './MobileMenu';
 import { Navbar } from './Navbar';
+import { settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -31,5 +32,5 @@ const BaseLayout = ({ className, children }: IProps) => {
 };
 
 export const Layout = styled(BaseLayout)`
-    margin-top: 56px;
+    margin-top: ${settings.navbarHeight}px;
 `;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { breakpoints, colors } from '../constants';
+import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
@@ -64,7 +64,7 @@ export const Navbar = styled(BaseNavbar)`
     display: flex;
     align-items: center;
     background-color: ${colors.white};
-    height: 3.5rem;
+    height: ${settings.navbarHeight + 'px'};
     z-index: 11;
     position: fixed;
     top: 0;

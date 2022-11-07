@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
 import { Container, SplitImageSection, LandingSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
+import { settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -12,12 +13,13 @@ interface IProps {
 
 const BaseHome: NextPage = ({ className }: IProps) => {
     const sectionRef = useRef<null | HTMLDivElement>(null);
+    const { navbarHeight } = settings;
 
     const handleScrollButtonClick = () => {
         if (!sectionRef.current) return;
 
         window.scrollTo({
-            top: sectionRef.current.offsetTop,
+            top: sectionRef.current.offsetTop - navbarHeight,
             left: 0,
             behavior: 'smooth',
         });

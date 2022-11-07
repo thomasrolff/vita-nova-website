@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Accordion, Container } from '../components';
+import { settings } from '../constants';
 import { faqs } from '../data';
 import backgroundImg from '/public/images/placeholder_full.jpg';
 
@@ -50,7 +51,8 @@ const Faq = styled(BaseFaq)`
 
     ${Container} {
         max-width: 800px;
-        margin: 48px auto 64px;
+        // Account for fixed navbar height
+        margin: ${settings.navbarHeight + 48 + 'px'} auto 64px;
     }
 
     ${ImageContainer} {
