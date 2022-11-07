@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { breakpoints, colors } from '../constants';
+import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
 import { Email, Logo, Phone, Pin } from '../svg';
 import { Container } from './Container';
@@ -73,8 +73,7 @@ export const Footer = styled(BaseFooter)`
     color: ${colors.offWhite};
     padding: 48px 24px 24px;
 
-    // Todo: fix responsive padding
-    @media (${breakpoints.mediumMin}) {
+    @media (min-width: ${settings.maxContainerWidthRem}) {
         padding: 48px 0 24px;
     }
 
