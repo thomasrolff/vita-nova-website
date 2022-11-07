@@ -14,15 +14,16 @@ const BookingButton = styled.a``;
 
 interface IProps {
     className?: string;
+    menuOpen: boolean;
     onHamburgerClick(): void;
 }
 
-const BaseNavbar = ({ className, onHamburgerClick }: IProps) => {
+const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
     const router = useRouter();
 
     return (
         <nav className={className}>
-            <Hamburger onClick={onHamburgerClick} />
+            <Hamburger menuOpen={menuOpen} onClick={onHamburgerClick} />
             <LeftLinkContainer>
                 {routes
                     .filter((route) => route.inNavbar)
