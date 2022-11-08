@@ -3,8 +3,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
-import { Container, SplitImageSection, LandingSection } from '../components';
-import { LinkButton } from '../components/LinkButton';
+import {
+    Container,
+    SplitImageSection,
+    LandingSection,
+    TextContainer,
+    LinkButton,
+    ReviewList,
+} from '../components';
 import { settings } from '../constants';
 
 interface IProps {
@@ -77,12 +83,15 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         een onvergetelijke tijd samen!
                     </p>
                     <LinkButton
-                        href="/rooms"
+                        href="/groups"
                         right
                         secondary
                         title="Meer over groepen"
                     />
                 </SplitImageSection>
+                <TextContainer center>
+                    <ReviewList />
+                </TextContainer>
             </Container>
         </div>
     );

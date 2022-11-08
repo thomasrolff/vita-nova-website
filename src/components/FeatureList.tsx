@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints, colors } from '../constants';
+import { colors } from '../constants';
 import { IFeature } from '../types';
 
 const IconContainer = styled.span``;

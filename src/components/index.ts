@@ -9,3 +9,5 @@ export * from './FeatureList';
 export * from './Accordion';
 export * from './MobileMenu';
 export * from './TextContainer';
+export * from './LinkButton';
+export * from './ReviewList';
