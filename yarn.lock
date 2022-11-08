@@ -338,7 +338,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@react-google-maps/api@^2.16.0":
+"@react-google-maps/api@2.16.0":
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/@react-google-maps/api/-/api-2.16.0.tgz#411747a1fd4c1ef1d693d9c6f8bbfcd963b9bc0a"
   integrity sha512-xOqA+Qvo0Rtz8S67P60d85JjR7f3BWmkTevtpN/CY6s5ortHVsboUCtqSXn9JA7oGXxOakrapQofDJyIMswn5Q==
@@ -372,7 +372,7 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/google.maps@3.50.5", "@types/google.maps@^3.50.5":
+"@types/google.maps@3.50.5":
   version "3.50.5"
   resolved "https://registry.yarnpkg.com/@types/google.maps/-/google.maps-3.50.5.tgz#a0d12675b547205fc163c4b8d999db305ba3862a"
   integrity sha512-RuZf1MJtctGlpW+Gd4a/eGtAufUDjMf+eyN1l+B3fbe2YLScJbg8KEljJfb+6vnSPFAeM1/48geVIEg3vqOkxw==
