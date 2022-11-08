@@ -33,7 +33,5 @@ const BaseLayout = ({ className, children }: IProps) => {
 };
 
 export const Layout = styled(BaseLayout)`
-    display: flex;
-    flex-direction: column;
     margin-top: ${settings.navbarHeight}px;
 `;
