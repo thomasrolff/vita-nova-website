@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Image, { StaticImageData } from 'next/image';
 import { breakpoints } from '../constants';
+import { TextContainer } from '../components';
 
 const ImageContainer = styled.div``;
-const TextContainer = styled.div``;
 
 interface IProps {
     className?: string;
@@ -53,14 +53,6 @@ export const SplitImageSection = styled(BaseSplitImageSection)`
 
         @media (${breakpoints.mediumMin}) {
             max-height: initial;
-        }
-    }
-
-    ${TextContainer} {
-        padding: 48px 24px 72px;
-
-        @media (${breakpoints.mediumMin}) {
-            padding: 60px;
         }
     }
 `;

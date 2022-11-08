@@ -12,9 +12,9 @@ import 'swiper/css/pagination';
 import { breakpoints, colors } from '../constants';
 import { IImage } from '../types';
 import { useState } from 'react';
+import { TextContainer } from '../components';
 
 const ImageContainer = styled.div``;
-const TextContainer = styled.div``;
 
 interface IProps {
     className?: string;
@@ -98,14 +98,6 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
 
         @media (${breakpoints.mediumMin}) {
             max-height: initial;
-        }
-    }
-
-    ${TextContainer} {
-        padding: 48px 24px 72px;
-
-        @media (${breakpoints.mediumMin}) {
-            padding: 48px 48px 24px;
         }
     }
 

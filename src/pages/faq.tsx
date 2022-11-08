@@ -2,8 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Accordion, Container } from '../components';
-import { settings } from '../constants';
+import { Accordion, Container, TextContainer } from '../components';
 import { faqs } from '../data';
 import backgroundImg from '/public/images/placeholder_full.jpg';
 
@@ -23,14 +22,16 @@ const BaseFaq: NextPage = ({ className }: IProps) => (
             />
         </Head>
         <Container>
-            <h2>FAQs</h2>
-            {faqs.map((section) => (
-                <Accordion
-                    body={section.content}
-                    key={section.id}
-                    title={section.title}
-                />
-            ))}
+            <TextContainer>
+                <h2>FAQs</h2>
+                {faqs.map((section) => (
+                    <Accordion
+                        body={section.content}
+                        key={section.id}
+                        title={section.title}
+                    />
+                ))}
+            </TextContainer>
         </Container>
         <ImageContainer>
             <Image
@@ -50,9 +51,7 @@ const Faq = styled(BaseFaq)`
     }
 
     ${Container} {
-        max-width: 800px;
-        // Account for fixed navbar height
-        margin: ${settings.navbarHeight + 48 + 'px'} auto 64px;
+        margin-bottom: 64px;
     }
 
     ${ImageContainer} {

@@ -1,9 +1,7 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Footer } from './Footer';
-import { MobileMenu } from './MobileMenu';
-import { Navbar } from './Navbar';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { Footer, MobileMenu, Navbar } from '../components';
 import { settings } from '../constants';
 
 interface IProps {
@@ -35,5 +33,7 @@ const BaseLayout = ({ className, children }: IProps) => {
 };
 
 export const Layout = styled(BaseLayout)`
+    display: flex;
+    flex-direction: column;
     margin-top: ${settings.navbarHeight}px;
 `;

@@ -8,3 +8,8 @@ export * from './Navbar';
 export * from './FeatureList';
 export * from './Accordion';
 export * from './MobileMenu';
+export * from './Footer';
+export * from './Accordion';
+export * from './LinkButton';
+export * from './Map';
+export * from './TextContainer';
