@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../constants';
 
 interface IProps {
     className?: string;
@@ -7,7 +8,7 @@ interface IProps {
 const BaseFullScreen = ({ className }: IProps) => (
     <svg
         className={className}
-        fill="#000"
+        fill={colors.blue}
         height="32px"
         viewBox="0 0 1024 1024"
         width="32px"

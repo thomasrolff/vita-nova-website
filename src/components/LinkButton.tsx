@@ -40,7 +40,9 @@ export const LinkButton = styled(BaseLinkButton)`
         secondary ? `1px solid ${colors.blue}` : `1px solid ${colors.orange}`};
     font-size: 1.1rem;
     height: 44px;
-    width: 192px;
+    padding: 0 24px;
+    min-width: 192px;
+    width: fit-content;
     cursor: pointer;
     transition: all 0.12s linear;
 

@@ -3,9 +3,15 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
-import { Container, SplitImageSection, LandingSection } from '../components';
-import { LinkButton } from '../components/LinkButton';
-import { settings } from '../constants';
+import {
+    Container,
+    SplitImageSection,
+    LandingSection,
+    TextContainer,
+    LinkButton,
+    ReviewSection,
+} from '../components';
+import { breakpoints, settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -77,12 +83,15 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         een onvergetelijke tijd samen!
                     </p>
                     <LinkButton
-                        href="/rooms"
+                        href="/groups"
                         right
                         secondary
                         title="Meer over groepen"
                     />
                 </SplitImageSection>
+                <TextContainer center className="review">
+                    <ReviewSection />
+                </TextContainer>
             </Container>
         </div>
     );
@@ -92,6 +101,15 @@ const Home = styled(BaseHome)`
     ${SplitImageSection} {
         ${LinkButton} {
             margin-top: 36px;
+        }
+    }
+
+    ${TextContainer}.review {
+        margin-top: 48px;
+
+        @media (${breakpoints.mediumMin}) {
+            margin-left: 64px;
+            margin-bottom: 64px;
         }
     }
 `;

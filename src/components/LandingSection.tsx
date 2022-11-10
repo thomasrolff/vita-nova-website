@@ -55,7 +55,4 @@ export const LandingSection = styled(BaseLandingSection)`
     ${Arrow} {
         height: 14px;
     }
-
-    @media (${breakpoints.mediumMin}) {
-    }
 `;
