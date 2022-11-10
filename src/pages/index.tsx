@@ -11,7 +11,7 @@ import {
     LinkButton,
     ReviewList,
 } from '../components';
-import { settings } from '../constants';
+import { breakpoints, settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -89,7 +89,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         title="Meer over groepen"
                     />
                 </SplitImageSection>
-                <TextContainer center>
+                <TextContainer center className="review">
                     <ReviewList />
                 </TextContainer>
             </Container>
@@ -101,6 +101,15 @@ const Home = styled(BaseHome)`
     ${SplitImageSection} {
         ${LinkButton} {
             margin-top: 36px;
+        }
+    }
+
+    ${TextContainer}.review {
+        margin-top: 48px;
+
+        @media (${breakpoints.mediumMin}) {
+            margin-left: 64px;
+            padding-bottom: 48px;
         }
     }
 `;

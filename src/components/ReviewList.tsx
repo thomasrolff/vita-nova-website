@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
 import { Quote } from '../svg';
 
 const ReviewItem = styled.li``;
@@ -14,11 +14,11 @@ const BaseReviewList = ({ className }: IProps) => {
     const reviews = [
         {
             author: 'Estelle (NL)',
-            text: 'Leuke locatie, unieke slaapplek op de boot, vriendelijke gastvrouw en vlakbij het centrum! ',
+            text: '"Leuke locatie, unieke slaapplek op de boot, vriendelijke gastvrouw en vlakbij het centrum!"',
         },
         {
-            author: 'Eenlangevoornaam (NL)',
-            text: 'Leuke locatie, unieke slaapplek op de boot, vriendelijke gastvrouw en vlakbij het centrum! ',
+            author: 'Eelco (NL)',
+            text: '"Schoon, netjes, aardige en behulpzame gastvrouw, heerlijk ontbijt. Alles klopt!"',
         },
     ];
 
@@ -39,31 +39,46 @@ const BaseReviewList = ({ className }: IProps) => {
 
 export const ReviewList = styled(BaseReviewList)`
     color: ${colors.blue};
-    max-width: 600px;
 
     ${ReviewItem} {
         display: flex;
+        flex-direction: column-reverse;
+        font-size: 20px;
         margin-bottom: 48px;
+
+        @media (${breakpoints.mediumMin}) {
+            flex-direction: row;
+        }
     }
 
     ${AuthorContainer} {
-        margin-right: 24px;
-        width: 280px;
-    }
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 12px;
 
-    h4 {
-        font-size: 16px;
-    }
-
-    ${Text} {
-        margin: 0;
-        line-height: 1.5;
+        @media (${breakpoints.mediumMin}) {
+            flex-direction: column;
+            width: 140px;
+            margin: 0;
+        }
     }
 
     ${Quote} {
         fill: ${colors.blue};
-        height: 48px;
-        width: 48px;
+        height: 36px;
+        width: 36px;
+        padding-top: 3px;
         margin-bottom: 12px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin-right: 12px;
+    }
+
+    ${Text} {
+        margin: 0;
+        line-height: 1.6;
+        max-width: 600px;
     }
 `;
