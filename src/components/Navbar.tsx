@@ -72,9 +72,9 @@ export const Navbar = styled(BaseNavbar)`
     width: 100%;
 
     ${Hamburger} {
-        margin: 0 24px;
+        padding: 0 24px;
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             display: none;
         }
     }
@@ -82,7 +82,7 @@ export const Navbar = styled(BaseNavbar)`
     ${LeftLinkContainer} {
         display: none;
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             display: block;
         }
     }
@@ -90,7 +90,7 @@ export const Navbar = styled(BaseNavbar)`
     ${RightLinkContainer} {
         display: none;
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             display: block;
             margin-left: auto;
         }
@@ -119,7 +119,7 @@ export const Navbar = styled(BaseNavbar)`
         left: 50%;
         transform: translateX(-50%);
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             align-self: flex-start;
             background-color: ${colors.white};
             border-bottom-left-radius: 15px;
@@ -133,7 +133,7 @@ export const Navbar = styled(BaseNavbar)`
     ${Logo} {
         height: 24px;
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             height: 34px;
         }
     }
@@ -148,7 +148,7 @@ export const Navbar = styled(BaseNavbar)`
         margin-right: 24px;
         font-size: 1rem;
 
-        @media (${breakpoints.mediumMin}) {
+        @media (${breakpoints.largeMin}) {
             height: 36px;
             padding: 8px 24px;
         }

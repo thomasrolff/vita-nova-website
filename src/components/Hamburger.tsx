@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../constants';
 
 const Line = styled.div``;
+const HamburgerContainer = styled.div``;
 
 interface IProps {
     className?: string;
@@ -11,17 +12,24 @@ interface IProps {
 
 const BaseHamburger = ({ className, onClick }: IProps) => (
     <div className={className} onClick={onClick}>
-        <Line className="top-bar" />
-        <Line className="middle-bar" />
-        <Line className="bottom-bar" />
+        <HamburgerContainer>
+            <Line className="top-bar" />
+            <Line className="middle-bar" />
+            <Line className="bottom-bar" />
+        </HamburgerContainer>
     </div>
 );
 
 export const Hamburger = styled(BaseHamburger)`
-    position: relative;
     height: 100%;
-    width: 25px;
-    transform: translateY(50%);
+    cursor: pointer;
+
+    ${HamburgerContainer} {
+        position: relative;
+        height: 100%;
+        width: 25px;
+        transform: translateY(50%);
+    }
 
     ${Line} {
         position: absolute;
