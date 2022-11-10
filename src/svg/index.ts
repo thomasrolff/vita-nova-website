@@ -9,4 +9,4 @@ export * from './FullScreen';
 export * from './Pin';
 export * from './Email';
 export * from './Phone';
-export * from './Quote';
+export * from './QuoteIcon';

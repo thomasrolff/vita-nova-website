@@ -4,7 +4,7 @@ interface IProps {
     className?: string;
 }
 
-const BaseQuote = ({ className }: IProps) => (
+const BaseQuoteIcon = ({ className }: IProps) => (
     <svg
         className={className}
         fill="#6C7F8D"
@@ -17,4 +17,4 @@ const BaseQuote = ({ className }: IProps) => (
     </svg>
 );
 
-export const Quote = styled(BaseQuote)``;
+export const QuoteIcon = styled(BaseQuoteIcon)``;
