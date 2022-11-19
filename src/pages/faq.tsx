@@ -52,7 +52,7 @@ const Faq = styled(BaseFaq)`
     ${Container} {
         max-width: 800px;
         // Account for fixed navbar height
-        margin: ${settings.navbarHeight + 48 + 'px'} auto 64px;
+        margin: ${settings.navbarHeight + 48 + 'px'} auto 96px;
     }
 
     ${ImageContainer} {
