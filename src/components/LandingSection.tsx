@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints, colors, settings } from '../constants';
+import { colors, settings } from '../constants';
 import { Arrow } from '../svg';
 import { LinkButton } from './LinkButton';
 
@@ -30,7 +30,7 @@ export const LandingSection = styled(BaseLandingSection)`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: center / cover no-repeat url('images/placeholder.jpg');
+    background: center / cover no-repeat url('images/landing.jpg');
     width: 100%;
     // Account for fixed navbar height
     height: calc(100vh - ${settings.navbarHeight + 'px'});

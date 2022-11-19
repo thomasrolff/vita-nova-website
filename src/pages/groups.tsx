@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import { Container, SplitImageSection, TextContainer } from '../components';
-import { placeholder } from '../data';
+import groupsImage from '../../public/images/groups.jpg';
 
 const Groups: NextPage = () => {
     return (
@@ -16,7 +16,7 @@ const Groups: NextPage = () => {
             <Container>
                 <SplitImageSection
                     imageAlt="placeholder"
-                    imageSrc={placeholder}
+                    imageSrc={groupsImage}
                 >
                     <h2>Groepen</h2>
                     <p>
@@ -39,48 +39,46 @@ const Groups: NextPage = () => {
                     <p>
                         In het schip is plaats voor een groep van 10 tot 15
                         personen:
-                        <ul>
-                            <li>
-                                – Vanaf 1 november t/m 31 maart is er plaats
-                                voor een groep van maximaal 12 personen*.
-                            </li>
-                            <li>
-                                – Vanaf 1 april t/m 31 oktober is er plaats voor
-                                een groep van maximaal 15 personen.
-                            </li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>
+                            – Vanaf 1 november t/m 31 maart is er plaats voor
+                            een groep van maximaal 12 personen*.
+                        </li>
+                        <li>
+                            – Vanaf 1 april t/m 31 oktober is er plaats voor een
+                            groep van maximaal 15 personen.
+                        </li>
+                    </ul>
                     <p>
                         Je kan het schip vanaf 2 nachten huren. Dit kan vanaf €
                         1495,-. Voor een offerte op maat kunt u contact met ons
                         opnemen. Als je het schip afhuurt, dan krijg je daarbij:
                     </p>
-                    <p>
-                        <ul>
-                            <li>
-                                – bedlinnen en handdoeken, shampoo/douchegel,
-                                toiletpapier en keukenlinnen;
-                            </li>
-                            <li>
-                                – onbeperkt toegang tot heerlijke koffie van
-                                Boot Koffie en thee van Clipper;
-                            </li>
-                            <li>
-                                – toegang tot het draadloos muzieksysteem Sonos
-                                om je persoonlijke muziek af te spelen;
-                            </li>
-                            <li>
-                                – een groot assortiment aan spellen,
-                                tijdschriften en de Volkskrant;
-                            </li>
-                            <li>– een eindschoonmaak;</li>
-                            <li>– een terras in de zon;</li>
-                            <li>
-                                – eenperfecte uitvalsbasis op loopafstand van
-                                het stadscentrum en openbaar vervoer.
-                            </li>
-                        </ul>
-                    </p>
+                    <ul>
+                        <li>
+                            – bedlinnen en handdoeken, shampoo/douchegel,
+                            toiletpapier en keukenlinnen;
+                        </li>
+                        <li>
+                            – onbeperkt toegang tot heerlijke koffie van Boot
+                            Koffie en thee van Clipper;
+                        </li>
+                        <li>
+                            – toegang tot het draadloos muzieksysteem Sonos om
+                            je persoonlijke muziek af te spelen;
+                        </li>
+                        <li>
+                            – een groot assortiment aan spellen, tijdschriften
+                            en de Volkskrant;
+                        </li>
+                        <li>– een eindschoonmaak;</li>
+                        <li>– een terras in de zon;</li>
+                        <li>
+                            – eenperfecte uitvalsbasis op loopafstand van het
+                            stadscentrum en openbaar vervoer.
+                        </li>
+                    </ul>
                     <p>
                         Wij denken ook graag met je mee over leuke
                         groepsactiviteiten of catering aan boord voor een

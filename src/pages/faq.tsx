@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Accordion, Container } from '../components';
 import { settings } from '../constants';
 import { faqs } from '../data';
-import backgroundImg from '/public/images/placeholder_full.jpg';
+import backgroundImg from '/public/images/faqs.jpg';
 
 const ImageContainer = styled.div``;
 
@@ -52,7 +52,7 @@ const Faq = styled(BaseFaq)`
     ${Container} {
         max-width: 800px;
         // Account for fixed navbar height
-        margin: ${settings.navbarHeight + 48 + 'px'} auto 64px;
+        margin: ${settings.navbarHeight + 48 + 'px'} auto 96px;
     }
 
     ${ImageContainer} {

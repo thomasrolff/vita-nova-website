@@ -6,20 +6,32 @@ import {
     SplitSwiperSection,
 } from '../components';
 import { LinkButton } from '../components/LinkButton';
-import { placeholder, placeholderFull } from '../data';
+import * as images from '../images/ship';
 
-const images = [
+const imagesData = [
     {
         id: 0,
-        src: placeholder,
-        srcFull: placeholderFull,
+        src: images.ship1Square,
+        srcFull: images.ship1,
         alt: 'Handdoeken image',
     },
     {
         id: 1,
-        src: placeholder,
-        srcFull: placeholderFull,
-        alt: 'Placeholder image',
+        src: images.ship2Square,
+        srcFull: images.ship2,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 2,
+        src: images.ship3Square,
+        srcFull: images.ship3,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 3,
+        src: images.ship4Square,
+        srcFull: images.ship4,
+        alt: 'Handdoeken image',
     },
 ];
 
@@ -34,7 +46,7 @@ const Ship: NextPage = () => {
                 />
             </Head>
             <Container>
-                <SplitSwiperSection images={images}>
+                <SplitSwiperSection images={imagesData}>
                     <h2>De Vita Nova</h2>
                     <p>
                         De Vita Nova is een motorvrachtschip dat in 1940 gebouwd
@@ -62,7 +74,7 @@ const Ship: NextPage = () => {
                 <SplitImageSection
                     imageAlt="placeholder"
                     imageLeft
-                    imageSrc={placeholder}
+                    imageSrc={images.yourHost}
                 >
                     <h2>Uw Host</h2>
                     <p>
@@ -80,7 +92,7 @@ const Ship: NextPage = () => {
                 </SplitImageSection>
                 <SplitImageSection
                     imageAlt="placeholder"
-                    imageSrc={placeholder}
+                    imageSrc={images.amersfoort}
                 >
                     <h2>Amersfoort</h2>
                     <p>
