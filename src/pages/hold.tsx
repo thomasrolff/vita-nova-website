@@ -6,20 +6,59 @@ import {
     SplitSwiperSection,
 } from '../components';
 import { LinkButton } from '../components/LinkButton';
-import { placeholder, placeholderFull } from '../data';
+import * as images from '../images/hold';
 
-const images = [
+const holdImages = [
     {
         id: 0,
-        src: placeholder,
-        srcFull: placeholderFull,
+        src: images.hold1Square,
+        srcFull: images.hold1,
         alt: 'Handdoeken image',
     },
     {
         id: 1,
-        src: placeholder,
-        srcFull: placeholderFull,
-        alt: 'Placeholder image',
+        src: images.hold2Square,
+        srcFull: images.hold2,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 2,
+        src: images.hold3Square,
+        srcFull: images.hold3,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 3,
+        src: images.hold4Square,
+        srcFull: images.hold4,
+        alt: 'Handdoeken image',
+    },
+];
+
+const breakfastImages = [
+    {
+        id: 0,
+        src: images.breakfast1Square,
+        srcFull: images.breakfast1Square,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 1,
+        src: images.breakfast2Square,
+        srcFull: images.breakfast2,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 2,
+        src: images.breakfast3Square,
+        srcFull: images.breakfast3,
+        alt: 'Handdoeken image',
+    },
+    {
+        id: 3,
+        src: images.breakfast4Square,
+        srcFull: images.breakfast4,
+        alt: 'Handdoeken image',
     },
 ];
 
@@ -34,7 +73,7 @@ const Ship: NextPage = () => {
                 />
             </Head>
             <Container>
-                <SplitSwiperSection imageLeft images={images}>
+                <SplitSwiperSection images={holdImages}>
                     <h2>Het scheepsruim</h2>
                     <p>
                         De Vita Nova is een motorvrachtschip dat in 1940 gebouwd
@@ -60,7 +99,8 @@ const Ship: NextPage = () => {
                 </SplitSwiperSection>
                 <SplitImageSection
                     imageAlt="placeholder"
-                    imageSrc={placeholder}
+                    imageLeft
+                    imageSrc={images.kitchen}
                 >
                     <h2>De keuken</h2>
                     <p>
@@ -76,7 +116,7 @@ const Ship: NextPage = () => {
                         Suspendisse facilisis imperdiet quam, at sodales mauris.
                     </p>
                 </SplitImageSection>
-                <SplitSwiperSection imageLeft images={images}>
+                <SplitSwiperSection images={breakfastImages}>
                     <h2>Ontbijt en lunch</h2>
                     <p>
                         Stukje ontbijt en lunch voorzieningen op de Vita Nova.
