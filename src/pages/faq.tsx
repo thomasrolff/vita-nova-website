@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Accordion, Container } from '../components';
 import { settings } from '../constants';
 import { faqs } from '../data';
-import backgroundImg from '/public/images/placeholder_full.jpg';
+import backgroundImg from '/public/images/faqs.jpg';
 
 const ImageContainer = styled.div``;
 
