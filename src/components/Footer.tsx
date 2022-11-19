@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
-import { Email, Logo, Phone, Pin } from '../svg';
+import { Email, Logo, Phone, Pin, Insta, Facebook, Whatsapp } from '../svg';
 import { Container } from './Container';
 import { Map } from './Map';
 
@@ -13,6 +13,8 @@ const LinkItem = styled.li``;
 const Copyright = styled.span``;
 const ContactContainer = styled.div``;
 const ContactLink = styled.a``;
+const SocialContainer = styled.div``;
+const SocialLink = styled.a``;
 
 interface IProps {
     className?: string;
@@ -20,6 +22,31 @@ interface IProps {
 
 const BaseFooter = ({ className }: IProps) => (
     <div className={className}>
+        <Container>
+            <SocialContainer>
+                <SocialLink
+                    href="https://www.instagram.com/hotelvitanova033/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <Insta />
+                </SocialLink>
+                <SocialLink
+                    href="https://www.facebook.com/hotelvitanova/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <Facebook />
+                </SocialLink>
+                <SocialLink
+                    href="https://wa.me/31651672548"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <Whatsapp />
+                </SocialLink>
+            </SocialContainer>
+        </Container>
         <Container>
             <ListContainer>
                 <h3>LINKS</h3>
@@ -77,6 +104,32 @@ export const Footer = styled(BaseFooter)`
         padding: 48px 0 24px;
     }
 
+    ${SocialContainer} {
+        display: flex;
+        margin-bottom: 48px;
+    }
+
+    ${SocialLink} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        width: 46px;
+        border-radius: 50%;
+        background-color: ${colors.offWhite};
+        transition: background-color 0.15s linear;
+        margin-right: 24px;
+
+        svg {
+            height: 24px;
+            width: 24px;
+        }
+
+        :hover {
+            background-color: ${colors.white};
+        }
+    }
+
     ${Container} {
         @media (${breakpoints.mediumMin}) {
             display: flex;
@@ -97,8 +150,8 @@ export const Footer = styled(BaseFooter)`
         height: 240px;
 
         @media (${breakpoints.mediumMin}) {
-            margin-left: 140px;
-            height: 200px;
+            margin-left: 48px;
+            height: 220px;
             width: 400px;
         }
     }
@@ -151,7 +204,7 @@ export const Footer = styled(BaseFooter)`
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 24px;
+        margin-top: 32px;
     }
 
     ${Logo} {

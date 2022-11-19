@@ -10,3 +10,6 @@ export * from './Pin';
 export * from './Email';
 export * from './Phone';
 export * from './QuoteIcon';
+export * from './Insta';
+export * from './Facebook';
+export * from './Whatsapp';
