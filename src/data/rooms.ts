@@ -1,13 +1,6 @@
 import { BedIcon, ShowerIcon, StarIcon, WifiIcon, WindowIcon } from '../svg';
 import { IRooms } from '../types';
-import {
-    hut0,
-    hut0Full,
-    placeholder,
-    placeholderFull,
-    forecastle0,
-    forecastle0Full,
-} from './images';
+import * as images from '../images/rooms';
 
 export const rooms: IRooms[] = [
     {
@@ -40,15 +33,45 @@ export const rooms: IRooms[] = [
         images: [
             {
                 id: 0,
-                src: hut0,
-                srcFull: hut0Full,
+                src: images.hut1Square,
+                srcFull: images.hut1,
                 alt: 'Handdoeken image',
             },
             {
                 id: 1,
-                src: placeholder,
-                srcFull: placeholderFull,
-                alt: 'Placeholder image',
+                src: images.hut2Square,
+                srcFull: images.hut2,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 2,
+                src: images.hut3Square,
+                srcFull: images.hut3,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 3,
+                src: images.hut4Square,
+                srcFull: images.hut4,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 4,
+                src: images.hut5Square,
+                srcFull: images.hut5,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 5,
+                src: images.hut6Square,
+                srcFull: images.hut6,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 6,
+                src: images.hut7Square,
+                srcFull: images.hut7,
+                alt: 'Handdoeken image',
             },
         ],
     },
@@ -77,15 +100,52 @@ export const rooms: IRooms[] = [
         images: [
             {
                 id: 0,
-                src: forecastle0,
-                srcFull: forecastle0Full,
+                src: images.forecastle2Square,
+                srcFull: images.forecastle2,
                 alt: 'Handdoeken image',
             },
             {
                 id: 1,
-                src: placeholder,
-                srcFull: placeholderFull,
-                alt: 'Placeholder image',
+                src: images.forecastle1Square,
+                srcFull: images.forecastle1,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 2,
+                src: images.forecastle7Square,
+                srcFull: images.forecastle7,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 3,
+                src: images.forecastle3Square,
+                srcFull: images.forecastle3,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 4,
+                src: images.forecastle4Square,
+                srcFull: images.forecastle4,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 5,
+                src: images.forecastle5Square,
+                srcFull: images.forecastle5,
+                alt: 'Handdoeken image',
+            },
+            {
+                id: 6,
+                src: images.forecastle6Square,
+                srcFull: images.forecastle6,
+                alt: 'Handdoeken image',
+            },
+
+            {
+                id: 7,
+                src: images.forecastle8Square,
+                srcFull: images.forecastle8,
+                alt: 'Handdoeken image',
             },
         ],
     },

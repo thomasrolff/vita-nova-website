@@ -43,10 +43,4 @@ export const routes: IRoutes[] = [
         inNavbar: true,
         href: '/faq',
     },
-    {
-        id: 7,
-        title: 'Contact',
-        inNavbar: true,
-        href: '/contact',
-    },
 ];
