@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
+import landingImg2 from '../../public/images/landing-2-min.jpg';
 import {
     Container,
     SplitImageSection,
@@ -68,7 +69,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                 </SplitImageSection>
                 <SplitImageSection
                     imageAlt="Placeholder Image"
-                    imageSrc={placeholderImg}
+                    imageSrc={landingImg2}
                 >
                     <h2>Ideaal voor groepen: huur de hele Vita Nova af</h2>
                     <p>
