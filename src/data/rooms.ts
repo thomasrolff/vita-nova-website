@@ -1,4 +1,11 @@
-import { BedIcon, ShowerIcon, StarIcon, WifiIcon, WindowIcon } from '../svg';
+import {
+    BedIcon,
+    ChairIcon,
+    ShowerIcon,
+    StarIcon,
+    WifiIcon,
+    WindowIcon,
+} from '../svg';
 import { IRooms } from '../types';
 import * as images from '../images/rooms';
 
@@ -83,12 +90,12 @@ export const rooms: IRooms[] = [
         features: [
             {
                 id: 0,
-                title: 'Uniek',
+                title: 'Uniek en avontuurlijk',
                 svg: StarIcon,
             },
             {
                 id: 1,
-                title: 'Tweepersoons bed',
+                title: '3 x eenpersoonsbed',
                 svg: BedIcon,
             },
             {
@@ -153,21 +160,26 @@ export const rooms: IRooms[] = [
         id: 2,
         title: 'De roef',
         description:
-            'Op zoek naar een bijzondere beleving? Boek dan een overnachting in het originele vooronder. Het vooronder is voorzien van een eigen douche en toilet en heeft een eigen ingang op het voordek. Er zijn twee aparte bedden en er is een derde slaapplek in de onderkooi. Het vooronder is geschikt voor 2-3 volwassen of een gezin met twee kleine kinderen.',
+            'Wil jij ervaren hoe het is om te leven aan boord van een voormalig binnenvaartschip? Boek dan jouw verblijf in de roef. De roef is de voormalige schipperswoning. De ruimte is voorzien van een eigen zithoek met heerlijke pelletkachel, badkamer en tweepersoonsbedstede (160 x 200 cm). Er is ruimte om een babybedje in een apart kamertje te plaatsen. Daarnaast heb je vanuit de stuurhut een prachtig uitzicht op de haven en de Koppelpoort van Amersfoort. De roef is ingericht met een koelkast, servies en koffie- en theefaciliteiten. Overnachten in de roef is een unieke ervaring!',
         features: [
             {
                 id: 0,
-                title: 'Uniek',
+                title: 'Authentiek',
                 svg: StarIcon,
             },
             {
                 id: 1,
-                title: 'Tweepersoons bed',
+                title: 'Tweepersoonsbedstede (160 x 200 cm)',
                 svg: BedIcon,
             },
             {
                 id: 2,
-                title: 'Douche en toilet (met scheepspomp!)',
+                title: 'Eigen zithoek met pelletkachel',
+                svg: ChairIcon,
+            },
+            {
+                id: 3,
+                title: 'Eigen sanitair',
                 svg: ShowerIcon,
             },
         ],

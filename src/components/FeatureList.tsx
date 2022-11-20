@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
 import { IFeature } from '../types';
 
 const IconContainer = styled.span``;
@@ -28,8 +28,12 @@ const BaseFeatureList = ({ className, features }: IProps) => (
 
 export const FeatureList = styled(BaseFeatureList)`
     color: ${colors.blue};
-    padding-left: 24px;
+    padding-left: 8px;
     font-size: 1rem;
+
+    @media (${breakpoints.mediumMin}) {
+        padding-left: 24px;
+    }
 
     li {
         margin: 6px 0;

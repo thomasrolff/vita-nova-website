@@ -49,6 +49,8 @@ const BaseRooms: NextPage = ({ className }: IProps) => (
 );
 
 const Rooms = styled(BaseRooms)`
+    font-size: 15px;
+
     ${LinkButton} {
         margin-top: 32px;
     }
@@ -59,6 +61,7 @@ const Rooms = styled(BaseRooms)`
 
     p {
         margin-bottom: 0;
+        line-height: 1.7;
     }
 
     ${ReadMoreDrawer} {
