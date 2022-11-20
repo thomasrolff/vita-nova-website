@@ -17,6 +17,7 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
         <ButtonContainer>
             <LinkButton
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                targetBlank
                 title="Boek nu"
             />
             <RoomsButton href="/rooms" title="Kamers bekijken" />
