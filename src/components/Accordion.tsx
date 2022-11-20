@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../constants';
+import { createMarkup } from '../utils';
 
 const AccordionTitle = styled.div``;
 const AccordionBody = styled.div``;
@@ -32,7 +33,7 @@ const BaseAccordion = ({ className, title, body }: IProps) => {
                 ref={bodyRef}
                 style={{ maxHeight: isActive ? getActiveHeight() : 0 }}
             >
-                <p>{body}</p>
+                <div dangerouslySetInnerHTML={createMarkup(body)} />
             </AccordionBody>
         </div>
     );
