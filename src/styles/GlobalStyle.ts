@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     p {
-        line-height: 2;
+        line-height: 1.8;
     }
 
     a {

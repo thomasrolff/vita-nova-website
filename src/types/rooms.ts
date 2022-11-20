@@ -5,6 +5,7 @@ export interface IRooms {
     id: number;
     title: string;
     description: string;
+    extraInfo?: string;
     images: IImage[];
     features: IFeature[];
 }

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { Container, FeatureList, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
+import { ReadMoreDrawer } from '../components/ReadMoreDrawer';
 import { rooms } from '../data';
 
 interface IProps {
@@ -28,6 +29,12 @@ const BaseRooms: NextPage = ({ className }: IProps) => (
                     <h2>{room.title}</h2>
                     <FeatureList features={room.features} />
                     <p>{room.description}</p>
+                    {room.extraInfo && (
+                        <ReadMoreDrawer
+                            body={room.extraInfo}
+                            title="Meer over scheepscomfort"
+                        />
+                    )}
                     <LinkButton
                         href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                         right={room.id % 2 === 0}
@@ -42,8 +49,23 @@ const BaseRooms: NextPage = ({ className }: IProps) => (
 );
 
 const Rooms = styled(BaseRooms)`
+    font-size: 15px;
+
     ${LinkButton} {
-        margin-top: 36px;
+        margin-top: 32px;
+    }
+
+    ${FeatureList} {
+        margin-top: 16px;
+    }
+
+    p {
+        margin-bottom: 0;
+        line-height: 1.7;
+    }
+
+    ${ReadMoreDrawer} {
+        margin-top: 12px;
     }
 `;
 
