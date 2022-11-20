@@ -100,15 +100,20 @@ export const Navbar = styled(BaseNavbar)`
         margin: 0 12px;
         padding: 3px 0;
         cursor: pointer;
+        transition: color 0.12s linear;
 
-        &:first-of-type {
+        :first-of-type {
             margin-left: 24px;
+        }
+
+        :hover {
+            color: ${colors.blue};
         }
     }
 
     .active {
         color: ${colors.blue};
-        border-bottom: 1.5px solid ${colors.blue};
+        border-bottom: 3px solid ${colors.blue};
     }
 
     ${LogoContainer} {
@@ -151,6 +156,11 @@ export const Navbar = styled(BaseNavbar)`
         @media (${breakpoints.largeMin}) {
             height: 36px;
             padding: 8px 24px;
+            transition: background-color 0.12s linear;
+
+            :hover {
+                background-color: ${colors.orangeHover};
+            }
         }
     }
 `;

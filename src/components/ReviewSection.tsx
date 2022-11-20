@@ -45,7 +45,7 @@ const BaseReviewSection = ({ className }: IProps) => {
                 <LinkButton
                     href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                     targetBlank
-                    title="Bekijk beschikbaarheid"
+                    title="Boeken"
                 />
             </BookingContainer>
         </section>
