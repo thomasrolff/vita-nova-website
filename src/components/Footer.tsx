@@ -113,8 +113,8 @@ export const Footer = styled(BaseFooter)`
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 46px;
-        width: 46px;
+        height: 44px;
+        width: 44px;
         border-radius: 50%;
         background-color: ${colors.offWhite};
         transition: background-color 0.15s linear;

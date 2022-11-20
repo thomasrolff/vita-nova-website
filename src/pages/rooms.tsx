@@ -65,7 +65,7 @@ const Rooms = styled(BaseRooms)`
     }
 
     ${ReadMoreDrawer} {
-        margin-top: 4px;
+        margin-top: 12px;
     }
 `;
 
