@@ -36,8 +36,7 @@ export const LinkButton = styled(BaseLinkButton)`
     color: ${({ secondary }) => (secondary ? colors.blue : colors.white)};
     background-color: ${({ secondary }) =>
         secondary ? 'transparent' : colors.orange};
-    border: ${({ secondary }) =>
-        secondary ? `1px solid ${colors.blue}` : `1px solid ${colors.orange}`};
+    border: ${({ secondary }) => secondary && `1px solid ${colors.blue}`};
     font-size: 1.1rem;
     height: 44px;
     padding: 0 24px;
@@ -56,7 +55,8 @@ export const LinkButton = styled(BaseLinkButton)`
 
     &:hover {
         color: ${({ secondary }) => secondary && colors.offWhite};
-        background-color: ${({ secondary }) => secondary && colors.blue};
+        background-color: ${({ secondary }) =>
+            secondary ? colors.blue : colors.orangeHover};
     }
 
     @media (${breakpoints.mediumMin}) {

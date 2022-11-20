@@ -100,9 +100,14 @@ export const Navbar = styled(BaseNavbar)`
         margin: 0 12px;
         padding: 3px 0;
         cursor: pointer;
+        transition: all 0.12s linear;
 
-        &:first-of-type {
+        :first-of-type {
             margin-left: 24px;
+        }
+
+        :hover {
+            color: ${colors.blue};
         }
     }
 
