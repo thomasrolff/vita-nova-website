@@ -15,6 +15,7 @@ const ContactContainer = styled.div``;
 const ContactLink = styled.a``;
 const SocialContainer = styled.div``;
 const SocialLink = styled.a``;
+const FlexContainer = styled(Container)``;
 
 interface IProps {
     className?: string;
@@ -47,7 +48,7 @@ const BaseFooter = ({ className }: IProps) => (
                 </SocialLink>
             </SocialContainer>
         </Container>
-        <Container>
+        <FlexContainer>
             <ListContainer>
                 <h3>LINKS</h3>
                 {routes.map((route) => (
@@ -77,11 +78,11 @@ const BaseFooter = ({ className }: IProps) => (
                         </ContactLink>
                     </li>
                 </ListContainer>
-                <GoogleMapContainer>
-                    <Map />
-                </GoogleMapContainer>
             </ContactContainer>
-        </Container>
+            <GoogleMapContainer>
+                <Map />
+            </GoogleMapContainer>
+        </FlexContainer>
         <LogoContainer>
             <Link href="/">
                 <a>
@@ -130,7 +131,7 @@ export const Footer = styled(BaseFooter)`
         }
     }
 
-    ${Container} {
+    ${FlexContainer} {
         @media (${breakpoints.mediumMin}) {
             display: flex;
             justify-content: space-between;
@@ -143,6 +144,15 @@ export const Footer = styled(BaseFooter)`
 
         @media (${breakpoints.mediumMin}) {
             flex-direction: row;
+            margin-left: 48px;
+        }
+    }
+
+    ${ContactLink} {
+        color: ${colors.offWhite};
+
+        :hover {
+            text-decoration: underline;
         }
     }
 
@@ -150,7 +160,7 @@ export const Footer = styled(BaseFooter)`
         height: 240px;
 
         @media (${breakpoints.mediumMin}) {
-            margin-left: 48px;
+            /* margin-left: 48px; */
             height: 220px;
             width: 400px;
         }
@@ -214,13 +224,5 @@ export const Footer = styled(BaseFooter)`
 
     ${Copyright} {
         font-size: 0.8rem;
-    }
-
-    ${ContactLink} {
-        color: ${colors.offWhite};
-
-        :hover {
-            text-decoration: underline;
-        }
     }
 `;

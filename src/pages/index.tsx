@@ -62,7 +62,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         ervaring!
                     </p>
                     <LinkButton
-                        href="/rooms"
+                        href="/ship"
                         secondary
                         title="Ontdek de Vita Nova"
                     />

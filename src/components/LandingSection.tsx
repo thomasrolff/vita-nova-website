@@ -5,6 +5,7 @@ import { LinkButton } from './LinkButton';
 
 const ButtonContainer = styled.div``;
 const ScrollButton = styled.button``;
+const RoomsButton = styled(LinkButton)``;
 
 interface IProps {
     className?: string;
@@ -18,6 +19,7 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                 title="Boek nu"
             />
+            <RoomsButton href="/rooms" title="Kamers bekijken" />
         </ButtonContainer>
         <ScrollButton onClick={onScrollButtonClick}>
             <Arrow />
@@ -50,9 +52,25 @@ export const LandingSection = styled(BaseLandingSection)`
         width: 44px;
         border-radius: 40px;
         background-color: ${colors.offWhite};
+        transition: all 0.1s linear;
+
+        :hover {
+            background-color: ${colors.white};
+            bottom: 1.62rem;
+        }
     }
 
     ${Arrow} {
         height: 14px;
+    }
+
+    ${RoomsButton} {
+        background-color: ${colors.offWhite};
+        color: ${colors.blue};
+        margin-top: 8px;
+
+        :hover {
+            background-color: ${colors.white};
+        }
     }
 `;
