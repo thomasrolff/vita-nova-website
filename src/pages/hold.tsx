@@ -76,19 +76,16 @@ const Ship: NextPage = () => {
                 <SplitSwiperSection images={holdImages}>
                     <h2>Het scheepsruim</h2>
                     <p>
-                        De Vita Nova is een motorvrachtschip dat in 1940 gebouwd
-                        is in België, een zogenaamde spits. Het schip is met
-                        haar specifieke afmetingen speciaal gebouwd om te kunnen
-                        varen over de kanalen en door de sluizen in België en
-                        Frankrijk. De Vita Nova is in de periode dat ze dienst
-                        deed als vrachtschip meerdere keren in Amersfoort
-                        geweest.
+                        Stukje over het scheepsruim. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Nam vulputate non dui sit
+                        amet suscipit. Nam pellentesque mollis turpis at semper.
+                        Duis et erat in leo iaculis aliquam eget id tortor.
+                        Vestibulum aliquet quam iaculis nibh lobortis egestas.
                     </p>
                     <p>
-                        De Vita Nova is één van de meest compleet bewaard
-                        gebleven schepen in Europa van deze soort. Het behoort
-                        tot het zogenaamde Varende Erfgoed. Sinds 2010 is er een
-                        B&B in het schip gevestigd.
+                        Aliquam hendrerit semper diam at faucibus. Nulla viverra
+                        velit quis est sollicitudin, nec consequat nisl blandit.
+                        Suspendisse facilisis imperdiet quam, at sodales mauris.
                     </p>
                     <LinkButton
                         href="https://my.mpskin.com/nl/tour/vitanova"
@@ -117,19 +114,18 @@ const Ship: NextPage = () => {
                     </p>
                 </SplitImageSection>
                 <SplitSwiperSection images={breakfastImages}>
-                    <h2>Ontbijt en lunch</h2>
+                    <h2>Aan boord ontbijten</h2>
                     <p>
-                        Stukje ontbijt en lunch voorzieningen op de Vita Nova.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vulputate non dui sit amet suscipit. Nam
-                        pellentesque mollis turpis at semper. Duis et erat in
-                        leo iaculis aliquam eget id tortor. Vestibulum aliquet
-                        quam iaculis nibh lobortis egestas.
+                        Van dinsdag tot zondag wordt er in het scheepsruim een
+                        heerlijk ontbijt geserveerd. Wij werken graag samen met
+                        lokale leveranciers. Bij het ontbijt serveren wij
+                        desembrood van Elsenburg&Sebastiani, onze koffie is van
+                        Boot Koffie en de granola van Bamboo Bytes.
                     </p>
                     <p>
-                        Aliquam hendrerit semper diam at faucibus. Nulla viverra
-                        velit quis est sollicitudin, nec consequat nisl blandit.
-                        Suspendisse facilisis imperdiet quam, at sodales mauris.
+                        Van dinsdag t/m vrijdag serveren we het ontbijt tussen
+                        7.30 uur en 10.30 uur. Op zaterdag en zondag kan er
+                        tussen 9.00 en 10.30 uur aangeschoven worden.
                     </p>
                 </SplitSwiperSection>
             </Container>
