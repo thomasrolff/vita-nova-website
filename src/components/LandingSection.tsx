@@ -52,7 +52,7 @@ export const LandingSection = styled(BaseLandingSection)`
         width: 44px;
         border-radius: 40px;
         background-color: ${colors.offWhite};
-        transition: all 0.1s ease;
+        transition: all 0.1s linear;
 
         :hover {
             background-color: ${colors.white};
