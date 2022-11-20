@@ -53,7 +53,7 @@ export const LinkButton = styled(BaseLinkButton)`
         right: 24px;
     }
 
-    &:hover {
+    :hover {
         color: ${({ secondary }) => secondary && colors.offWhite};
         background-color: ${({ secondary }) =>
             secondary ? colors.blue : colors.orangeHover};
