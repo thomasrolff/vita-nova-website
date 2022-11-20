@@ -28,7 +28,7 @@ const BaseFeatureList = ({ className, features }: IProps) => (
 
 export const FeatureList = styled(BaseFeatureList)`
     color: ${colors.blue};
-    margin: 1.5rem 0 1.5rem 1rem;
+    padding-left: 24px;
     font-size: 1rem;
 
     li {
