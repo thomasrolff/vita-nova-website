@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Container, SplitImageSection, TextContainer } from '../components';
 import groupsImage from '../../public/images/groups.jpg';
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
 
 interface IProps {
     className?: string;
@@ -83,12 +83,7 @@ const BaseGroups: NextPage = ({ className }: IProps) => (
                     groepsactiviteiten of catering aan boord voor een
                     onvergetelijke tijd samen!
                 </p>
-                <p
-                    style={{
-                        fontSize: '15px',
-                        color: colors.blue,
-                    }}
-                >
+                <p>
                     * Van 1 november t/m 31 maart is het vooronder gesloten,
                     omdat het hier in de winter wat kouder wordt. In overleg kan
                     het vooronder wel gehuurd worden in deze periode.
@@ -104,6 +99,10 @@ const Groups = styled(BaseGroups)`
         padding-left: 16px;
         color: ${colors.blue};
         font-size: 15px;
+
+        @media (${breakpoints.mediumMin}) {
+            padding-left: 32px;
+        }
     }
 
     li {
