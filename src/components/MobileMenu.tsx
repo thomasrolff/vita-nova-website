@@ -42,7 +42,7 @@ export const MobileMenu = styled(BaseMobileMenu)`
     background-color: ${colors.white};
     position: fixed;
     transition: top 0.4s ease;
-    top: ${({ open }) => (open ? 0 : '-100%')};
+    top: ${({ open }) => (open ? 0 : '-120%')};
     color: ${colors.white};
     z-index: 10;
 
