@@ -52,7 +52,13 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                 <link href="/favicon.ico" rel="icon" />
             </Head>
 
-            {showPopUp && <BookingPopUp open={true} popupRef={popupRef} />}
+            {showPopUp && (
+                <BookingPopUp
+                    open={true}
+                    popupRef={popupRef}
+                    onClick={() => setShowPopUp(false)}
+                />
+            )}
 
             <LandingSection onScrollButtonClick={handleScrollButtonClick} />
 
