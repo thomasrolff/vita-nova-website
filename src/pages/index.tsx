@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
 import landingImg2 from '../../public/images/landing-2-min.jpg';
 import {
+    BookingPopUp,
     Container,
     SplitImageSection,
     LandingSection,
@@ -13,7 +14,6 @@ import {
     ReviewSection,
 } from '../components';
 import { breakpoints, settings } from '../constants';
-import { BookingPopUp } from '../components/BookingPopUp';
 
 interface IProps {
     className?: string;
@@ -22,10 +22,8 @@ interface IProps {
 const BaseHome: NextPage = ({ className }: IProps) => {
     const sectionRef = useRef<null | HTMLDivElement>(null);
     const popupRef = useRef<null | HTMLDivElement>(null);
-    const [showPopUp, setShowPopUp] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(true);
     const { navbarHeight } = settings;
-
-    console.log(showPopUp);
 
     const handleScrollButtonClick = () => {
         if (!sectionRef.current) return;
@@ -38,7 +36,11 @@ const BaseHome: NextPage = ({ className }: IProps) => {
     };
 
     useEffect(() => {
-        setTimeout(() => setShowPopUp(true), 300);
+        setTimeout(() => {
+            if (!popupRef.current) return;
+
+            popupRef.current.style.right = '0';
+        }, 3000);
     }, []);
 
     return (
@@ -138,8 +140,9 @@ const Home = styled(BaseHome)`
             display: flex;
             position: fixed;
             bottom: 40px;
-            right: 0;
+            right: -100%;
             z-index: 200;
+            transition: right 0.96s ease-in-out;
         }
     }
 `;
