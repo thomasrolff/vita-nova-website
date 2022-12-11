@@ -1,18 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {
-    Container,
-    SplitImageSection,
-    SplitSwiperSection,
-} from '../components';
+import { Container, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
 import * as images from '../images/hold';
 
 const holdImages = [
     {
         id: 0,
-        src: images.hold1Square,
-        srcFull: images.hold1,
+        src: images.hold3Square,
+        srcFull: images.hold3,
         alt: 'Handdoeken image',
     },
     {
@@ -23,14 +19,14 @@ const holdImages = [
     },
     {
         id: 2,
-        src: images.hold3Square,
-        srcFull: images.hold3,
+        src: images.hold4Square,
+        srcFull: images.hold4,
         alt: 'Handdoeken image',
     },
     {
         id: 3,
-        src: images.hold4Square,
-        srcFull: images.hold4,
+        src: images.hold1Square,
+        srcFull: images.hold1,
         alt: 'Handdoeken image',
     },
 ];
@@ -66,9 +62,9 @@ const Ship: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>Een beschrijving over het scheepsruim</title>
+                <title>B&B Vita Nova - Het scheepsruim</title>
                 <meta
-                    content="Een beschrijving over het scheepsruim"
+                    content="In het scheepsruim van B&B Vita Nova is ruimte voor ontspanning en wordt in de ochtend een heerlijk ontbijt met lokale producten geserveerd."
                     name="description"
                 />
             </Head>
@@ -76,44 +72,27 @@ const Ship: NextPage = () => {
                 <SplitSwiperSection images={holdImages}>
                     <h2>Het scheepsruim</h2>
                     <p>
-                        Stukje over het scheepsruim. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Nam vulputate non dui sit
-                        amet suscipit. Nam pellentesque mollis turpis at semper.
-                        Duis et erat in leo iaculis aliquam eget id tortor.
-                        Vestibulum aliquet quam iaculis nibh lobortis egestas.
+                        In het scheepsruim is er ruimte voor ontspanning en
+                        plezier. Heb je zin in een kopje koffie, thee of
+                        misschien een speciaal biertje? In onze minibar op basis
+                        van self service is dit allemaal verkrijgbaar.
                     </p>
                     <p>
-                        Aliquam hendrerit semper diam at faucibus. Nulla viverra
-                        velit quis est sollicitudin, nec consequat nisl blandit.
-                        Suspendisse facilisis imperdiet quam, at sodales mauris.
+                        Met een ruim assortiment aan spelletjes en tijdschriften
+                        is er voldoende vermaak. &lsquo;s Winters zorgt de
+                        pelletkachel voor een heerlijke warmte en in de zomer
+                        kan je buiten op de picknicktafels in het zonnetje
+                        vertoeven.
                     </p>
                     <LinkButton
                         href="https://my.mpskin.com/nl/tour/vitanova"
+                        right
                         secondary
                         targetBlank
                         title="Virtuele tour"
                     />
                 </SplitSwiperSection>
-                <SplitImageSection
-                    imageAlt="placeholder"
-                    imageLeft
-                    imageSrc={images.kitchen}
-                >
-                    <h2>De keuken</h2>
-                    <p>
-                        Stukje over de keuken. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Nam vulputate non dui sit
-                        amet suscipit. Nam pellentesque mollis turpis at semper.
-                        Duis et erat in leo iaculis aliquam eget id tortor.
-                        Vestibulum aliquet quam iaculis nibh lobortis egestas.
-                    </p>
-                    <p>
-                        Aliquam hendrerit semper diam at faucibus. Nulla viverra
-                        velit quis est sollicitudin, nec consequat nisl blandit.
-                        Suspendisse facilisis imperdiet quam, at sodales mauris.
-                    </p>
-                </SplitImageSection>
-                <SplitSwiperSection images={breakfastImages}>
+                <SplitSwiperSection imageLeft images={breakfastImages}>
                     <h2>Aan boord ontbijten</h2>
                     <p>
                         Van dinsdag tot zondag wordt er in het scheepsruim een

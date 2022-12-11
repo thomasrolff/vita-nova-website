@@ -16,9 +16,9 @@ interface IProps {
 const BaseFaq: NextPage = ({ className }: IProps) => (
     <div className={className}>
         <Head>
-            <title>Een beschrijving over de Kamers pagina</title>
+            <title>B&B Vita Nova - FAQ</title>
             <meta
-                content="Een beschrijving over de FAQs pagina"
+                content="Check de FAQ's voor een antwoord op de meest gestelde vragen."
                 name="description"
             />
         </Head>
