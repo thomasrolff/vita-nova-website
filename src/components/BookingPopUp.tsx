@@ -50,11 +50,18 @@ export const BookingPopUp = styled(BaseBookingPopUp)`
         padding-top: 20px;
         padding-right: 40px;
         margin-top: auto;
-    }
 
-    ${BookingArrow} {
-        position: absolute;
-        right: 8px;
-        height: 16px;
+        ${BookingArrow} {
+            position: absolute;
+            height: 16px;
+            right: 4px;
+            transition: right 0.1s ease-in;
+        }
+
+        :hover {
+            ${BookingArrow} {
+                right: 0;
+            }
+        }
     }
 `;
