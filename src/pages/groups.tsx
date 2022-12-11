@@ -12,8 +12,11 @@ interface IProps {
 const BaseGroups: NextPage = ({ className }: IProps) => (
     <div className={className}>
         <Head>
-            <title>Een beschrijving over het groepen</title>
-            <meta content="Een beschrijving over groepen" name="description" />
+            <title>B&B Vita Nova - Groepen</title>
+            <meta
+                content="B&B Vita Nova is ook te huren als groepsaccommodatie. Een unieke plek in Amersfoort om tijd met jouw vrienden, familie of collega's door te brengen."
+                name="description"
+            />
         </Head>
         <Container>
             <SplitImageSection imageAlt="placeholder" imageSrc={groupsImage}>

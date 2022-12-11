@@ -13,9 +13,9 @@ interface IProps {
 const BaseRooms: NextPage = ({ className }: IProps) => (
     <div className={className}>
         <Head>
-            <title>Een beschrijving over de Kamers pagina</title>
+            <title>B&B Vita Nova - Kamers</title>
             <meta
-                content="Een beschrijving over de Kamers pagina"
+                content="Aan boord van B&B Vita Nova in Amersfoort kan je overnachten in één van de vijf scheepshutten, het vooronder of de roef. Een unieke ervaring!"
                 name="description"
             />
         </Head>
