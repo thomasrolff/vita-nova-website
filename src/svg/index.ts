@@ -15,3 +15,4 @@ export * from './Insta';
 export * from './Facebook';
 export * from './Whatsapp';
 export * from './Dropdown';
+export * from './BookingArrow';

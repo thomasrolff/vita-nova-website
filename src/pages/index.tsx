@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
@@ -13,6 +13,7 @@ import {
     ReviewSection,
 } from '../components';
 import { breakpoints, settings } from '../constants';
+import { BookingPopUp } from '../components/BookingPopUp';
 
 interface IProps {
     className?: string;
@@ -20,7 +21,11 @@ interface IProps {
 
 const BaseHome: NextPage = ({ className }: IProps) => {
     const sectionRef = useRef<null | HTMLDivElement>(null);
+    const popupRef = useRef<null | HTMLDivElement>(null);
+    const [showPopUp, setShowPopUp] = useState(false);
     const { navbarHeight } = settings;
+
+    console.log(showPopUp);
 
     const handleScrollButtonClick = () => {
         if (!sectionRef.current) return;
@@ -32,6 +37,10 @@ const BaseHome: NextPage = ({ className }: IProps) => {
         });
     };
 
+    useEffect(() => {
+        setTimeout(() => setShowPopUp(true), 300);
+    }, []);
+
     return (
         <div className={className}>
             <Head>
@@ -42,6 +51,8 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                 />
                 <link href="/favicon.ico" rel="icon" />
             </Head>
+
+            {showPopUp && <BookingPopUp open={true} popupRef={popupRef} />}
 
             <LandingSection onScrollButtonClick={handleScrollButtonClick} />
 
@@ -111,6 +122,18 @@ const Home = styled(BaseHome)`
         @media (${breakpoints.mediumMin}) {
             margin-left: 64px;
             margin-bottom: 64px;
+        }
+    }
+
+    ${BookingPopUp} {
+        display: none;
+
+        @media (${breakpoints.mediumMin}) {
+            display: flex;
+            position: fixed;
+            bottom: 40px;
+            right: 0;
+            z-index: 200;
         }
     }
 `;
