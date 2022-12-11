@@ -10,4 +10,4 @@ export * from './Accordion';
 export * from './MobileMenu';
 export * from './TextContainer';
 export * from './LinkButton';
-export * from './ReviewSection';
+export * from './BookingPopUp';
