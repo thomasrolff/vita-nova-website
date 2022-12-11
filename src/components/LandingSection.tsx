@@ -54,11 +54,6 @@ export const LandingSection = styled(BaseLandingSection)`
         border-radius: 40px;
         background-color: ${colors.offWhite};
         transition: all 0.1s linear;
-
-        :hover {
-            background-color: ${colors.white};
-            bottom: 1.62rem;
-        }
     }
 
     ${Arrow} {

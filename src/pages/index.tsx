@@ -9,9 +9,7 @@ import {
     Container,
     SplitImageSection,
     LandingSection,
-    TextContainer,
     LinkButton,
-    ReviewSection,
 } from '../components';
 import { breakpoints, settings } from '../constants';
 
@@ -109,9 +107,6 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         title="Meer over groepen"
                     />
                 </SplitImageSection>
-                <TextContainer center className="review">
-                    <ReviewSection />
-                </TextContainer>
             </Container>
         </div>
     );
@@ -121,15 +116,6 @@ const Home = styled(BaseHome)`
     ${SplitImageSection} {
         ${LinkButton} {
             margin-top: 36px;
-        }
-    }
-
-    ${TextContainer}.review {
-        margin-top: 48px;
-
-        @media (${breakpoints.mediumMin}) {
-            margin-left: 64px;
-            margin-bottom: 64px;
         }
     }
 
