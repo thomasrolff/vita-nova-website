@@ -9,7 +9,7 @@ export const routes: IRoutes[] = [
     },
     {
         id: 1,
-        title: 'Het Schip',
+        title: 'Schip',
         inNavbar: true,
         href: '/ship',
     },

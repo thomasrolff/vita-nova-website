@@ -43,15 +43,15 @@ const imagesData = [
 const BaseShip: NextPage = ({ className }: IProps) => (
     <div className={className}>
         <Head>
-            <title>Een beschrijving over het schip</title>
+            <title>B&B Vita Nova - Het schip</title>
             <meta
-                content="Een beschrijving over het schip"
+                content="B&B Vita Nova is gevestigd op een voormalig binnenvaartschip. Het schip ligt in de haven van Amersfoort, op loopafstand van het oude stadscentrum."
                 name="description"
             />
         </Head>
         <Container>
             <SplitSwiperSection images={imagesData}>
-                <h2>De Vita Nova</h2>
+                <h2>Van vrachtschip naar B&B</h2>
                 <p>
                     De Vita Nova is een motorvrachtschip dat in 1940 gebouwd is
                     in België, een zogenaamde spits. Het schip is met haar
@@ -59,14 +59,12 @@ const BaseShip: NextPage = ({ className }: IProps) => (
                     over de kanalen en door de sluizen in België en Frankrijk.
                     De Vita Nova is in de periode dat ze dienst deed als
                     vrachtschip meerdere keren in Amersfoort geweest. Sinds 2010
-                    is er een B&B in het schip gevestigd. Aan boord zijn vijf
-                    scheepshutten, het vooronder en de roef (de voormalige
-                    schipperswoning). Er is een gemeenschappelijke ruimte waar
-                    onder andere het ontbijt wordt geserveerd. In de
-                    gemeenschappelijke ruimte zijn spelletjes en tijdschriften
-                    aanwezig en staat een minibar op basis van selfservice. Bij
-                    mooi weer kan er gebruik worden gemaakt van de
-                    picknicktafels op de kade.
+                    is er een B&B in het schip gevestigd.
+                </p>
+                <p>
+                    Aan boord zijn vijf scheepshutten, het vooronder en de roef.
+                    In het scheepsruim wordt het ontbijt geserveeerd en is er
+                    ruimte voor ontspanning.{' '}
                 </p>
                 <a
                     href="https://my.mpskin.com/nl/tour/vitanova"
@@ -81,25 +79,19 @@ const BaseShip: NextPage = ({ className }: IProps) => (
                 imageLeft
                 imageSrc={images.yourHost}
             >
-                <h2>Uw Host</h2>
+                <h2>Meet the host</h2>
                 <p>
-                    Stukje over de host. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Nam vulputate non dui sit amet suscipit.
-                    Nam pellentesque mollis turpis at semper. Duis et erat in
-                    leo iaculis aliquam eget id tortor. Vestibulum aliquet quam
-                    iaculis nibh lobortis egestas.
-                </p>
-                <p>
-                    Aliquam hendrerit semper diam at faucibus. Nulla viverra
-                    velit quis est sollicitudin, nec consequat nisl blandit.
-                    Suspendisse facilisis imperdiet quam, at sodales mauris.
+                    Ik ben Elène en ik ontvang je graag aan boord van mijn schip
+                    Vita Nova. Sinds 2018 run ik met trots en plezier een B&B in
+                    dit stoere vrachtschip uit 1940. Ontdek de charme van dit
+                    schip op deze unieke locatie in Amersfoort.
                 </p>
             </SplitImageSection>
             <SplitImageSection
                 imageAlt="placeholder"
                 imageSrc={images.amersfoort}
             >
-                <h2>Amersfoort</h2>
+                <h2>Thuishaven: Amersfoort</h2>
                 <p>
                     Onze thuishaven is Amersfoort: centraal gelegen, goed
                     bereikbaar en vlakbij de historische binnenstad. Het schip
@@ -109,6 +101,10 @@ const BaseShip: NextPage = ({ className }: IProps) => (
                 <p>
                     Via het moderne Eemplein en de prachtige Koppelpoort loop je
                     eenvoudig naar het oude stadscentrum.
+                </p>
+                <p>
+                    Een verblijf in Amersfoort is ook eenvoudig te combineren
+                    met een bezoek aan bijvoorbeeld Utrecht of Amsterdam.
                 </p>
             </SplitImageSection>
         </Container>
