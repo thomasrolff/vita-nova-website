@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
 import landingImg2 from '../../public/images/landing-2-min.jpg';
+import giftImg from '../../public/images/gift.jpg';
 import {
     BookingPopUp,
     Container,
@@ -105,6 +106,30 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         secondary
                         title="Meer over groepen"
                     />
+                </SplitImageSection>
+                <SplitImageSection imageAlt="Gift" imageLeft imageSrc={giftImg}>
+                    <h2>Geef B&B Vita Nova kado!</h2>
+                    <p>
+                        Ben jij op zoek naar een uniek kado? Geef je vader,
+                        moeder, broer, zus, vriend, vriendin of collega een
+                        waardebon kado voor een overnachting aan boord van B&B
+                        Vita Nova.
+                    </p>
+                    <p>
+                        Het is mogelijk om een waardebon te kopen voor 1 of 2
+                        personen en met of zonder ontbijt.
+                    </p>
+                    <p>
+                        De waardebon pakken wij feestelijk voor je in, zodat het
+                        extra leuk is om te geven én te krijgen. De waardebon
+                        kan je na bevestiging van je bestelling bij ons afhalen
+                        of we sturen hem kosteloos per post naar je op. De
+                        waardebon is tot een jaar na aankoop geldig.
+                    </p>
+                    <p>
+                        Wil jij iemand verrassen? Neem contact met ons op via de
+                        e-mail, telefoon of whatsapp.
+                    </p>
                 </SplitImageSection>
             </Container>
         </div>
