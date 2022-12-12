@@ -49,7 +49,6 @@ export const FeatureList = styled(BaseFeatureList)`
     }
 
     svg {
-        max-height: 1rem;
-        max-width: 1rem;
+        height: 1rem;
     }
 `;
