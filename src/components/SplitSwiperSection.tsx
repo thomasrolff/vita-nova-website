@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-
+import { useState } from 'react';
 import { Lightbox } from 'yet-another-react-lightbox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
@@ -11,7 +11,6 @@ import 'swiper/css/pagination';
 
 import { breakpoints, colors } from '../constants';
 import { IImage } from '../types';
-import { useState } from 'react';
 
 const ImageContainer = styled.div``;
 const TextContainer = styled.div``;
@@ -75,7 +74,11 @@ const BaseSplitSwiperSection = ({ className, children, images }: IProps) => {
 
 export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+    @media (${breakpoints.smallMin}) {
+        flex-direction: column;
+    }
 
     @media (${breakpoints.mediumMin}) {
         flex-direction: ${({ imageLeft }) =>
@@ -102,7 +105,7 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     }
 
     ${TextContainer} {
-        padding: 48px 24px 72px;
+        padding: 32px 24px 64px;
 
         @media (${breakpoints.mediumMin}) {
             padding: 48px 48px 48px;
