@@ -29,7 +29,7 @@ const BaseFeatureList = ({ className, features }: IProps) => (
 export const FeatureList = styled(BaseFeatureList)`
     color: ${colors.blue};
     padding-left: 8px;
-    font-size: 1rem;
+    font-size: 16px;
 
     @media (${breakpoints.mediumMin}) {
         padding-left: 24px;
@@ -41,14 +41,15 @@ export const FeatureList = styled(BaseFeatureList)`
 
     ${IconContainer} {
         height: 100%;
-        width: 1rem;
+        width: 16px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        margin-right: 0.6rem;
+        margin-right: 10px;
     }
 
     svg {
-        height: 1rem;
+        height: 16px;
+        width: 16px;
     }
 `;
