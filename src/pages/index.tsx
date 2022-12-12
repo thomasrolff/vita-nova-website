@@ -12,7 +12,7 @@ import {
     LandingSection,
     LinkButton,
 } from '../components';
-import { breakpoints, settings } from '../constants';
+import { breakpoints, colors, settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -128,8 +128,27 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                         waardebon is tot een jaar na aankoop geldig.
                     </p>
                     <p>
-                        Wil jij iemand verrassen? Neem contact met ons op via de
-                        e-mail, telefoon of whatsapp.
+                        Wil jij iemand verrassen? Neem contact met ons op via{' '}
+                        <a
+                            className="gift-link"
+                            href="mailto:elene@hotelvitanova.nl"
+                        >
+                            e-mail
+                        </a>
+                        ,{' '}
+                        <a className="gift-link" href="tel:+31651672548">
+                            telefoon
+                        </a>{' '}
+                        of{' '}
+                        <a
+                            className="gift-link"
+                            href="https://wa.me/31651672548"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            whatsapp
+                        </a>
+                        .
                     </p>
                 </SplitImageSection>
             </Container>
@@ -155,6 +174,11 @@ const Home = styled(BaseHome)`
             z-index: 200;
             transition: right 0.96s ease-in-out;
         }
+    }
+
+    .gift-link {
+        color: ${colors.blue};
+        text-decoration: underline;
     }
 `;
 
