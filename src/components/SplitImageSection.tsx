@@ -11,6 +11,7 @@ interface IProps {
     imageSrc: StaticImageData;
     imageAlt: string;
     imageLeft?: boolean;
+    noImageMobile?: boolean;
     sectionRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
@@ -31,7 +32,11 @@ const BaseSplitImageSection = ({
 
 export const SplitImageSection = styled(BaseSplitImageSection)`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+    @media (${breakpoints.smallMin}) {
+        flex-direction: column;
+    }
 
     @media (${breakpoints.mediumMin}) {
         flex-direction: ${({ imageLeft }) =>
@@ -45,11 +50,15 @@ export const SplitImageSection = styled(BaseSplitImageSection)`
     }
 
     ${ImageContainer} {
-        display: flex;
+        display: ${({ noImageMobile }) => (noImageMobile ? 'none' : 'flex')};
         justify-content: center;
         align-items: center;
         max-height: 400px;
         overflow: hidden;
+
+        @media (${breakpoints.smallMin}) {
+            display: flex;
+        }
 
         @media (${breakpoints.mediumMin}) {
             max-height: initial;
@@ -57,7 +66,7 @@ export const SplitImageSection = styled(BaseSplitImageSection)`
     }
 
     ${TextContainer} {
-        padding: 48px 24px 72px;
+        padding: 32px 24px 64px;
 
         @media (${breakpoints.mediumMin}) {
             padding: 48px;

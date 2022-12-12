@@ -68,6 +68,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                     imageAlt="Placeholder Image"
                     imageLeft
                     imageSrc={placeholderImg}
+                    noImageMobile
                     sectionRef={sectionRef}
                 >
                     <h2>Welkom aan boord van B&B Vita Nova</h2>
