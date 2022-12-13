@@ -12,7 +12,7 @@ import {
     LandingSection,
     LinkButton,
 } from '../components';
-import { breakpoints, colors, settings } from '../constants';
+import { colors, settings } from '../constants';
 
 interface IProps {
     className?: string;
@@ -164,16 +164,11 @@ const Home = styled(BaseHome)`
     }
 
     ${BookingPopUp} {
-        display: none;
-
-        @media (${breakpoints.mediumMin}) {
-            display: flex;
-            position: fixed;
-            bottom: 40px;
-            right: -100%;
-            z-index: 200;
-            transition: right 0.96s ease-in-out;
-        }
+        position: fixed;
+        bottom: 40px;
+        right: -100%;
+        z-index: 200;
+        transition: right 0.96s ease-in-out;
     }
 
     .gift-link {
