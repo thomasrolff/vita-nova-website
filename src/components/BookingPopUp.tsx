@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { breakpoints, colors } from '../constants';
 import { BookingArrow, Close } from '../svg';
 
 const BookingLink = styled.a``;
 const CloseButton = styled.div``;
+const TextContainer = styled.div``;
 
 interface IProps {
     className?: string;
@@ -17,7 +18,9 @@ const BaseBookingPopUp = ({ className, popupRef, onClick }: IProps) => (
         <CloseButton onClick={onClick}>
             <Close />
         </CloseButton>
-        <p>Boek direct en krijg de beste prijs!</p>
+        <TextContainer>
+            <p>Boek direct en krijg de beste prijs!</p>
+        </TextContainer>
         <BookingLink
             href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
             rel="noopener noreferrer"
@@ -34,15 +37,30 @@ export const BookingPopUp = styled(BaseBookingPopUp)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
-    width: 400px;
-    font-size: 18px;
     background-color: ${colors.orange};
     color: ${colors.white};
-    padding: 24px;
+    font-size: 16px;
+    height: 130px;
+    width: 240px;
+    padding: 16px 16px;
+
+    @media (${breakpoints.mediumMin}) {
+        font-size: 18px;
+        height: 180px;
+        width: 400px;
+        padding: 24px;
+    }
+
+    ${TextContainer} {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
 
     p {
         margin: 0;
+        line-height: 1.1;
+        padding-right: 44px;
     }
 
     ${BookingLink} {
@@ -52,32 +70,48 @@ export const BookingPopUp = styled(BaseBookingPopUp)`
         align-items: center;
         border-top: 2px solid ${colors.white};
         color: ${colors.white};
-        font-size: 28px;
-        padding-top: 20px;
-        padding-right: 40px;
+        font-size: 24px;
+        padding-top: 10px;
+        padding-right: 24px;
         margin-top: auto;
+
+        @media (${breakpoints.mediumMin}) {
+            font-size: 28px;
+            padding-top: 20px;
+            padding-right: 40px;
+
+            :hover {
+                ${BookingArrow} {
+                    right: 0;
+                }
+            }
+        }
 
         ${BookingArrow} {
             position: absolute;
-            height: 16px;
-            right: 4px;
-            transition: right 0.15s ease-in-out;
-        }
+            height: 12px;
+            right: 0;
 
-        :hover {
-            ${BookingArrow} {
-                right: 0;
+            @media (${breakpoints.mediumMin}) {
+                height: 16px;
+                right: 4px;
+                transition: right 0.15s ease-in-out;
             }
         }
     }
 
     ${CloseButton} {
         position: absolute;
-        width: 28px;
-        height: 28px;
-        top: 12px;
-        right: 12px;
+        width: 24px;
+        top: 6px;
+        right: 6px;
         padding: 6px;
         cursor: pointer;
+
+        @media (${breakpoints.mediumMin}) {
+            width: 28px;
+            top: 12px;
+            right: 12px;
+        }
     }
 `;
