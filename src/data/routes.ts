@@ -32,12 +32,6 @@ export const routes: IRoutes[] = [
         href: 'https://my.mpskin.com/nl/tour/vitanova',
     },
     {
-        id: 5,
-        title: 'Praktische info',
-        inNavbar: false,
-        href: '/info',
-    },
-    {
         id: 6,
         title: 'FAQs',
         inNavbar: true,
