@@ -14,7 +14,7 @@ interface IProps {
 
 const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
     <section className={className}>
-        <video autoPlay loop muted>
+        <video autoPlay loop muted playsInline>
             <source src="/video/wintervideo-vita-nova.m4v" type="video/mp4" />
         </video>
         <div className="video-overlay" />
