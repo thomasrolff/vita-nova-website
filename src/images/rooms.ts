@@ -28,6 +28,26 @@ import forecastle7 from '/public/images/rooms/forecastle-7-min.jpg';
 import forecastle7Square from '/public/images/rooms/forecastle-7-square-min.jpg';
 import forecastle8 from '/public/images/rooms/forecastle-8-min.jpg';
 import forecastle8Square from '/public/images/rooms/forecastle-8-square-min.jpg';
+import deckhouse1 from '/public/images/rooms/HotelVitaNova_DeRoef_1-min.jpg';
+import deckhouse1Square from '/public/images/rooms/HotelVitaNova_DeRoef_1-square-min.jpg';
+import deckhouse2 from '/public/images/rooms/HotelVitaNova_DeRoef_2-min.jpg';
+import deckhouse2Square from '/public/images/rooms/HotelVitaNova_DeRoef_2-square-min.jpg';
+import deckhouse3 from '/public/images/rooms/HotelVitaNova_DeRoef_3-min.jpg';
+import deckhouse3Square from '/public/images/rooms/HotelVitaNova_DeRoef_3-square-min.jpg';
+import deckhouse4 from '/public/images/rooms/HotelVitaNova_DeRoef_4-min.jpg';
+import deckhouse4Square from '/public/images/rooms/HotelVitaNova_DeRoef_4-square-min.jpg';
+import deckhouse5 from '/public/images/rooms/HotelVitaNova_DeRoef_5-min.jpg';
+import deckhouse5Square from '/public/images/rooms/HotelVitaNova_DeRoef_5-square-min.jpg';
+import deckhouse6 from '/public/images/rooms/HotelVitaNova_DeRoef_6-min.jpg';
+import deckhouse6Square from '/public/images/rooms/HotelVitaNova_DeRoef_6-square-min.jpg';
+import deckhouse7 from '/public/images/rooms/HotelVitaNova_DeRoef_7-min.jpg';
+import deckhouse7Square from '/public/images/rooms/HotelVitaNova_DeRoef_7-square-min.jpg';
+import deckhouse8 from '/public/images/rooms/HotelVitaNova_DeRoef_8-min.jpg';
+import deckhouse8Square from '/public/images/rooms/HotelVitaNova_DeRoef_8-square-min.jpg';
+import deckhouse9 from '/public/images/rooms/HotelVitaNova_DeRoef_9-min.jpg';
+import deckhouse9Square from '/public/images/rooms/HotelVitaNova_DeRoef_9-square-min.jpg';
+import deckhouse10 from '/public/images/rooms/HotelVitaNova_DeRoef_10-min.jpg';
+import deckhouse10Square from '/public/images/rooms/HotelVitaNova_DeRoef_10-square-min.jpg';
 
 export {
     hut1,
@@ -60,4 +80,24 @@ export {
     forecastle7Square,
     forecastle8,
     forecastle8Square,
+    deckhouse1,
+    deckhouse1Square,
+    deckhouse2,
+    deckhouse2Square,
+    deckhouse3,
+    deckhouse3Square,
+    deckhouse4,
+    deckhouse4Square,
+    deckhouse5,
+    deckhouse5Square,
+    deckhouse6,
+    deckhouse6Square,
+    deckhouse7,
+    deckhouse7Square,
+    deckhouse8,
+    deckhouse8Square,
+    deckhouse9,
+    deckhouse9Square,
+    deckhouse10,
+    deckhouse10Square,
 };
