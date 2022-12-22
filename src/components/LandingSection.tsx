@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors, settings } from '../constants';
 import { Arrow } from '../svg';
 import { LinkButton } from './LinkButton';
+import { useTranslation } from 'next-i18next';
 
 const ButtonContainer = styled.div``;
 const ScrollButton = styled.button``;
@@ -12,26 +13,33 @@ interface IProps {
     onScrollButtonClick(): void;
 }
 
-const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => (
-    <section className={className}>
-        <video autoPlay loop muted playsInline>
-            <source src="/video/wintervideo-vita-nova.m4v" type="video/mp4" />
-        </video>
-        <div className="video-overlay" />
+const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
+    const { t } = useTranslation(['common', 'home']);
 
-        <ButtonContainer>
-            <LinkButton
-                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-                targetBlank
-                title="Boek nu"
-            />
-            <RoomsButton href="/rooms" title="Kamers bekijken" />
-        </ButtonContainer>
-        <ScrollButton onClick={onScrollButtonClick}>
-            <Arrow />
-        </ScrollButton>
-    </section>
-);
+    return (
+        <section className={className}>
+            <video autoPlay loop muted playsInline>
+                <source
+                    src="/video/wintervideo-vita-nova.m4v"
+                    type="video/mp4"
+                />
+            </video>
+            <div className="video-overlay" />
+
+            <ButtonContainer>
+                <LinkButton
+                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    targetBlank
+                    title={t('common:bookNow')}
+                />
+                <RoomsButton href="/rooms" title="Kamers bekijken" />
+            </ButtonContainer>
+            <ScrollButton onClick={onScrollButtonClick}>
+                <Arrow />
+            </ScrollButton>
+        </section>
+    );
+};
 
 export const LandingSection = styled(BaseLandingSection)`
     position: relative;

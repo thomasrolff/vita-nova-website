@@ -22,8 +22,6 @@ interface IProps {
 const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
     const router = useRouter();
 
-    const { locale, locales, defaultLocale } = router;
-
     return (
         <nav className={className}>
             <Hamburger menuOpen={menuOpen} onClick={onHamburgerClick} />
