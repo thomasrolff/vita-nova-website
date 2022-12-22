@@ -5,6 +5,7 @@ import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
+import LocaleSelector from './LocaleSelector';
 
 const LinkItem = styled.a``;
 const LeftLinkContainer = styled.div``;
@@ -20,6 +21,8 @@ interface IProps {
 
 const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
     const router = useRouter();
+
+    const { locale, locales, defaultLocale } = router;
 
     return (
         <nav className={className}>
@@ -48,6 +51,9 @@ const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
                     </a>
                 </Link>
             </LogoContainer>
+
+            <LocaleSelector />
+
             <RightLinkContainer>
                 <BookingButton
                     href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
@@ -65,7 +71,8 @@ export const Navbar = styled(BaseNavbar)`
     display: flex;
     align-items: center;
     background-color: ${colors.white};
-    height: ${settings.navbarHeight + 'px'};
+    /* height: ${settings.navbarHeight + 'px'}; */
+    height: 140px;
     z-index: 11;
     position: fixed;
     top: 0;
