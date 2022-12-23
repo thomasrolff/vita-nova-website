@@ -54,6 +54,7 @@ const BaseLocaleSelectorMobile = ({ className, onLocaleClick }: IProps) => {
 
 export const LocaleSelectorMobile = styled(BaseLocaleSelectorMobile)`
     display: flex;
+    border-top: 1px solid ${colors.blue};
 
     ${OptionButton}, a {
         text-align: center;

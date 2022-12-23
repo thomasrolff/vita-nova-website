@@ -69,10 +69,6 @@ export const MobileMenu = styled(BaseMobileMenu)`
         border-top: 1px solid ${colors.blue};
     }
 
-    ${LinkItem}, ${LocaleSelectorMobile} {
-        border-top: 1px solid ${colors.blue};
-    }
-
     ${BookingLink} {
         color: ${colors.white};
         background-color: ${colors.orange};
