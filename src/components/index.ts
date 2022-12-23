@@ -12,3 +12,4 @@ export * from './TextContainer';
 export * from './LinkButton';
 export * from './BookingPopUp';
 export * from './LocaleSelector';
+export * from './LocaleSelectorMobile';

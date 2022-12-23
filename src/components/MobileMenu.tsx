@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { colors } from '../constants';
 import { routes } from '../data';
+import { LocaleSelectorMobile } from '../components';
 
 const LinkItem = styled.a``;
 const BookingLink = styled.a``;
@@ -10,9 +11,10 @@ const Nav = styled.nav``;
 interface IProps {
     className?: string;
     open: boolean;
+    onLocaleClick(): void;
 }
 
-const BaseMobileMenu = ({ className }: IProps) => (
+const BaseMobileMenu = ({ className, onLocaleClick }: IProps) => (
     <div className={className}>
         <Nav>
             {routes
@@ -22,6 +24,7 @@ const BaseMobileMenu = ({ className }: IProps) => (
                         <LinkItem>{route.title}</LinkItem>
                     </Link>
                 ))}
+            <LocaleSelectorMobile onLocaleClick={onLocaleClick} />
             <BookingLink
                 href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                 rel="noopener noreferrer"
@@ -63,6 +66,10 @@ export const MobileMenu = styled(BaseMobileMenu)`
         width: 100%;
         height: 56px;
         color: ${colors.blue};
+        border-top: 1px solid ${colors.blue};
+    }
+
+    ${LinkItem}, ${LocaleSelectorMobile} {
         border-top: 1px solid ${colors.blue};
     }
 

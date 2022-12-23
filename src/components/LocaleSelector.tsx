@@ -37,9 +37,9 @@ const BaseLocaleSelector = ({ className }: IProps) => {
             <ToggleButton onClick={() => setShowOptions(!showOptions)}>
                 {activeLocale}
             </ToggleButton>
-            {showOptions && (
+            {showOptions && locales && (
                 <OptionsList>
-                    {(locales || []).map((locale) => {
+                    {locales.map((locale) => {
                         const { pathname, query, asPath } = router;
 
                         return (
