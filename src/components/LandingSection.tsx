@@ -32,7 +32,6 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
                     targetBlank
                     title={t('common:bookNow')}
                 />
-                <RoomsButton href="/rooms" title="Kamers bekijken" />
             </ButtonContainer>
             <ScrollButton onClick={onScrollButtonClick}>
                 <Arrow />
