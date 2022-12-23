@@ -55,8 +55,7 @@ export const LinkButton = styled(BaseLinkButton)`
 
     :hover {
         color: ${({ secondary }) => secondary && colors.offWhite};
-        background-color: ${({ secondary }) =>
-            secondary ? colors.blue : colors.orangeHover};
+        background-color: ${colors.blue};
     }
 
     @media (${breakpoints.mediumMin}) {
