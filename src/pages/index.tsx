@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import placeholderImg from '../../public/images/placeholder.jpg';
 import landingImg2 from '../../public/images/landing-2-min.jpg';
 import giftImg from '../../public/images/gift.jpg';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import {
     BookingPopUp,
     Container,
@@ -13,6 +14,19 @@ import {
     LinkButton,
 } from '../components';
 import { colors, settings } from '../constants';
+import { useTranslation, Trans } from 'next-i18next';
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'home'])),
+        },
+    };
+};
 
 interface IProps {
     className?: string;
@@ -23,6 +37,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
     const popupRef = useRef<null | HTMLDivElement>(null);
     const [showPopUp, setShowPopUp] = useState(true);
     const { navbarHeight } = settings;
+    const { t } = useTranslation('common');
 
     const handleScrollButtonClick = () => {
         if (!sectionRef.current) return;
@@ -45,9 +60,9 @@ const BaseHome: NextPage = ({ className }: IProps) => {
     return (
         <div className={className}>
             <Head>
-                <title>Welkom aan boord van B&B Vita Nova</title>
+                <title>{t('home:welcomeTitle')}</title>
                 <meta
-                    content="Overnacht op een voormalig binnenvaartschip in het stadscentrum van Amersfoort. Bij B&B Vita Nova stap je aan boord van een bijzondere beleving."
+                    content={t('home:meta.description') || ''}
                     name="description"
                 />
                 <link href="/favicon.ico" rel="icon" />
@@ -71,84 +86,58 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                     noImageMobile
                     sectionRef={sectionRef}
                 >
-                    <h2>Welkom aan boord van B&B Vita Nova</h2>
-                    <p>
-                        Op B&B Vita Nova ben je te gast als opvarende. Je stapt
-                        geen hotel binnen, maar aan boord van een beleving. Kom
-                        aan boord en overnacht in één van de vijf scheepshutten,
-                        het vooronder of de roef. Hier slaap je op de zachte
-                        deining van het water. Een onvergetelijke ervaring!
-                    </p>
+                    <h2>{t('home:welcomeTitle')}</h2>
+                    <p>{t('home:welcomeBody')}</p>
                     <LinkButton
                         href="/ship"
                         secondary
-                        title="Ontdek B&B Vita Nova"
+                        title={t('home:discover')}
                     />
                 </SplitImageSection>
                 <SplitImageSection
                     imageAlt="Placeholder Image"
                     imageSrc={landingImg2}
                 >
-                    <h2>Ideaal voor groepen: huur het hele schip</h2>
-                    <p>
-                        Kom aan boord met jouw vrienden, familie of collega’s en
-                        ervaar de intimiteit en sfeer van leven op het water.
-                    </p>
-                    <p>
-                        Het hele schip staat tot jullie beschikking en in het
-                        sfeervolle ruim is er genoeg plaats om samen te borrelen
-                        of een spelletje te spelen. Wij denken graag met je mee
-                        over leuke groepsactiviteiten voor een onvergetelijke
-                        tijd samen!
-                    </p>
+                    <h2>{t('home:groupsTitle')}</h2>
+                    <p>{t('home:groupsBody1')}</p>
+                    <p>{t('home:groupsBody2')}</p>
                     <LinkButton
                         href="/groups"
                         right
                         secondary
-                        title="Meer over groepen"
+                        title={t('home:moreOnGroups')}
                     />
                 </SplitImageSection>
                 <SplitImageSection imageAlt="Gift" imageLeft imageSrc={giftImg}>
-                    <h2>Geef B&B Vita Nova kado!</h2>
+                    <h2>{t('home:giftTitle')}</h2>
+                    <p>{t('home:giftBody1')}</p>
+                    <p>{t('home:giftBody2')}</p>
+                    <p>{t('home:giftBody3')}</p>
                     <p>
-                        Ben jij op zoek naar een uniek kado? Geef je vader,
-                        moeder, broer, zus, vriend, vriendin of collega een
-                        waardebon kado voor een overnachting aan boord van B&B
-                        Vita Nova.
-                    </p>
-                    <p>
-                        Het is mogelijk om een waardebon te kopen voor 1 of 2
-                        personen en met of zonder ontbijt.
-                    </p>
-                    <p>
-                        De waardebon pakken wij feestelijk voor je in, zodat het
-                        extra leuk is om te geven én te krijgen. De waardebon
-                        kan je na bevestiging van je bestelling bij ons afhalen
-                        of we sturen hem kosteloos per post naar je op. De
-                        waardebon is tot een jaar na aankoop geldig.
-                    </p>
-                    <p>
-                        Wil jij iemand verrassen? Neem contact met ons op via{' '}
-                        <a
-                            className="gift-link"
-                            href="mailto:elene@hotelvitanova.nl"
-                        >
-                            e-mail
-                        </a>
-                        ,{' '}
-                        <a className="gift-link" href="tel:+31651672548">
-                            telefoon
-                        </a>{' '}
-                        of{' '}
-                        <a
-                            className="gift-link"
-                            href="https://wa.me/31651672548"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            whatsapp
-                        </a>
-                        .
+                        <Trans i18nKey="home:giftBody4">
+                            Wil jij iemand verrassen? Neem contact met ons op
+                            via{' '}
+                            <a
+                                className="gift-link"
+                                href="mailto:elene@hotelvitanova.nl"
+                            >
+                                e-mail
+                            </a>
+                            ,{' '}
+                            <a className="gift-link" href="tel:+31651672548">
+                                telefoon
+                            </a>{' '}
+                            of{' '}
+                            <a
+                                className="gift-link"
+                                href="https://wa.me/31651672548"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                whatsapp
+                            </a>
+                            .
+                        </Trans>
                     </p>
                 </SplitImageSection>
             </Container>
