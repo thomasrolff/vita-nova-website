@@ -27,7 +27,10 @@ const BaseLayout = ({ className, children }: IProps) => {
                 menuOpen={menuOpen}
                 onHamburgerClick={() => setMenuOpen(!menuOpen)}
             />
-            <MobileMenu open={menuOpen} />
+            <MobileMenu
+                open={menuOpen}
+                onLocaleClick={() => setMenuOpen(false)}
+            />
             {children}
             <Footer />
         </div>

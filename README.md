@@ -14,3 +14,7 @@ This project uses typescript and is formatted using prettier and eslint. To repl
     "editor.formatOnSave": true
 }
 ```
+
+## Internationalization
+
+Translations can be found at `public/locales`.

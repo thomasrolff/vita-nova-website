@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
 import { BookingArrow, Close } from '../svg';
@@ -13,24 +14,28 @@ interface IProps {
     onClick(): void;
 }
 
-const BaseBookingPopUp = ({ className, popupRef, onClick }: IProps) => (
-    <div className={className} ref={popupRef}>
-        <CloseButton onClick={onClick}>
-            <Close />
-        </CloseButton>
-        <TextContainer>
-            <p>Boek direct en krijg de beste prijs!</p>
-        </TextContainer>
-        <BookingLink
-            href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-            rel="noopener noreferrer"
-            target="_blank"
-        >
-            Boek nu
-            <BookingArrow />
-        </BookingLink>
-    </div>
-);
+const BaseBookingPopUp = ({ className, popupRef, onClick }: IProps) => {
+    const { t } = useTranslation('common');
+
+    return (
+        <div className={className} ref={popupRef}>
+            <CloseButton onClick={onClick}>
+                <Close />
+            </CloseButton>
+            <TextContainer>
+                <p>{t('common:popupTitle')}</p>
+            </TextContainer>
+            <BookingLink
+                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                {t('common:bookNow')}
+                <BookingArrow />
+            </BookingLink>
+        </div>
+    );
+};
 
 export const BookingPopUp = styled(BaseBookingPopUp)`
     position: relative;
