@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../constants';
+import { Arrow } from '../svg';
 
 interface IOptionButtonProps {
     active: boolean;
@@ -13,6 +14,9 @@ const ToggleButton = styled.div.attrs({
     role: 'button',
 })``;
 
+const LngArrow = styled(Arrow)<IOptionButtonProps>`
+    transform: ${({ active }) => active && 'rotate(180deg)'};
+`;
 const OptionButton = styled.li.attrs({
     role: 'button',
 })<IOptionButtonProps>`
@@ -35,7 +39,8 @@ const BaseLocaleSelector = ({ className }: IProps) => {
     return (
         <div className={className}>
             <ToggleButton onClick={() => setShowOptions(!showOptions)}>
-                {activeLocale}
+                <div>{activeLocale}</div>
+                <LngArrow active={showOptions} />
             </ToggleButton>
             {showOptions && locales && (
                 <OptionsList>
@@ -70,13 +75,23 @@ export const LocaleSelector = styled(BaseLocaleSelector)`
 
     ${ToggleButton}, ${OptionsList} {
         width: 56px;
+
+        div {
+            width: 36px;
+        }
     }
 
     ${ToggleButton} {
+        display: flex;
+        align-items: center;
         font-size: 20px;
         cursor: pointer;
         color: ${colors.offBlack};
         padding: 8px 0;
+    }
+
+    ${LngArrow} {
+        height: 13px;
     }
 
     ${OptionsList} {

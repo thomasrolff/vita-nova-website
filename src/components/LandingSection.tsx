@@ -80,7 +80,7 @@ export const LandingSection = styled(BaseLandingSection)`
 
         @media (${breakpoints.mediumMin}) {
             flex-direction: row;
-            margin-bottom: 48px;
+            margin-bottom: 24px;
         }
     }
 
