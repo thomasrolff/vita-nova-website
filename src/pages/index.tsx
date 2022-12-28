@@ -54,7 +54,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
             if (!popupRef.current) return;
 
             popupRef.current.style.right = '0';
-        }, 3000);
+        }, 8000);
     }, []);
 
     return (
