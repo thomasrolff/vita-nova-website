@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { useTranslation } from 'next-i18next';
 import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
 import { Email, Logo, Phone, Pin, Insta, Facebook, Whatsapp } from '../svg';
@@ -21,80 +22,84 @@ interface IProps {
     className?: string;
 }
 
-const BaseFooter = ({ className }: IProps) => (
-    <div className={className}>
-        <Container>
-            <SocialContainer>
-                <SocialLink
-                    href="https://www.instagram.com/hotelvitanova033/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <Insta />
-                </SocialLink>
-                <SocialLink
-                    href="https://www.facebook.com/hotelvitanova/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <Facebook />
-                </SocialLink>
-                <SocialLink
-                    href="https://wa.me/31651672548"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <Whatsapp />
-                </SocialLink>
-            </SocialContainer>
-        </Container>
-        <FlexContainer>
-            <ListContainer>
-                <h3>LINKS</h3>
-                {routes.map((route) => (
-                    <Link href={route.href} key={route.id}>
-                        <LinkItem>{route.title}</LinkItem>
-                    </Link>
-                ))}
-            </ListContainer>
-            <ContactContainer>
+const BaseFooter = ({ className }: IProps) => {
+    const { t } = useTranslation('common');
+
+    return (
+        <div className={className}>
+            <Container>
+                <SocialContainer>
+                    <SocialLink
+                        href="https://www.instagram.com/hotelvitanova033/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <Insta />
+                    </SocialLink>
+                    <SocialLink
+                        href="https://www.facebook.com/hotelvitanova/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <Facebook />
+                    </SocialLink>
+                    <SocialLink
+                        href="https://wa.me/31651672548"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <Whatsapp />
+                    </SocialLink>
+                </SocialContainer>
+            </Container>
+            <FlexContainer>
                 <ListContainer>
-                    <h3>CONTACT</h3>
-                    <li>
-                        <Pin />
-                        Kleine koppel 11
-                    </li>
-                    <li>3812 PG Amersfoort</li>
-                    <li>
-                        <Email />
-                        <ContactLink href="mailto:elene@hotelvitanova.nl">
-                            elene@hotelvitanova.nl
-                        </ContactLink>
-                    </li>
-                    <li>
-                        <Phone />
-                        <ContactLink href="tel:+31651672548">
-                            +31 651672548
-                        </ContactLink>
-                    </li>
+                    <h3>LINKS</h3>
+                    {routes.map((route) => (
+                        <Link href={route.href} key={route.id}>
+                            <LinkItem>{t(route.title)}</LinkItem>
+                        </Link>
+                    ))}
                 </ListContainer>
-            </ContactContainer>
-            <GoogleMapContainer>
-                <Map />
-            </GoogleMapContainer>
-        </FlexContainer>
-        <LogoContainer>
-            <Link href="/">
-                <a>
-                    <Logo />
-                </a>
-            </Link>
-            <Copyright>
-                &copy; {new Date().getFullYear()} B&B Vita Nova
-            </Copyright>
-        </LogoContainer>
-    </div>
-);
+                <ContactContainer>
+                    <ListContainer>
+                        <h3>CONTACT</h3>
+                        <li>
+                            <Pin />
+                            Kleine koppel 11
+                        </li>
+                        <li>3812 PG Amersfoort</li>
+                        <li>
+                            <Email />
+                            <ContactLink href="mailto:elene@hotelvitanova.nl">
+                                elene@hotelvitanova.nl
+                            </ContactLink>
+                        </li>
+                        <li>
+                            <Phone />
+                            <ContactLink href="tel:+31651672548">
+                                +31 651672548
+                            </ContactLink>
+                        </li>
+                    </ListContainer>
+                </ContactContainer>
+                <GoogleMapContainer>
+                    <Map />
+                </GoogleMapContainer>
+            </FlexContainer>
+            <LogoContainer>
+                <Link href="/">
+                    <a>
+                        <Logo />
+                    </a>
+                </Link>
+                <Copyright>
+                    &copy; {new Date().getFullYear()} B&B Vita Nova
+                </Copyright>
+            </LogoContainer>
+        </div>
+    );
+};
 
 export const Footer = styled(BaseFooter)`
     background-color: ${colors.blue};

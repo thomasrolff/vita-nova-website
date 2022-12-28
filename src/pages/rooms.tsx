@@ -1,10 +1,23 @@
 import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import styled from 'styled-components';
 import { Container, FeatureList, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
 import { ReadMoreDrawer } from '../components/ReadMoreDrawer';
 import { rooms } from '../data';
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'rooms'])),
+        },
+    };
+};
 
 interface IProps {
     className?: string;

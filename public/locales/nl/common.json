@@ -1,4 +1,12 @@
 {
     "bookNow": "Boek nu",
-    "popupTitle": "Boek direct via de website en krijg de beste prijs!"
+    "popupTitle": "Boek direct via de website en krijg de beste prijs!",
+    "menu": {
+        "rooms": "Kamers",
+        "ship": "Schip",
+        "hold": "Scheepsruim",
+        "groups": "Groepen",
+        "tour": "Virtuele Tour",
+        "faq": "FAQs"
+    }
 }

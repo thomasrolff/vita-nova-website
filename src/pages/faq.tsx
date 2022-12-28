@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -6,6 +7,18 @@ import { Accordion, Container } from '../components';
 import { settings } from '../constants';
 import { faqs } from '../data';
 import backgroundImg from '/public/images/faqs.jpg';
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'faq'])),
+        },
+    };
+};
 
 const ImageContainer = styled.div``;
 
