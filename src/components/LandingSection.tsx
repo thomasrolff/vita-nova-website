@@ -87,7 +87,7 @@ export const LandingSection = styled(BaseLandingSection)`
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 24px;
+        bottom: 48px;
         height: 64px;
         width: 150px;
         border-radius: 40px;
