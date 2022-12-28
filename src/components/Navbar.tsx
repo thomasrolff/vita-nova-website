@@ -6,6 +6,7 @@ import { routes } from '../data';
 import { Logo } from '../svg';
 import { Hamburger } from './Hamburger';
 import { LocaleSelector } from './LocaleSelector';
+import { useTranslation } from 'next-i18next';
 
 const LinkItem = styled.a``;
 const LeftLinkContainer = styled.div``;
@@ -21,6 +22,7 @@ interface IProps {
 
 const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
     const router = useRouter();
+    const { t } = useTranslation(['common']);
 
     return (
         <nav className={className}>
@@ -37,7 +39,7 @@ const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
                                         : ''
                                 }
                             >
-                                {route.title}
+                                {t(route.title)}
                             </LinkItem>
                         </Link>
                     ))}
@@ -57,7 +59,7 @@ const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
                     rel="noopener noreferrer"
                     target="_blank"
                 >
-                    Boek nu
+                    {t('common:bookNow')}
                 </BookingButton>
             </RightLinkContainer>
         </nav>

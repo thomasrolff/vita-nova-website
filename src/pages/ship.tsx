@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import styled from 'styled-components';
 import {
@@ -8,6 +9,18 @@ import {
 } from '../components';
 import { colors } from '../constants';
 import * as images from '../images/ship';
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'ship'])),
+        },
+    };
+};
 
 interface IProps {
     className?: string;

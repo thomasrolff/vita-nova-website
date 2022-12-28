@@ -1,4 +1,12 @@
 {
     "bookNow": "Book now",
-    "popupTitle": "Book via our website and get the best price!"
+    "popupTitle": "Book via our website and get the best price!",
+    "menu": {
+        "rooms": "Rooms",
+        "ship": "Ship",
+        "hold": "Ship's Hold",
+        "groups": "Groups",
+        "tour": "Virtual Tour",
+        "faq": "FAQs"
+    }
 }
