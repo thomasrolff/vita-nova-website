@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { colors, settings } from '../constants';
-import { Arrow } from '../svg';
+import { breakpoints, colors, settings } from '../constants';
+import { Dropdown } from '../svg';
 import { useTranslation } from 'next-i18next';
+import { LinkButton } from './LinkButton';
 
 const ButtonContainer = styled.div``;
 const ScrollButton = styled.button``;
-const BookingButton = styled.a``;
+const Button = styled.a``;
 
 interface IProps {
     className?: string;
@@ -26,17 +27,18 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
             <div className="video-overlay" />
 
             <ButtonContainer>
-                <BookingButton
+                <LinkButton href="/rooms" title="Bekijk de kamers" />
+                <Button
                     href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
                     {t('common:bookNow')}
-                </BookingButton>
-                <ScrollButton onClick={onScrollButtonClick}>
-                    <Arrow />
-                </ScrollButton>
+                </Button>
             </ButtonContainer>
+            <ScrollButton onClick={onScrollButtonClick}>
+                <Dropdown />
+            </ScrollButton>
         </section>
     );
 };
@@ -71,39 +73,58 @@ export const LandingSection = styled(BaseLandingSection)`
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        margin: auto 0;
         z-index: 1;
-        margin-bottom: 60px;
+
+        @media (${breakpoints.mediumMin}) {
+            flex-direction: row;
+        }
     }
 
     ${ScrollButton} {
-        /* position: absolute; */
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 44px;
-        width: 44px;
+        bottom: 24px;
+        height: 64px;
+        width: 150px;
         border-radius: 40px;
-        background-color: ${colors.offWhite};
+        background-color: transparent;
         transition: all 0.1s linear;
+        z-index: 1;
+
+        @media (${breakpoints.mediumMin}) {
+            bottom: 8px;
+
+            :hover {
+                bottom: 12px;
+            }
+        }
     }
 
-    ${Arrow} {
-        height: 14px;
+    ${Dropdown} {
+        height: 10px;
+        fill: ${colors.white};
     }
 
-    ${BookingButton} {
+    ${Button}, ${LinkButton} {
         display: flex;
         align-items: center;
         justify-content: center;
         color: ${colors.white};
-        width: 100%;
-        max-width: 220px;
-        margin: 0 auto;
-        padding: 16px 0;
-        font-size: 20px;
+        width: 220px;
+        margin: 6px 8px;
+        height: 44px;
+        font-size: 1.1rem;
         border: 1px solid ${colors.white};
-        border-radius: 40px;
-        margin-bottom: 8%;
+        background-color: rgba(255, 255, 255, 0);
+        transition: all 0.2s linear;
+
+        :hover {
+            background-color: ${colors.white};
+            color: ${colors.blue};
+        }
     }
 `;
