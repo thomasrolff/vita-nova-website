@@ -4,6 +4,19 @@ import { Container, SplitImageSection, TextContainer } from '../components';
 import groupsImage from '../../public/images/groups.jpg';
 import styled from 'styled-components';
 import { breakpoints, colors } from '../constants';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'groups'])),
+        },
+    };
+};
 
 interface IProps {
     className?: string;

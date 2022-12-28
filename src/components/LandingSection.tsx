@@ -27,7 +27,7 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
             <div className="video-overlay" />
 
             <ButtonContainer>
-                <LinkButton href="/rooms" title="Bekijk de kamers" />
+                <LinkButton href="/rooms" title={t('home:viewRooms')} />
                 <Button
                     href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
                     rel="noopener noreferrer"

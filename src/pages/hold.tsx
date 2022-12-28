@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import { Container, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
@@ -57,6 +58,18 @@ const breakfastImages = [
         alt: 'Handdoeken image',
     },
 ];
+
+interface IStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({ locale }: IStaticProps) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'hold'])),
+        },
+    };
+};
 
 const Ship: NextPage = () => {
     return (
