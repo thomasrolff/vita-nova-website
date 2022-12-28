@@ -55,11 +55,11 @@ export const LandingSection = styled(BaseLandingSection)`
 
     video,
     .video-overlay {
+        position: absolute;
         width: 100vw;
         height: 56.25vw;
-        min-height: 100vh;
+        min-height: 100%;
         min-width: 177.77vh;
-        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -87,7 +87,7 @@ export const LandingSection = styled(BaseLandingSection)`
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 48px;
+        bottom: 12px;
         height: 64px;
         width: 150px;
         border-radius: 40px;
@@ -122,9 +122,13 @@ export const LandingSection = styled(BaseLandingSection)`
         background-color: rgba(255, 255, 255, 0);
         transition: all 0.2s linear;
 
-        :hover {
-            background-color: ${colors.white};
-            color: ${colors.blue};
+        @media (${breakpoints.mediumMin}) {
+            margin-bottom: 48px;
+
+            :hover {
+                background-color: ${colors.white};
+                color: ${colors.blue};
+            }
         }
     }
 `;
