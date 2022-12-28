@@ -74,11 +74,13 @@ export const LandingSection = styled(BaseLandingSection)`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: auto 0;
+        margin-bottom: 64px;
+        height: 100%;
         z-index: 1;
 
         @media (${breakpoints.mediumMin}) {
             flex-direction: row;
+            margin-bottom: 48px;
         }
     }
 
@@ -87,7 +89,7 @@ export const LandingSection = styled(BaseLandingSection)`
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 12px;
+        bottom: 64px;
         height: 64px;
         width: 150px;
         border-radius: 40px;
@@ -123,8 +125,6 @@ export const LandingSection = styled(BaseLandingSection)`
         transition: all 0.2s linear;
 
         @media (${breakpoints.mediumMin}) {
-            margin-bottom: 48px;
-
             :hover {
                 background-color: ${colors.white};
                 color: ${colors.blue};
