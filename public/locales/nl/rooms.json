@@ -1,0 +1,38 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Kamers",
+        "description": "Aan boord van B&B Vita Nova in Amersfoort kan je overnachten in één van de vijf scheepshutten, het vooronder of de roef. Een unieke ervaring!"
+    },
+    "shipsCabin": {
+        "title": "De Scheepshut",
+        "description": "De scheepshutten zijn knus en van alle gemakken voorzien. De modern ingerichte kamers beschikken over een tweepersoonsbed met eigen douche en toilet. Er is gratis wifi. Daarnaast kan je gebruik maken van het ruim, waar je alle ruimte hebt om te relaxen en gezellig samen te zijn.",
+        "features": {
+            "doubleBed": "Tweepersoons bed (140 x 200cm)",
+            "bathroom": "Douche en toilet",
+            "wifi": "Gratis Wifi",
+            "skyLight": "Elektrisch dakraam"
+        }
+    },
+    "sailorsCabin": {
+        "title": "Het Vooronder",
+        "description": "Op zoek naar een bijzondere beleving? Boek dan een overnachting in het originele vooronder. Het vooronder is voorzien van een eigen douche en toilet en heeft een eigen ingang op het voordek. Er zijn twee eenpersoonsbedstedes en er is een derde eenpersoons slaapplek in de onderkooi. Het vooronder is geschikt voor 2 tot 3 volwassen of een gezin met twee kleine kinderen. Houdt rekening met scheepscomfort.",
+        "extraInfoTitle": "Meer over scheepscomfort",
+        "extraInfo": "Let op: het vooronder is een kleine ruimte. Een steile trap biedt toegang tot de ruimte. Er zitten geen ramen aan de zijkant en het heeft een verlaagd plafond, dus het is niet geschikt voor personen met claustrofobie. Vooral met drie volwassenen kan de ruimte als klein worden ervaren. Als je voor langere tijd een verblijf zoekt dan adviseer ik je om een 'scheepshut' of 'de roef' te boeken.",
+        "features": {
+            "unique": "Uniek en avontuurlijk",
+            "beds": "3 x eenpersoonsbed",
+            "bathroom": "Douche en toilet (met scheepspomp!)"
+        }
+    },
+    "skippersHouse": {
+        "title": "De Roef",
+        "description": "Wil jij ervaren hoe het is om te leven aan boord van een voormalig binnenvaartschip? Boek dan jouw verblijf in de roef. De roef is de voormalige schipperswoning. De ruimte is voorzien van een eigen zithoek met heerlijke pelletkachel, badkamer en tweepersoonsbedstede (160 x 200 cm). Er is ruimte om een babybedje in een apart kamertje te plaatsen. Daarnaast heb je vanuit de stuurhut een prachtig uitzicht op de haven en de Koppelpoort van Amersfoort. De roef is ingericht met een koelkast, servies en koffie- en theefaciliteiten. Overnachten in de roef is een unieke ervaring!",
+        "features": {
+            "authentic": "Authentiek en romantisch",
+            "beds": "Tweepersoonsbedstede (160 x 200 cm)",
+            "comfort": "Eigen zithoek met pelletkachel",
+            "bathroom": "Eigen sanitair"
+        }
+    },
+    "availability": "Beschikbaarheid"
+}

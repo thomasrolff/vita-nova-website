@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useTranslation } from 'next-i18next';
 import { breakpoints, colors } from '../constants';
 import { IFeature } from '../types';
 
@@ -9,22 +10,26 @@ interface IProps {
     features: IFeature[];
 }
 
-const BaseFeatureList = ({ className, features }: IProps) => (
-    <ul className={className}>
-        {features.map((feature) => {
-            const SvgComponent = feature.svg;
+const BaseFeatureList = ({ className, features }: IProps) => {
+    const { t } = useTranslation();
 
-            return (
-                <li key={feature.id}>
-                    <IconContainer>
-                        <SvgComponent />
-                    </IconContainer>
-                    {feature.title}
-                </li>
-            );
-        })}
-    </ul>
-);
+    return (
+        <ul className={className}>
+            {features.map((feature) => {
+                const SvgComponent = feature.svg;
+
+                return (
+                    <li key={feature.id}>
+                        <IconContainer>
+                            <SvgComponent />
+                        </IconContainer>
+                        {t(feature.title)}
+                    </li>
+                );
+            })}
+        </ul>
+    );
+};
 
 export const FeatureList = styled(BaseFeatureList)`
     color: ${colors.blue};
