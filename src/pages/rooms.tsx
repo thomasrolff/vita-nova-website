@@ -2,9 +2,14 @@ import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Container, FeatureList, SplitSwiperSection } from '../components';
-import { LinkButton } from '../components/LinkButton';
-import { ReadMoreDrawer } from '../components/ReadMoreDrawer';
+import { useTranslation } from 'next-i18next';
+import {
+    Container,
+    FeatureList,
+    SplitSwiperSection,
+    ReadMoreDrawer,
+    LinkButton,
+} from '../components';
 import { rooms } from '../data';
 
 interface IStaticProps {
@@ -23,43 +28,47 @@ interface IProps {
     className?: string;
 }
 
-const BaseRooms: NextPage = ({ className }: IProps) => (
-    <div className={className}>
-        <Head>
-            <title>B&B Vita Nova - Kamers</title>
-            <meta
-                content="Aan boord van B&B Vita Nova in Amersfoort kan je overnachten in één van de vijf scheepshutten, het vooronder of de roef. Een unieke ervaring!"
-                name="description"
-            />
-        </Head>
-        <Container>
-            {rooms.map((room) => (
-                <SplitSwiperSection
-                    imageLeft={room.id % 2 !== 0}
-                    images={room.images}
-                    key={room.id}
-                >
-                    <h2>{room.title}</h2>
-                    <FeatureList features={room.features} />
-                    <p>{room.description}</p>
-                    {room.extraInfo && (
-                        <ReadMoreDrawer
-                            body={room.extraInfo}
-                            title="Meer over scheepscomfort"
+const BaseRooms: NextPage = ({ className }: IProps) => {
+    const { t } = useTranslation('rooms');
+
+    return (
+        <div className={className}>
+            <Head>
+                <title>{t('rooms:meta.title')}</title>
+                <meta
+                    content={t('rooms:meta.description') || ''}
+                    name="description"
+                />
+            </Head>
+            <Container>
+                {rooms.map((room) => (
+                    <SplitSwiperSection
+                        imageLeft={room.id % 2 !== 0}
+                        images={room.images}
+                        key={room.id}
+                    >
+                        <h2>{t(room.title)}</h2>
+                        <FeatureList features={room.features} />
+                        <p>{t(room.description)}</p>
+                        {room.extraInfo && (
+                            <ReadMoreDrawer
+                                body={t(room.extraInfo)}
+                                title={t('rooms:sailorsCabin.extraInfoTitle')}
+                            />
+                        )}
+                        <LinkButton
+                            href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                            right={room.id % 2 === 0}
+                            secondary
+                            targetBlank
+                            title={t('rooms:availability')}
                         />
-                    )}
-                    <LinkButton
-                        href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-                        right={room.id % 2 === 0}
-                        secondary
-                        targetBlank
-                        title="Beschikbaarheid"
-                    />
-                </SplitSwiperSection>
-            ))}
-        </Container>
-    </div>
-);
+                    </SplitSwiperSection>
+                ))}
+            </Container>
+        </div>
+    );
+};
 
 const Rooms = styled(BaseRooms)`
     font-size: 15px;
