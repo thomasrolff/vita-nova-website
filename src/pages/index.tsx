@@ -37,7 +37,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
     const popupRef = useRef<null | HTMLDivElement>(null);
     const [showPopUp, setShowPopUp] = useState(true);
     const { navbarHeight } = settings;
-    const { t } = useTranslation('common');
+    const { t } = useTranslation();
 
     const handleScrollButtonClick = () => {
         if (!sectionRef.current) return;
