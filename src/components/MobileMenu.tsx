@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colors } from '../constants';
 import { routes } from '../data';
 import { LocaleSelectorMobile } from '../components';
+import { useTranslation } from 'next-i18next';
 
 const LinkItem = styled.a``;
 const BookingLink = styled.a``;
@@ -14,27 +15,31 @@ interface IProps {
     onLocaleClick(): void;
 }
 
-const BaseMobileMenu = ({ className, onLocaleClick }: IProps) => (
-    <div className={className}>
-        <Nav>
-            {routes
-                .filter((route) => route.inNavbar)
-                .map((route) => (
-                    <Link href={route.href} key={route.id}>
-                        <LinkItem>{route.title}</LinkItem>
-                    </Link>
-                ))}
-            <LocaleSelectorMobile onLocaleClick={onLocaleClick} />
-            <BookingLink
-                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                Boek nu
-            </BookingLink>
-        </Nav>
-    </div>
-);
+const BaseMobileMenu = ({ className, onLocaleClick }: IProps) => {
+    const { t } = useTranslation();
+
+    return (
+        <div className={className}>
+            <Nav>
+                {routes
+                    .filter((route) => route.inNavbar)
+                    .map((route) => (
+                        <Link href={route.href} key={route.id}>
+                            <LinkItem>{t(route.title)}</LinkItem>
+                        </Link>
+                    ))}
+                <LocaleSelectorMobile onLocaleClick={onLocaleClick} />
+                <BookingLink
+                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    {t('common:bookNow')}
+                </BookingLink>
+            </Nav>
+        </div>
+    );
+};
 
 export const MobileMenu = styled(BaseMobileMenu)`
     display: flex;

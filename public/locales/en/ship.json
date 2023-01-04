@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Ship",
+        "description": "B&B Vita Nova is located on a former cargo ship. The ship is located in the port of Amersfoort, within walking distance of the old city center."
+    },
+    "ship": {
+        "heading": "From cargo ship to B&B",
+        "body1": "Vita Nova is a historic, motorized cargo ship build in 1940 in Belgium. This type of ship is called a \"spits\". The ship, with her specific size, is built to navigate the canals of Belgium and France. When the Vita Nova was still operational, as a cargo ship, it docked multiple times in Amersfoort. Since 2010 Vita Nova has been used as a B&B.",
+        "body2": "Aboard are five ship's cabins, the sailor's cabin and the skipper's house. Breakfast is served in the public area.",
+        "tourLinkTitle": "Click here for a virtual tour through the ship!"
+    },
+    "host": {
+        "heading": "Meet the host",
+        "body": "Hi! My name is Elène and I would like to receive you aboard of my ship Vita Nova. Since 2018 I am proud and happy to run a B&B in this sturdy cargo ship from 1940. Discover the charm of this ship at its unique location in Amersfoort."
+    },
+    "location": {
+        "heading": "Located in Amersfoort",
+        "body1": "We are located close to the historical city center of Amersfoort. Amersfoort is in the middle of the Netherlands and is easily accessible by car, train and bus. The boat is permanently docked in \"De Nieuwe Stad\" (The New City), the creative area of Amersfoort. ",
+        "body2": "From the modern \"Eemplein\" walk through the breath-taking historical \"Koppelpoort\", an iconic portion of the old city wall, to the bustling city center of Amersfoort.",
+        "body3": "A stay in Amersfoort is also easy to combine with a visit to, for example, Utrecht or Amsterdam."
+    }
+}

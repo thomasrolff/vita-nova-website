@@ -1,0 +1,37 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - FAQ",
+        "description": "Check the FAQs for answers to the most frequently asked questions."
+    },
+    "cancelPolicy": {
+        "title": "What is your cancellation policy?",
+        "body1": "If you book directly through us, you can cancel free of charge up to 1 day (24 hours) before arrival. For any booking not canceled at least 24 hours before arrival, the total cost of the stay will be charged. Non-refundable reservations cannot be canceled free of charge. In case of a no show, the full amount will be charged.",
+        "body2": "Special cancellation conditions apply for group bookings (4 rooms or more). A group booking can be canceled free of charge at least 7 days before arrival. If the group booking is canceled 48 hours before arrival, 50% of the accommodation costs will be charged. For any group booking that is not canceled at least 48 hours before arrival, the total cost of the stay will be charged.",
+        "body3": "If you have booked through another provider, the cancellation conditions of that provider apply."
+    },
+    "parking": {
+        "title": "Where can I park my car?",
+        "body1": "We do not have our own parking lot. Affordable and safe parking is possible in the Eemplein car park. The maximum rate per 24 hours is € 11.00. The parking garage is a 3-minute walk away. The address is Eemlaan 21, Amersfoort.",
+        "body2": "Would you rather park for free? You can park for free in the parking spaces next to restaurant Kroast (Kleine Koppel 36, Amersfoort) or in the neighborhoods around Kwekersweg and Brabantsestraat."
+    },
+    "checkInOut": {
+        "title": "What are the check-in and check-out times?",
+        "body": "You can check in from 4 p.m. Check-out is until 11 a.m. You can deliver your luggage before 4 p.m. in consultation."
+    },
+    "breakfast": {
+        "title": "Do you serve breakfast?",
+        "body": "For € 15 per person a delicious breakfast is served in the public area from Tuesday to Sunday (not Mondays). Breakfast can be served between 7.30 and 10.30 a.m. on weekdays and from 9.00 to 10.30 a.m. on weekends."
+    },
+    "bike": {
+        "title": "Does B&B Vita Nova have a bicycle shed?",
+        "body": "There is a bicycle rack in front of the ship on the quay for parking your bicycle. We do not have a covered/guarded bicycle shed. Lightweight bicycles such as racing bicycles can be stored in the ship in consultation."
+    },
+    "groups": {
+        "title": "Do you accept group bookings?",
+        "body": "Yes we do! Check out our <linkComponent>Groups</linkComponent> page for more information on group bookings."
+    },
+    "gift": {
+        "title": "Can I also give the B&B Vita Nova experience as a gift?",
+        "body": "Yes, that's possible! Contact us to order a gift voucher."
+    }
+}
