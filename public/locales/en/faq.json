@@ -28,7 +28,7 @@
     },
     "groups": {
         "title": "Do you accept group bookings?",
-        "body": "Yes we do! Check out our Groups page for more information on group bookings."
+        "body": "Yes we do! Check out our <linkComponent>Groups</linkComponent> page for more information on group bookings."
     },
     "gift": {
         "title": "Can I also give the B&B Vita Nova experience as a gift?",

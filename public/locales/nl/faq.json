@@ -28,7 +28,7 @@
     },
     "groups": {
         "title": "Accepteren jullie groepsreserveringen?",
-        "body": "Ja zeker! Bekijk onze Groepen pagina voor meer informatie over groepsboekingen."
+        "body": "Ja zeker! Bekijk onze <linkComponent>Groepen</linkComponent> pagina voor meer informatie over groepsboekingen."
     },
     "gift": {
         "title": "Kan ik een overnachting op de Vita Nova kado geven?",

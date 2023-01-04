@@ -2,11 +2,12 @@ import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
+import { useTranslation, Trans } from 'next-i18next';
 import styled from 'styled-components';
 import { Accordion, Container } from '../components';
-import { settings } from '../constants';
+import { colors, settings } from '../constants';
 import backgroundImg from '/public/images/faqs.jpg';
+import Link, { LinkProps } from 'next/link';
 
 interface IStaticProps {
     locale: string;
@@ -28,6 +29,14 @@ interface IProps {
 
 const BaseFaq: NextPage = ({ className }: IProps) => {
     const { t } = useTranslation();
+
+    const LinkComponent = (props: React.PropsWithChildren<LinkProps>) => {
+        return (
+            <Link {...props} href={props.href || ''}>
+                <a>{props.children}</a>
+            </Link>
+        );
+    };
 
     return (
         <div className={className}>
@@ -59,7 +68,15 @@ const BaseFaq: NextPage = ({ className }: IProps) => {
                     <p>{t('faq:bike.body')}</p>
                 </Accordion>
                 <Accordion title={t('faq:groups.title')}>
-                    <p>{t('faq:groups.body')}</p>
+                    <p>
+                        <Trans
+                            components={{
+                                linkComponent: <LinkComponent href="/groups" />,
+                            }}
+                            i18nKey="faq:groups.body"
+                            t={t}
+                        />
+                    </p>
                 </Accordion>
                 <Accordion title={t('faq:gift.title')}>
                     <p>{t('faq:gift.body')}</p>
@@ -94,6 +111,11 @@ const Faq = styled(BaseFaq)`
         position: relative;
         width: 100%;
         height: 480px;
+    }
+
+    a {
+        color: ${colors.blue};
+        text-decoration: underline;
     }
 `;
 
