@@ -29,7 +29,7 @@ interface IProps {
 }
 
 const BaseRooms: NextPage = ({ className }: IProps) => {
-    const { t } = useTranslation('rooms');
+    const { t } = useTranslation();
 
     return (
         <div className={className}>

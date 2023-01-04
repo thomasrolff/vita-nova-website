@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - The public area",
+        "description": "In the public area of B&B Vita Nova there is room for relaxation. A delicious breakfast with local products is served on board."
+    },
+    "hold": {
+        "heading": "The public area",
+        "body1": "In the public area there is room for relaxation and fun. Would you like a cup of coffee, tea or maybe a special beer? This is all available in our honesty bar.",
+        "body2": "With a wide range of games and magazines, there is plenty of entertainment. In the winter, the pellet stove provides a wonderful warmth and in the summer you can relax outside on the picnic tables in the sun.",
+        "tourLinkTitle": "Virtual tour"
+    },
+    "breakfast": {
+        "heading": "Breakfast on board",
+        "body1": "A delicious breakfast is served in the public area from Tuesday to Sunday. We like to work with local suppliers. At breakfast we serve delicious sourdough bread from Elsenburg & Sebastiani, our coffee is from Boot Koffie and the granola is from Bamboo Bytes.",
+        "body2": "Breakfast can be served between 7.30 and 10.30 a.m. on weekdays and from 9.00 to 10.30 a.m. on weekends."
+    }
+}

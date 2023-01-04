@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Groepen",
+        "description": "B&B Vita Nova is ook te huren als groepsaccommodatie. Een unieke plek in Amersfoort om tijd met jouw vrienden, familie of collega's door te brengen."
+    },
+    "groups": {
+        "heading": "Groepen",
+        "body1": "Op zoek naar een unieke groepsaccommodatie in het centrum van Amersfoort? Kom aan boord met jouw vrienden, familie of collega’s en ervaar de intimiteit en sfeer van leven op het water.",
+        "body2": "Het hele schip staat tot jullie beschikking. Slaap in een scheepshut, het vooronder of de roef die allemaal voorzien zijn van eigen sanitair. In het sfeervolle scheepsruim is er genoeg plaats om samen te borrelen of een spelletje te spelen. In de goed uitgeruste keuken kan je je eigen maaltijden klaar maken."
+    },
+    "info": {
+        "heading": "Mogelijkheden en tarieven",
+        "groupSize": "In het schip is plaats voor een groep van 10 tot 15 personen:",
+        "groupSizeLi1": "Vanaf 1 november t/m 31 maart is er plaats voor een groep van maximaal 12 personen*.",
+        "groupSizeLi2": "Vanaf 1 april t/m 31 oktober is er plaats voor een groep van maximaal 15 personen.",
+        "rentShip": "Je kan het schip vanaf 2 nachten huren. Dit kan vanaf € 1495,-. Voor een offerte op maat kunt u contact met ons opnemen. Als je het schip afhuurt, dan krijg je daarbij:",
+        "features": {
+            "bedLinen": "Bedlinnen en handdoeken, shampoo/douchegel, toiletpapier en keukenlinnen",
+            "coffee": "Onbeperkt toegang tot heerlijke koffie van Boot Koffie en thee van Clipper",
+            "music": "Toegang tot het draadloos muzieksysteem Sonos om je persoonlijke muziek af te spelen",
+            "games": "Een groot assortiment aan spellen, tijdschriften en de Volkskrant",
+            "cleaning": "Een eindschoonmaak",
+            "terrace": "Een terras in de zon",
+            "location": "Een perfecte uitvalsbasis op loopafstand van het stadscentrum en openbaar vervoer."
+        },
+        "activities": "Wij denken ook graag met je mee over leuke groepsactiviteiten of catering aan boord voor een onvergetelijke tijd samen!",
+        "footnote": "* Van 1 november t/m 31 maart is het vooronder gesloten, omdat het hier in de winter wat kouder wordt. In overleg kan het vooronder wel gehuurd worden in deze periode."
+    }
+}

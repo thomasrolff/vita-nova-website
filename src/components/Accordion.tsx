@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../constants';
-import { createMarkup } from '../utils';
 
 const AccordionTitle = styled.div``;
 const AccordionBody = styled.div``;
@@ -10,10 +9,10 @@ const Icon = styled.div``;
 interface IProps {
     className?: string;
     title: string;
-    body: string;
+    children?: React.ReactNode;
 }
 
-const BaseAccordion = ({ className, title, body }: IProps) => {
+const BaseAccordion = ({ className, children, title }: IProps) => {
     const [isActive, setIsActive] = useState(false);
     const bodyRef = useRef<HTMLDivElement | null>(null);
 
@@ -33,7 +32,7 @@ const BaseAccordion = ({ className, title, body }: IProps) => {
                 ref={bodyRef}
                 style={{ maxHeight: isActive ? getActiveHeight() : 0 }}
             >
-                <div dangerouslySetInnerHTML={createMarkup(body)} />
+                {children}
             </AccordionBody>
         </div>
     );
