@@ -11,7 +11,7 @@
     },
     "breakfast": {
         "heading": "Breakfast on board",
-        "body1": "A delicious breakfast is served in the public area from Tuesday to Sunday. We like to work with local suppliers. At breakfast we serve delicious sourdough bread from Elsenburg & Sebastiani, our coffee is from Boot Koffie and the granola is from Bamboo Bytes.",
+        "body1": "A delicious breakfast is served in the public area from Tuesday to Sunday. We like to work with local suppliers. At breakfast we serve delicious sourdough bread from <1>Elsenburg & Sebastiani</1>, our coffee is from <4>Boot Koffie</4> and the granola is from <8>Bamboo Bytes</8>.",
         "body2": "Breakfast can be served between 7.30 and 10.30 a.m. on weekdays and from 9.00 to 10.30 a.m. on weekends."
     }
 }

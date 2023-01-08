@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { Container, SplitSwiperSection } from '../components';
 import { LinkButton } from '../components/LinkButton';
 import * as images from '../images/hold';
@@ -99,7 +99,41 @@ const Ship: NextPage = () => {
                 </SplitSwiperSection>
                 <SplitSwiperSection imageLeft images={breakfastImages}>
                     <h2>{t('hold:breakfast.heading')}</h2>
-                    <p>{t('hold:breakfast.body1')}</p>
+                    <p>
+                        <Trans i18nKey="hold:breakfast.body1">
+                            Van dinsdag tot zondag wordt er in het scheepsruim
+                            een heerlijk ontbijt geserveerd. Wij werken graag
+                            samen met lokale leveranciers. Bij het ontbijt
+                            serveren wij desembrood van
+                            <a
+                                className="vita-nova-link"
+                                href="http://elsenburg-sebastiani.nl/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Elsenburg&Sebastiani
+                            </a>
+                            , onze koffie is van{' '}
+                            <a
+                                className="vita-nova-link"
+                                href="https://www.bootkoffie.nl/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Boot Koffie
+                            </a>{' '}
+                            en de granola van{' '}
+                            <a
+                                className="vita-nova-link"
+                                href="https://www.bamboobyte.nl/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Bamboo Bytes
+                            </a>
+                            .
+                        </Trans>
+                    </p>
                     <p>{t('hold:breakfast.body2')}</p>
                 </SplitSwiperSection>
             </Container>

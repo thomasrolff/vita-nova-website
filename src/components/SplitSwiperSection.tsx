@@ -144,4 +144,9 @@ export const SplitSwiperSection = styled(BaseSplitSwiperSection)`
     .swiper-pagination-bullet-active {
         opacity: 1;
     }
+
+    .vita-nova-link {
+        color: ${colors.blue};
+        text-decoration: underline;
+    }
 `;
