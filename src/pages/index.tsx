@@ -118,18 +118,21 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                             Wil jij iemand verrassen? Neem contact met ons op
                             via{' '}
                             <a
-                                className="gift-link"
+                                className="vita-nova-link"
                                 href="mailto:elene@hotelvitanova.nl"
                             >
                                 e-mail
                             </a>
                             ,{' '}
-                            <a className="gift-link" href="tel:+31651672548">
+                            <a
+                                className="vita-nova-link"
+                                href="tel:+31651672548"
+                            >
                                 telefoon
                             </a>{' '}
                             of{' '}
                             <a
-                                className="gift-link"
+                                className="vita-nova-link"
                                 href="https://wa.me/31651672548"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -158,11 +161,6 @@ const Home = styled(BaseHome)`
         right: -100%;
         z-index: 200;
         transition: right 0.96s ease-in-out;
-    }
-
-    .gift-link {
-        color: ${colors.blue};
-        text-decoration: underline;
     }
 `;
 

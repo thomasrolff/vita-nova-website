@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image, { StaticImageData } from 'next/image';
-import { breakpoints } from '../constants';
+import { breakpoints, colors } from '../constants';
 
 const ImageContainer = styled.div``;
 const TextContainer = styled.div``;
@@ -71,5 +71,10 @@ export const SplitImageSection = styled(BaseSplitImageSection)`
         @media (${breakpoints.mediumMin}) {
             padding: 48px;
         }
+    }
+
+    .vita-nova-link {
+        color: ${colors.blue};
+        text-decoration: underline;
     }
 `;
