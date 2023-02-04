@@ -112,9 +112,8 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                     <h2>{t('home:giftTitle')}</h2>
                     <p>{t('home:giftBody1')}</p>
                     <p>{t('home:giftBody2')}</p>
-                    <p>{t('home:giftBody3')}</p>
                     <p>
-                        <Trans i18nKey="home:giftBody4">
+                        <Trans i18nKey="home:giftBody3">
                             Wil jij iemand verrassen? Neem contact met ons op
                             via{' '}
                             <a
