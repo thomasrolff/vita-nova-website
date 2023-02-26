@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Gruppen",
+        "description": "B&B Vita Nova kann auch als Gruppenunterkunft gemietet werden. Ein einzigartiger Ort in Amersfoort, um Zeit mit Freunden, Familie oder Kollegen zu verbringen."
+    },
+    "groups": {
+        "heading": "Gruppen",
+        "body1": "Suchen Sie eine einzigartige Gruppenunterkunft im Zentrum von Amersfoort? Kommen Sie mit Ihren Freunden, Familie oder Kollegen an Bord und erfahren Sie die Intimität und Atmosphäre des Lebens am Wasser.",
+        "body2": "Das gesamte Schiff steht Ihnen zur Verfügung. Schlafen Sie in einer Schiffshütte, dem Vorschiff oder dem Deckshaus, die alle über eigene Sanitäranlagen verfügen. Im attraktiven Schiffsraum gibt es ausreichend Platz, um gemeinsam etwas zu trinken oder ein Spiel zu spielen. In der gut ausgestatteten können Sie Ihre eigenen Mahlzeiten zubereiten."
+    },
+    "info": {
+        "heading": "Möglichkeiten und Tarife",
+        "groupSize": "Das Schiff eignet sich für eine Gruppe von 10-15 Personen:",
+        "groupSizeLi1": "Vom 1. November bis 31. März gibt es Platz für eine Gruppe von maximal 12 Personen*.",
+        "groupSizeLi2": "Vom 1. April bis 31. März gibt es Platz für eine Gruppe von maximal 15 Personen.",
+        "rentShip": "Der Mindestaufenthalt ist 2 Nächte, ab € 1495,-. Für ein maßgeschneidertes Angebot können Sie Kontakt mit uns aufnehmen. Wenn Sie das gesamte Schiff mieten, ist folgendes inklusive:",
+        "features": {
+            "bedLinen": "Bettwäsche und Handtücher, Shampoo/Duschgel, Toilettenpapier und Küchenwäsche",
+            "coffee": "Unbeschränkt Kaffee (von Boot Koffie) und Tee (von Clipper)",
+            "music": "Zugriff auf das drahtlose Sonos-Musiksystem, um Ihre persönliche Musik abzuspielen",
+            "games": "Eine reiche Auswahl an Spielen, Zeitschriften und Zeitungen",
+            "cleaning": "Eine Endreinigung",
+            "terrace": "Eine Terrasse in der Sonne",
+            "location": "Eine  perfekte Aktionsbasis. Sie können das Zentrum und die öffentlichen Verkehrsmitteln zu Fuss erreichen"
+        },
+        "activities": "Wir denken auch gerne mit Ihnen über lustige Gruppenaktivitäten oder Catering an Bord nach, für eine unvergessliche gemeinsame Zeit!",
+        "footnote": "* Vom 1. November bis 31. März ist das Vorschiff geschlossen, da es hier im Winter kälter wird. In Absprache kann das Vorschiff in dieser Periode gemietet werden."
+    }
+}

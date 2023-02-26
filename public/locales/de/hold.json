@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Schiffsraum",
+        "description": "Das Schiffsraum bietet Raum zum Entspannen und morgens wird ein köstliches Frühstück mit lokalen Produkten serviert."
+    },
+    "hold": {
+        "heading": "Der Schiffsraum",
+        "body1": "Der Schiffsraum bietet Platz für Entspannung und Spaß. Möchten Sie eine Tasse Kaffee, Tee oder vielleicht ein Spezialbier? Sie finden alles in unserer Minibar.",
+        "body2": "An Bord befinden sich viele Spiele und Zeitschriften Im Winter kreiert der Pelletofen eine angenehme Wärme und im Sommer können Sie draussen auf den Picknicktischen die Sonne geniessen. ",
+        "tourLinkTitle": "Virtueller Rundgang"
+    },
+    "breakfast": {
+        "heading": "Frühstück an Bord",
+        "body1": "Von Dienstag bis Sonntag wird im Schiffsraum ein köstliches Frühstück serviert. Wir arbeiten gerne mit lokalen Lieferanten zusammen. Wir servieren Sauerteigbrot von <1>Elsenburg&Sebastiani</1>, Kaffee von <4>Boot Koffie</4> und Müsli von <8>Bamboo Bytes</8>.",
+        "body2": "Von Dienstag bis Freitag wird das Frühstück zwischen 7.30 Uhr und 10.30 Uhr serviert. Am Samstag und Sonntag zwischen 9.00 Uhr und 10.30 Uhr."
+    }
+}

@@ -81,6 +81,12 @@ const BaseFaq: NextPage = ({ className }: IProps) => {
                 <Accordion title={t('faq:gift.title')}>
                     <p>{t('faq:gift.body')}</p>
                 </Accordion>
+                <Accordion title={t('faq:disability.title')}>
+                    <p>{t('faq:disability.body')}</p>
+                </Accordion>
+                <Accordion title={t('faq:seaSickness.title')}>
+                    <p>{t('faq:seaSickness.body')}</p>
+                </Accordion>
             </Container>
             <ImageContainer>
                 <Image

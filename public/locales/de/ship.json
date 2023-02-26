@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Schiff",
+        "description": "B&B Vita Nova befindet sich auf einem ehemaligen Binnenschiff im Hafen von Amersfoort, nur wenige Gehminuten von der Altstadt entfernt."
+    },
+    "ship": {
+        "heading": "Vom Frachtschiff zum B&B",
+        "body1": "Das Vita Nova ist ein 1940 in Belgien gebauter Motorfrachter. Mit seinen spezifischen Abmessungen wurde das Schiff speziell gebaut, um auf den Kanälen und durch die Schleusen in Belgien und Frankreich zu fahren. Das Vita Nova besuchte Amersfoort mehrmals während ihres Dienstes als Frachtschiff. Seit 2010 befindet sich ein B&B im Schiff.",
+        "body2": "An Bord befinden sich fünf Schiffshütten, das Vorschiff und das Deckshaus. Das Frühstück wird im Schiffsraum serviert und es gibt Raum zum Entspannen.",
+        "tourLinkTitle": "Klicken Sie hier für einen virtuelle Rundgang durch das Schiff"
+    },
+    "host": {
+        "heading": "Meet the host",
+        "body": "Ich bin Elène und ich begrüße Sie gerne am Bord  meines Schiffes Vita Nova. Seit 2018 leite ich mit viel Spaß und Vergnügen ein B&B in diesem robusten Frachtschiff aus 1940. Entdecken Sie den Charme dieses Schiffes an diesem einzigartigen Ort in Amersfoort."
+    },
+    "location": {
+        "heading": "Heimathafen: Amersfoort",
+        "body1": "Unser Heimathafen ist Amersfoort: zentral gelegen, gut erreichbar und in der Nähe der historischen Innenstadt. Das Schiff liegt mitten in \"De Nieuwe Stad\", dem Kreativviertel von Amersfoort.",
+        "body2": "Über das moderne Eemplein und den schönen Koppelpoort erreichen Sie ganz einfach die Altstadt.",
+        "body3": "Ein Aufenthalt in Amersfoort lässt sich auch gut mit einem Besuch an z.B. Utrecht oder Amsterdam kombinieren."
+    }
+}

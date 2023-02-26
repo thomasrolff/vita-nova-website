@@ -1,0 +1,45 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - FAQ",
+        "description": "In den FAQs finden Sie eine Antwort auf die am häufigsten gestellten Fragen."
+    },
+    "cancelPolicy": {
+        "title": "Wie lauten Ihre Stornobedingungen?",
+        "body1": "Wenn Sie direkt bei uns buchen, können Sie bis 1 Tag (24 Stunden) vor Anreise kostenlos stornieren. Für jede Buchung die nicht mindestens 24 Stunden vor Anreise storniert wird, werden die Gesamtkosten des Aufenthalts in Rechnung gestellt. Nicht-erstattungsfähige Buchungen  können nicht kostenlos storniert werden.  Bei Nichterscheinen wird die Gesamtsumme in Rechnung gestellt.",
+        "body2": "Für Gruppenbuchungen (4 Zimmer oder mehr) gelten gesonderte Stornobedingungen. Eine Gruppenbuchung kann bis spätestens 7 Tage vor Anreise kostenlos storniert werden. Wenn die Gruppenbuchung 48 Stunden vor Anreise storniert wird, werden 50% der Aufenthaltskosten in Rechnung gestellt. Für jede Buchung die nicht mindestens 48 Stunden vor Ankunft storniert wird, werden die Gesamtkosten des Aufenthalts in Rechnung gestellt.",
+        "body3": "Für Gruppenbuchungen (4 Zimmer oder mehr) gelten gesonderte Stornobedingungen. Eine Gruppenbuchung kann bis spätestens 7 Tage vor Anreise kostenlos storniert werden. Wenn die Gruppenbuchung 48 Stunden vor Anreise storniert wird, werden 50% der Aufenthaltskosten in Rechnung gestellt. Für jede Buchung die nicht mindestens 48 Stunden vor Ankunft storniert wird, werden die Gesamtkosten des Aufenthalts in Rechnung gestellt."
+    },
+    "parking": {
+        "title": "Wo kann ich parken?",
+        "body1": "Wir haben keinen eigenen Parkplatz. Sie können vorteilhaft und sicher im Parkhaus Eemplein parken. Der Höchstsatz pro 24 Stunden ist € 11,00. Das Parkhaus ist 3 Gehminuten entfernt. Die Adresse ist Eemlaan 21, Amersfoort.",
+        "body2": "Möchten Sie kostenlos parken? Sie können kostenlos auf den Parkplätzen neben Restaurant Kroast (Kleine Koppel 36, Amersfoort) oder in den Vierteln um Kwekersweg und Brabantsestraat parken."
+    },
+    "checkInOut": {
+        "title": "Was sind die Check in/Check out Zeiten?",
+        "body": "Sie können ab 16.00 Uhr einchecken und bis 11.00 Uhr auschecken. In Absprache können Sie Ihr Gepäck vor 16.00 Uhr abgeben."
+    },
+    "breakfast": {
+        "title": "Servieren Sie auch Frühstück?",
+        "body": "Für € 16,50 pro Person servieren wir ein köstliches Frühstück von Dienstag bis Sonntag (nicht am Montag). Von Dienstag bis Freitag wird das Frühstück zwischen 7.30 und 10.30 serviert, im Wochenende von 9.00 bis 10.30 Uhr."
+    },
+    "bike": {
+        "title": "Hat B&B Vita Nova einen Fahrradschuppen?",
+        "body": "Vor dem Schiff am Kai befindet sich ein Fahrradschuppen. Es gibt keinen überdachten/bewachten Fahrradschuppen. Leichtgewichtsfahrräder wie Rennräder können in Absprache im Schiff abgestellt werden."
+    },
+    "groups": {
+        "title": "Akzeptieren Sie Gruppenbuchungen?",
+        "body": "Natürlich! Sehen Sie unsere <linkComponent>Gruppen</linkComponent> Seite für weitere Informationen zu Gruppenbuchungen."
+    },
+    "gift": {
+        "title": "Kann ich eine Übernachtung im Vita Nova verschenken?",
+        "body": "Aber sicher! Nehmen Sie Kontakt mit uns auf, um einen Geschenkgutschein zu bestellen."
+    },
+    "disability": {
+        "title": "Is das B&B Vita Nova rollstuhlfreundlich?",
+        "body": "Leider ist das B&B Vita Nova nicht rollstuhlfreundlich."
+    },
+    "seaSickness": {
+        "title": "Ich werde leicht seekrank. Schaukelt das Schiff?",
+        "body": "Das Schiff liegt sehr stabil am Wasser. Nur bei starken Windböen kann das Schiff manchmal gegen den Kai gedrückt werden. Aber weil das Schiff einen flachen Boden hat, geht das Schiff nicht auf und ab."
+    }
+}

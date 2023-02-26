@@ -33,5 +33,13 @@
     "gift": {
         "title": "Kan ik een overnachting op de Vita Nova kado geven?",
         "body": "Dat kan! Neem contact met ons op om een kadobon te bestellen."
+    },
+    "disability": {
+        "title": "Is B&B Vita Nova rolstoeltoegankelijk?",
+        "body": "Helaas is B&B Vita Nova niet rolstoeltoegankelijk."
+    },
+    "seaSickness": {
+        "title": "Ik ben snel zeeziek. Schommelt het schip?",
+        "body": "Het schip ligt heel stabiel op het water. Alleen bij harde windstoten kan het schip soms tegen de kade worden geduwd. Maar omdat het schip een platte bodem heeft, gaat het schip niet op en neer."
     }
 }

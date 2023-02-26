@@ -5,11 +5,11 @@
     },
     "shipsCabin": {
         "title": "Sailor's cabin",
-        "description": "The ship’s cabins are cozy and fully equipped. The modern furnished rooms have a double bed with an en suite bathroom. There is a skylight in the room that is electrically operated. The WiFi is complementary. Additionally, you can make use of the common area to relax and socialize.",
+        "description": "The ship’s cabins are cozy and fully equipped. The modern furnished rooms have a double bed with an en suite bathroom. There is a skylight in the room that is electrically operated. The wifi is complementary. Additionally, you can make use of the common area to relax and socialize.",
         "features": {
             "doubleBed": "Double bed (140 x 200 cm)",
             "bathroom": "En suit bathroom",
-            "wifi": "Free WiFi",
+            "wifi": "Free wifi",
             "skyLight": "Skylight"
         }
     },
@@ -32,7 +32,7 @@
             "beds": "Double bed (160 x 200 cm)",
             "comfort": "Sitting area with pellet stove",
             "bathroom": "En suite bathroom",
-            "wifi": "Free WiFi"
+            "wifi": "Free wifi"
         }
     },
     "availability": "Availability"
