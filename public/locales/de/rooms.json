@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "title": "B&B Vita Nova - Zimmer",
+        "description": "An Bord des B&B Vita Nova in Amersfoort können Sie in einer der fünf Schiffshütten, im Vorschiff oder im Deckshaus übernachten. Eine einzigartige Erfahrung!"
+    },
+    "shipsCabin": {
+        "title": "Die Schiffshütte",
+        "description": "Die Schiffshütten sind gemütlich und haben allen Komfort. Die modern eingerichteten Zimmer verfügen über ein Doppelbett mit Privatdusche und Toilette. Es gibt kostenloses WLAN. Sie können auch den Schiffsraum nutzen. Es bietet ausreichend Platz, sich zu entspannen.",
+        "features": {
+            "doubleBed": "Doppelbett (140 x 200 cm)",
+            "bathroom": "Dusche und Toilette",
+            "wifi": "Kostenloses WLAN",
+            "skyLight": "Elektrisches Dachfenster"
+        }
+    },
+    "sailorsCabin": {
+        "title": "Das Vorschiff",
+        "description": "Suchen Sie ein besonders Erlebnis? Buchen Sie dann eine Übernachtung im originellen Vorschiff. Das Vorschiff verfügt über eine Privatdusche und Toilette und hat einen eigenen Eingang am Vordeck. Es gibt zwei Alkoven mit Einzelbetten und einen dritten Einzelschlafplatz in der Koje. Das Vorschiff eignet sich für 2-3 Erwachsene oder eine Familie mit zwei kleinen Kindern. Berücksichtigen Sie den Schiffskomfort.",
+        "extraInfoTitle": "Mehr zum Thema Schiffskomfort",
+        "extraInfo": "Achtung: Das Vorschiff ist ein sehr kleiner Raum. Eine steile Treppe bietet Zugang zum Raum. Es gibt keine seitlichen Fenster und es hat eine niedrige Decke. Es eignet sich daher nicht für Menschen mit Klaustrophobie. Besonders mit drei Erwachsene kann der Platz als klein empfunden werden. Wenn Sie für einen längeren Zeitraum einen Unterkunft suchen, empfehlen ich Ihnen, eine „Schiffshütte“ oder „das Deckshaus“ zu buchen.",
+        "features": {
+            "unique": "Einzigartig und abenteuerlich",
+            "beds": "3 x Einzelbett",
+            "bathroom": "Dusche und Toilette (mit Schiffspumpe!)"
+        }
+    },
+    "skippersHouse": {
+        "title": "Das Deckshaus",
+        "description": "Möchten Sie erfahren, wie es ist, an Bord eines ehemaligen Binnenschiffs zu leben? Buchen Sie dann einen Aufenthalt im Deckshaus. Das Deckshaus ist das ehemalige Schifferhaus. Es gibt eine eigene Sitzecke mit angenehmen Pelletofen, Badezimmer und 2-Personen Alkoven (160 x 200 cm). In einem separaten Raum kann ein Babybett aufgestellt werden. Das Steuerhaus bietet einen wunderschönen Blick auf den Hafen und den Koppelpoort von Amersfoort. Das Deckshaus verfügt über einen Kühlschank, Tischgeschirr und Kaffee- und Teezubereitungsmöglichkeiten. Eine Übernachtung im Deckshaus ist eine einzigartige Erfahrung!",
+        "features": {
+            "authentic": "Authentisch und romantisch",
+            "beds": "2-Personen Alkoven (160 x 200 cm)",
+            "comfort": "Eigene Sitzecke mit Pelletofen",
+            "bathroom": "Private Sanitäranlagen",
+            "wifi": "Kostenloses WLAN"
+        }
+    },
+    "availability": "Verfügbarkeit"
+}
