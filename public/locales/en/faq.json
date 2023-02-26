@@ -33,5 +33,13 @@
     "gift": {
         "title": "Can I also give the B&B Vita Nova experience as a gift?",
         "body": "Yes, that's possible! Contact us to order a gift voucher."
+    },
+    "disability": {
+        "title": "Is B&B Vita Nova wheelchair accessible?",
+        "body:": "Unfortunately, B&B Vita Nova is not wheelchair accessible."
+    },
+    "seaSickness": {
+        "title": "I get seasick easily. Does the ship rock?",
+        "body": "The ship is very stable on the water. Only with strong gusts of wind the ship can be pushed against the quay. But because the ship has a flat bottom, the ship does not go up and down."
     }
 }

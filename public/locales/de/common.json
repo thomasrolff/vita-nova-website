@@ -1,0 +1,12 @@
+{
+    "bookNow": "Jetzt buchen",
+    "popupTitle": "Buchen Sie direkt über die Website und erhalten Sie den besten Preis!",
+    "menu": {
+        "rooms": "Zimmer",
+        "ship": "Schiff",
+        "hold": "Schiffsraum",
+        "groups": "Gruppen",
+        "tour": "Virtueller Rundgang",
+        "faq": "FAQs"
+    }
+}
