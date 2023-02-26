@@ -62,6 +62,11 @@ export const LocaleSelectorMobile = styled(BaseLocaleSelectorMobile)`
         width: 100%;
     }
 
+    ${OptionButton}:nth-child(2) {
+        border-left: 1px solid ${colors.blue};
+        border-right: 1px solid ${colors.blue};
+    }
+
     a {
         display: block;
         width: 100%;
