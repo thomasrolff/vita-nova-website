@@ -7,7 +7,7 @@
         "title": "Die Schiffshütte",
         "description": "Die Schiffshütten sind gemütlich und haben allen Komfort. Die modern eingerichteten Zimmer verfügen über ein Doppelbett mit Privatdusche und Toilette. Es gibt kostenloses WLAN. Sie können auch den Schiffsraum nutzen. Es bietet ausreichend Platz, sich zu entspannen.",
         "features": {
-            "doubleBed": "Doppelbett (140 x 200cm)",
+            "doubleBed": "Doppelbett (140 x 200 cm)",
             "bathroom": "Dusche und Toilette",
             "wifi": "Kostenloses WLAN",
             "skyLight": "Elektrisches Dachfenster"
