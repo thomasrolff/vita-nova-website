@@ -22,7 +22,9 @@ interface IProps {
 
 const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
     const router = useRouter();
-    const { t } = useTranslation(['common']);
+    const { t } = useTranslation();
+
+    const bookingUrl = t('common:bookingUrl');
 
     return (
         <nav className={className}>
@@ -55,7 +57,7 @@ const BaseNavbar = ({ className, menuOpen, onHamburgerClick }: IProps) => {
             <RightLinkContainer>
                 <LocaleSelector />
                 <BookingButton
-                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    href={bookingUrl}
                     rel="noopener noreferrer"
                     target="_blank"
                 >
