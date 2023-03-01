@@ -14,7 +14,9 @@ interface IProps {
 }
 
 const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
-    const { t } = useTranslation(['common', 'home']);
+    const { t } = useTranslation();
+
+    const bookingUrl = t('common:bookingUrl');
 
     return (
         <section className={className}>
@@ -29,7 +31,7 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
             <ButtonContainer>
                 <LinkButton href="/rooms" title={t('home:viewRooms')} />
                 <Button
-                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    href={bookingUrl}
                     rel="noopener noreferrer"
                     target="_blank"
                 >

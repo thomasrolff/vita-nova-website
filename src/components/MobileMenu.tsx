@@ -18,6 +18,8 @@ interface IProps {
 const BaseMobileMenu = ({ className, onLocaleClick }: IProps) => {
     const { t } = useTranslation();
 
+    const bookingUrl = t('common:bookingUrl');
+
     return (
         <div className={className}>
             <Nav>
@@ -30,7 +32,7 @@ const BaseMobileMenu = ({ className, onLocaleClick }: IProps) => {
                     ))}
                 <LocaleSelectorMobile onLocaleClick={onLocaleClick} />
                 <BookingLink
-                    href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                    href={bookingUrl}
                     rel="noopener noreferrer"
                     target="_blank"
                 >

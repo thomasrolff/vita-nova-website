@@ -17,6 +17,8 @@ interface IProps {
 const BaseBookingPopUp = ({ className, popupRef, onClick }: IProps) => {
     const { t } = useTranslation('common');
 
+    const bookingUrl = t('common:bookingUrl');
+
     return (
         <div className={className} ref={popupRef}>
             <CloseButton onClick={onClick}>
@@ -26,7 +28,7 @@ const BaseBookingPopUp = ({ className, popupRef, onClick }: IProps) => {
                 <p>{t('common:popupTitle')}</p>
             </TextContainer>
             <BookingLink
-                href="https://booking.roomraccoon.com/vita-nova-scheepshotel-b-b/nl/"
+                href={bookingUrl}
                 rel="noopener noreferrer"
                 target="_blank"
             >
