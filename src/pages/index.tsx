@@ -13,7 +13,7 @@ import {
     LandingSection,
     LinkButton,
 } from '../components';
-import { colors, settings } from '../constants';
+import { settings } from '../constants';
 import { useTranslation, Trans } from 'next-i18next';
 
 interface IStaticProps {
