@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import videoPlaceholder from '../../public/images/video-placeholder.jpg';
 import { breakpoints, colors, settings } from '../constants';
 import { Dropdown } from '../svg';
 import { useTranslation } from 'next-i18next';
@@ -20,7 +21,14 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
 
     return (
         <section className={className}>
-            <video autoPlay loop muted playsInline>
+            <video
+                autoPlay
+                data-video="0"
+                loop
+                muted
+                playsInline
+                poster={videoPlaceholder.src}
+            >
                 <source
                     src="/video/wintervideo-vita-nova.m4v"
                     type="video/mp4"
