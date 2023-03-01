@@ -47,12 +47,13 @@ export const MobileMenu = styled(BaseMobileMenu)`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: auto;
+    max-height: 100%;
+    overflow-y: scroll;
     padding-top: 56px;
     background-color: ${colors.white};
     position: fixed;
     transition: top 0.4s ease;
-    top: ${({ open }) => (open ? 0 : '-120%')};
+    top: ${({ open }) => (open ? 0 : '-130%')};
     color: ${colors.white};
     z-index: 10;
 
