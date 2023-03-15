@@ -3,7 +3,16 @@ import styled from 'styled-components';
 import { useTranslation } from 'next-i18next';
 import { breakpoints, colors, settings } from '../constants';
 import { routes } from '../data';
-import { Email, Logo, Phone, Pin, Insta, Facebook, Whatsapp } from '../svg';
+import {
+    Email,
+    Logo,
+    Phone,
+    Pin,
+    Insta,
+    Facebook,
+    Whatsapp,
+    AffiliateLogo,
+} from '../svg';
 import { Container } from './Container';
 import { Map } from './Map';
 
@@ -16,7 +25,9 @@ const ContactContainer = styled.div``;
 const ContactLink = styled.a``;
 const SocialContainer = styled.div``;
 const SocialLink = styled.a``;
+const AffiliateLink = styled.a``;
 const FlexContainer = styled(Container)``;
+const LogoRowContainer = styled(Container)``;
 
 interface IProps {
     className?: string;
@@ -87,16 +98,25 @@ const BaseFooter = ({ className }: IProps) => {
                     <Map />
                 </GoogleMapContainer>
             </FlexContainer>
-            <LogoContainer>
-                <Link href="/">
-                    <a>
-                        <Logo />
-                    </a>
-                </Link>
-                <Copyright>
-                    &copy; {new Date().getFullYear()} B&B Vita Nova
-                </Copyright>
-            </LogoContainer>
+            <LogoRowContainer>
+                <LogoContainer>
+                    <Link href="/">
+                        <a>
+                            <Logo />
+                        </a>
+                    </Link>
+                    <Copyright>
+                        &copy; {new Date().getFullYear()} B&B Vita Nova
+                    </Copyright>
+                </LogoContainer>
+                <AffiliateLink
+                    href="https://www.bijzonderplekje.nl/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <AffiliateLogo />
+                </AffiliateLink>
+            </LogoRowContainer>
         </div>
     );
 };
@@ -215,16 +235,39 @@ export const Footer = styled(BaseFooter)`
         }
     }
 
+    ${LogoRowContainer} {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+
+        @media (${breakpoints.smallMin}) {
+            justify-content: center;
+        }
+    }
+
     ${LogoContainer} {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 32px;
+    }
+
+    ${AffiliateLink} {
+        position: absolute;
+        right: 0;
+
+        svg {
+            height: 44px;
+        }
     }
 
     ${Logo} {
-        height: 32px;
+        height: 28px;
         fill: ${colors.offWhite};
+
+        @media (${breakpoints.smallMin}) {
+            height: 32px;
+        }
     }
 
     ${Copyright} {
