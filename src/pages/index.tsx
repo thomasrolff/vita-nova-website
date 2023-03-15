@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
-import placeholderImg from '../../public/images/placeholder.jpg';
+import lampImg from '../../public/images/lamp.jpg';
 import landingImg2 from '../../public/images/landing-2-min.jpg';
 import giftImg from '../../public/images/gift.jpg';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -82,7 +82,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                 <SplitImageSection
                     imageAlt="Placeholder Image"
                     imageLeft
-                    imageSrc={placeholderImg}
+                    imageSrc={lampImg}
                     noImageMobile
                     sectionRef={sectionRef}
                 >
