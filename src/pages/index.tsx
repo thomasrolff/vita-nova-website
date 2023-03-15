@@ -65,7 +65,6 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                     content={t('home:meta.description') || ''}
                     name="description"
                 />
-                <link href="/favicon.ico" rel="icon" />
             </Head>
 
             {showPopUp && (
