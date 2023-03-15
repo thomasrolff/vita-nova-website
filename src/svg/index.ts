@@ -16,3 +16,4 @@ export * from './Whatsapp';
 export * from './Dropdown';
 export * from './BookingArrow';
 export * from './Close';
+export * from './AffiliateLogo';
