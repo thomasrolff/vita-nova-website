@@ -29,6 +29,7 @@ export default class MyDocument extends Document {
     }
 }
 
+// Insert styled components stylesheet
 MyDocument.getInitialProps = async (ctx) => {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
