@@ -4,7 +4,7 @@
         "description": "Aboard of B&B Vita Nova in Amersfoort you can spend the night in one of the five ship's cabins, the sailor's cabin or the skipper's house. A unique experience!"
     },
     "shipsCabin": {
-        "title": "Sailor's cabin",
+        "title": "Ship's cabin",
         "description": "The ship’s cabins are cozy and fully equipped. The modern furnished rooms have a double bed with an en suite bathroom. There is a skylight in the room that is electrically operated. The wifi is complementary. Additionally, you can make use of the common area to relax and socialize.",
         "features": {
             "doubleBed": "Double bed (140 x 200 cm)",
