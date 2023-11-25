@@ -4,7 +4,7 @@
     "private": true,
     "packageManager": "^yarn@1.22.17",
     "engines": {
-        "node": "14.X"
+        "node": "20.X"
     },
     "scripts": {
         "dev": "next dev",
