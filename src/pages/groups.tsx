@@ -61,7 +61,6 @@ const BaseGroups: NextPage = ({ className }: IProps) => {
                         <li>{t('groups:info.features.terrace')}</li>
                         <li>{t('groups:info.features.location')}</li>
                     </ul>
-                    <p>{t('groups:info.activities')}</p>
                     <p>{t('groups:info.footnote')}</p>
                 </TextContainer>
             </Container>

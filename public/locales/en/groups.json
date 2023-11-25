@@ -13,7 +13,7 @@
         "groupSize": "The ship can accommodate a group of 10 to 15 people:",
         "groupSizeLi1": "From 1 November to 31 March there is room for a group of up to 12 people*.",
         "groupSizeLi2": "From 1 April to 31 October there is room for a group of up to 15 people.",
-        "rentShip": "You can rent the ship from 2 nights. This is possible from € 1495. Please contact us for more information. If you rent the ship, the following is included:",
+        "rentShip": "Please contact us for more information about prices and availability. If you rent the ship, the following is included:",
         "features": {
             "bedLinen": "Bed linen and towels, shampoo/shower gel, toilet paper and kitchen linen",
             "coffee": "Unlimited access to delicious coffee from Boot Koffie and tea from Clipper",
@@ -23,7 +23,6 @@
             "terrace": "A terrace in the sun",
             "location": "A perfect base within walking distance of the city center and public transport"
         },
-        "activities": "We are also happy to think along with you about fun group activities or catering on board for an unforgettable time together!",
         "footnote": "* From 1 November to 31 March the sailor's cabin is closed, because it gets a bit colder here in the winter. In consultation, the sailor's cabin can be rented during this period."
     }
 }
