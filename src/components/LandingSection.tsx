@@ -30,7 +30,7 @@ const BaseLandingSection = ({ className, onScrollButtonClick }: IProps) => {
                 poster={videoPlaceholder.src}
             >
                 <source
-                    src="/video/wintervideo-vita-nova.m4v"
+                    src="https://vita-nova.b-cdn.net/wintervideo-vita-nova.mp4"
                     type="video/mp4"
                 />
             </video>
