@@ -18,3 +18,7 @@ This project uses typescript and is formatted using prettier and eslint. To repl
 ## Internationalization
 
 Translations can be found at `public/locales`.
+
+## Video url
+
+The video used on the landingpage is hosted through the Bunny cdn on the account of thomasrolff@icloud.com.
