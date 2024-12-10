@@ -21,7 +21,7 @@ Translations can be found at `public/locales`.
 
 ## Video url
 
-The video used on the landingpage is hosted through the Bunny cdn on the account of thomasrolff@icloud.com. The Allowed Referrers on this Bunny storage are:
+The video used on the landingpage is hosted through the Bunny cdn on the account of Elene (Hotel Vita Nova). The Allowed Referrers on this Bunny storage are:
 
 -   vita-nova-website-git-development-thomasrolff.vercel.app
 -   hotelvitanova.nl
