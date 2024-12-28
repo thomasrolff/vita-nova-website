@@ -1,11 +1,4 @@
-import {
-    BedIcon,
-    ChairIcon,
-    ShowerIcon,
-    StarIcon,
-    WifiIcon,
-    WindowIcon,
-} from '../svg';
+import { BedIcon, ShowerIcon, StarIcon, WifiIcon, WindowIcon } from '../svg';
 import { IRooms } from '../types';
 import * as images from '../images/rooms';
 
@@ -152,94 +145,6 @@ export const rooms: IRooms[] = [
                 id: 7,
                 src: images.forecastle8Square,
                 srcFull: images.forecastle8,
-                alt: 'Kamer',
-            },
-        ],
-    },
-    {
-        id: 2,
-        title: 'rooms:skippersHouse.title',
-        description: 'rooms:skippersHouse.description',
-        features: [
-            {
-                id: 0,
-                title: 'rooms:skippersHouse.features.authentic',
-                svg: StarIcon,
-            },
-            {
-                id: 1,
-                title: 'rooms:skippersHouse.features.beds',
-                svg: BedIcon,
-            },
-            {
-                id: 2,
-                title: 'rooms:skippersHouse.features.comfort',
-                svg: ChairIcon,
-            },
-            {
-                id: 3,
-                title: 'rooms:skippersHouse.features.bathroom',
-                svg: ShowerIcon,
-            },
-            {
-                id: 3,
-                title: 'rooms:shipsCabin.features.wifi',
-                svg: WifiIcon,
-            },
-        ],
-        images: [
-            {
-                id: 0,
-                src: images.deckhouse1Square,
-                srcFull: images.deckhouse1,
-                alt: 'Kamer',
-            },
-            {
-                id: 1,
-                src: images.deckhouse2Square,
-                srcFull: images.deckhouse2,
-                alt: 'Kamer',
-            },
-            {
-                id: 2,
-                src: images.deckhouse3Square,
-                srcFull: images.deckhouse3,
-                alt: 'Kamer',
-            },
-            {
-                id: 3,
-                src: images.deckhouse4Square,
-                srcFull: images.deckhouse4,
-                alt: 'Kamer',
-            },
-            {
-                id: 4,
-                src: images.deckhouse5Square,
-                srcFull: images.deckhouse5,
-                alt: 'Kamer',
-            },
-            {
-                id: 5,
-                src: images.deckhouse8Square,
-                srcFull: images.deckhouse8,
-                alt: 'Kamer',
-            },
-            {
-                id: 6,
-                src: images.deckhouse9Square,
-                srcFull: images.deckhouse9,
-                alt: 'Kamer',
-            },
-            {
-                id: 7,
-                src: images.deckhouse6Square,
-                srcFull: images.deckhouse6,
-                alt: 'Kamer',
-            },
-            {
-                id: 8,
-                src: images.deckhouse10Square,
-                srcFull: images.deckhouse10,
                 alt: 'Kamer',
             },
         ],

@@ -17,22 +17,11 @@
         "title": "Sailor's cabin",
         "description": "Looking for a special experience? Book to stay in our original sailor’s cabin. The sailor’s cabin is equipped with an en suite bathroom and its own entry from the deck. There are two separate single beds and one of them has a trundle bed underneath. The sailor’s cabin is best suited for 2 or 3 adults or a family with two little children.",
         "extraInfoTitle": "More info",
-        "extraInfo": "Please keep in mind you’re on a boat. The sailor’s cabin has a lowered ceiling and steep stairs. There are no windows to the side, so it is not suitable for those with claustrophobia. Especially with three adults, the space can be experienced as small. If you are looking for accommodation for a longer period of time, we advise you to book a ship's cabin or the skipper’s house.",
+        "extraInfo": "Please keep in mind you’re on a boat. The sailor’s cabin has a lowered ceiling and steep stairs. There are no windows to the side, so it is not suitable for those with claustrophobia. Especially with three adults, the space can be experienced as small. If you are looking for accommodation for a longer period of time, we advise you to book a ship's cabin.",
         "features": {
             "unique": "Unique and adventurous",
             "beds": "3 x single bed",
             "bathroom": "En suite bathroom (with ship pump!)"
-        }
-    },
-    "skippersHouse": {
-        "title": "Skipper's house",
-        "description": "Do you want to experience what it is like to live aboard of a former cargo ship? Then book your stay in the skipper’s house. The room has its own sitting area with a lovely pellet stove, bathroom and double bed (160 x 200 cm). There is space to place a baby cot in a separate room. In addition, you have a beautiful view of the harbor and the Koppelpoort of Amersfoort from the wheelhouse. The skipper’s house is furnished with a refrigerator, crockery and coffee and tea facilities. Spending the night in the skipper’s house is a unique experience!",
-        "features": {
-            "authentic": "Authentic and romantic",
-            "beds": "Double bed (160 x 200 cm)",
-            "comfort": "Sitting area with pellet stove",
-            "bathroom": "En suite bathroom",
-            "wifi": "Free wifi"
         }
     },
     "availability": "Availability"
