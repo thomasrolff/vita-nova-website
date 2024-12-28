@@ -24,16 +24,5 @@
             "bathroom": "Dusche und Toilette (mit Schiffspumpe!)"
         }
     },
-    "skippersHouse": {
-        "title": "Das Deckshaus",
-        "description": "Möchten Sie erfahren, wie es ist, an Bord eines ehemaligen Binnenschiffs zu leben? Buchen Sie dann einen Aufenthalt im Deckshaus. Das Deckshaus ist das ehemalige Schifferhaus. Es gibt eine eigene Sitzecke mit angenehmen Pelletofen, Badezimmer und 2-Personen Alkoven (160 x 200 cm). In einem separaten Raum kann ein Babybett aufgestellt werden. Das Steuerhaus bietet einen wunderschönen Blick auf den Hafen und den Koppelpoort von Amersfoort. Das Deckshaus verfügt über einen Kühlschank, Tischgeschirr und Kaffee- und Teezubereitungsmöglichkeiten. Eine Übernachtung im Deckshaus ist eine einzigartige Erfahrung!",
-        "features": {
-            "authentic": "Authentisch und romantisch",
-            "beds": "2-Personen Alkoven (160 x 200 cm)",
-            "comfort": "Eigene Sitzecke mit Pelletofen",
-            "bathroom": "Private Sanitäranlagen",
-            "wifi": "Kostenloses WLAN"
-        }
-    },
     "availability": "Verfügbarkeit"
 }
