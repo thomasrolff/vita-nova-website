@@ -82,8 +82,8 @@ const BaseFooter = ({ className }: IProps) => {
                         <li>3812 PG Amersfoort</li>
                         <li>
                             <Email />
-                            <ContactLink href="mailto:elene@hotelvitanova.nl">
-                                elene@hotelvitanova.nl
+                            <ContactLink href="mailto:simone@hotelvitanova.nl">
+                                simone@hotelvitanova.nl
                             </ContactLink>
                         </li>
                         <li>

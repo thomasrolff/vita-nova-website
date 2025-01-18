@@ -117,7 +117,7 @@ const BaseHome: NextPage = ({ className }: IProps) => {
                             via{' '}
                             <a
                                 className="vita-nova-link"
-                                href="mailto:elene@hotelvitanova.nl"
+                                href="mailto:simone@hotelvitanova.nl"
                             >
                                 e-mail
                             </a>
